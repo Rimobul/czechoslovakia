@@ -9,9 +9,12 @@ namespace MusicAtlas
         static async Task Main(string[] args)
         {
             string artistId = "2rfkmr5WzRN9D9gAfb2ycd?si=9Riumf8VS6Cxo0u6burlQQ"; // Spotify artist ID
+            string artistName = "Vesna";
+            string market = "SK"; //"CZ";
 
             string accessToken = await GetAccessToken();
-            string artistInfo = await GetArtistInfoAsync(artistId, accessToken);
+            //string artistInfo = await GetArtistInfoAsync(artistId, accessToken);
+            string artistInfo = await SearchSpotify(artistId, market, accessToken);
             Console.WriteLine(artistInfo);
         }
         private static async Task<string> GetArtistInfoAsync(string artistId, string accessToken)
@@ -20,6 +23,23 @@ namespace MusicAtlas
             {
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
                 string url = $"https://api.spotify.com/v1/artists/{artistId}";
+
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                string responseBody = await response.Content.ReadAsStringAsync();
+                JObject artistJson = JObject.Parse(responseBody);
+
+                return artistJson.ToString();
+            }
+        }
+
+        private static async Task<string> SearchSpotify(string artistName, string market, string accessToken, int limit = 10, int offset = 0)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                string url = $"https://api.spotify.com/v1/search?q={artistName}&type=artist&market={market}&limit={limit}&offset={offset}";
 
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
