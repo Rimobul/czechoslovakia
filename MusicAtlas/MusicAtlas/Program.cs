@@ -8,15 +8,34 @@ namespace MusicAtlas
     {
         static async Task Main(string[] args)
         {
-            string artistId = "2rfkmr5WzRN9D9gAfb2ycd?si=9Riumf8VS6Cxo0u6burlQQ"; // Spotify artist ID
+            string artistId = "2rfkmr5WzRN9D9gAfb2ycd"; // Spotify artist ID
             string artistName = "Vesna";
             string market = "SK"; //"CZ";
 
             string accessToken = await GetAccessToken();
             //string artistInfo = await GetArtistInfoAsync(artistId, accessToken);
-            string artistInfo = await SearchSpotify(artistId, market, accessToken);
+            //string artistInfo = await SearchSpotify(artistId, market, accessToken);
+            string artistInfo = await GetArtistsTopTracks(artistId, market, accessToken);
             Console.WriteLine(artistInfo);
         }
+
+        private static async Task<string> GetArtistsTopTracks(string artistId, string market, string accessToken)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + accessToken);
+                string url = $"https://api.spotify.com/v1/artists/{artistId}/top-tracks?market={market}";
+
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                string responseBody = await response.Content.ReadAsStringAsync();
+                JObject artistJson = JObject.Parse(responseBody);
+
+                return artistJson.ToString();
+            }
+        }
+
         private static async Task<string> GetArtistInfoAsync(string artistId, string accessToken)
         {
             using (HttpClient client = new HttpClient())
