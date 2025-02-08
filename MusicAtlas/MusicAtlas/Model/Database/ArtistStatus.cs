@@ -5,8 +5,9 @@
     {
         New = 0,
         Skip = 1,
-        Accepted = 2,
-        WithLinks = 4,
-        WithDetails = 8
+        Linked = 2,
+        Accepted = 4,
+        WithLinks = 8,
+        WithDetails = 16
     }
 }

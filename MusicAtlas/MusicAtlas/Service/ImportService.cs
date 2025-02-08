@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MusicAtlas.Data;
+using MusicAtlas.Model.Spotify;
 
 namespace MusicAtlas.Service
 {
@@ -41,11 +42,25 @@ namespace MusicAtlas.Service
 
             var bestTrack = czechTracks.Tracks.Union(slovakTracks.Tracks).OrderByDescending(x => x.Popularity).FirstOrDefault();
 
-            // TODO: process links
+            var czechSearchResult = await spotifyService.SearchSpotify(spotifyArtist.Name, Constants.CzechMarket, accessToken);
+            var slovakSearchResult = await spotifyService.SearchSpotify(spotifyArtist.Name, Constants.SlovakMarket, accessToken);
 
-            var mappingService = new MappingService();
+            var artistService = new ArtistService();
 
-            await mappingService.AddNewSpotifyArtist(context, spotifyArtist, bestTrack, 0);
+            var sourceArtist = await artistService.AddNewSpotifyArtist(context, spotifyArtist, bestTrack, 0);
+
+            var linkService = new LinkService();
+
+            var linkableArtists = linkService.ExtractLinkableArtists(
+                spotifyArtist,
+                new List<TrackCollection> { czechTracks, slovakTracks },
+                new List<ArtistCollection> { czechSearchResult, slovakSearchResult });
+
+            foreach (var linkableArtist in linkableArtists)
+            {
+                var linkedArtist= await artistService.AddLinkableArtist(context, linkableArtist, sourceArtist.Iteration);
+                await linkService.AddLink(context, sourceArtist, linkedArtist, linkableArtist.LinkWeight);
+            }
         }
     }
 }

@@ -41,7 +41,7 @@ namespace MusicAtlas.Service
             }
         }
 
-        public async Task<Search> SearchSpotify(string artistName, string market, string accessToken, int limit = 10, int offset = 0)
+        public async Task<ArtistCollection> SearchSpotify(string artistName, string market, string accessToken, int limit = 10, int offset = 0)
         {
             using (HttpClient client = new HttpClient())
             {
@@ -52,7 +52,7 @@ namespace MusicAtlas.Service
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                Search searchResult = JsonConvert.DeserializeObject<Search>(responseBody);
+                ArtistCollection searchResult = JsonConvert.DeserializeObject<ArtistCollection>(responseBody);
 
                 return searchResult;
             }
