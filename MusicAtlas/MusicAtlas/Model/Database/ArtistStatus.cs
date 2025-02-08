@@ -1,9 +1,12 @@
 ﻿namespace MusicAtlas.Model.Database
 {
+    [Flags]
     public enum ArtistStatus
     {
-        NotReviewed,
-        Active,
-        Skip
+        New = 0,
+        Skip = 1,
+        Accepted = 2,
+        WithLinks = 4,
+        WithDetails = 8
     }
 }
