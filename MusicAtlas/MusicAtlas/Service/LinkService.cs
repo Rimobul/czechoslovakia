@@ -6,7 +6,7 @@ namespace MusicAtlas.Service
 {
     public class LinkService
     {
-        public IEnumerable<LinkableArtist> ExtractLinkableArtists(Artist sourceArtist, IEnumerable<TrackCollection> trackCollections, IEnumerable<ArtistCollection> searchResults)
+        public IEnumerable<LinkableArtist> ExtractSpotifyArtists(Artist sourceArtist, IEnumerable<TrackCollection> trackCollections, IEnumerable<ArtistCollection> searchResults)
         {
             var skipIds = new HashSet<string> { sourceArtist.Id };
 

@@ -9,7 +9,6 @@ namespace MusicAtlas.Model.Database
             SpotifyProfiles = new List<SpotifyProfile>();
             AppleProfiles = new List<AppleProfile>();
             //Languages = new List<Language>();
-            Genres = new List<Genre>();
             SourceLinks = new List<Link>();
         }
 
@@ -18,10 +17,10 @@ namespace MusicAtlas.Model.Database
         public string Name { get; set; }
         public int Iteration { get; set; }
         public ArtistStatus Status { get; set; }
+        public bool WithDetails { get; set;}
 
         public List<SpotifyProfile> SpotifyProfiles { get; set; }
         public List<AppleProfile> AppleProfiles { get; set; }
-        public List<Genre> Genres { get; set; }
         public List<Link> SourceLinks { get; set; }
         public List<Link> DestinationLinks { get; set; }
 

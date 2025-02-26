@@ -10,6 +10,7 @@ namespace MusicAtlas.Model.Database
         public int Popularity { get; set; }
         public int BestTrackPopularity { get; set; }
         public DateTime LastUpdated { get; set; }
+        public List<Genre> Genres { get; set; }
 
         public Guid ArtistId { get; set; }
         public Artist Artist { get; set; }
