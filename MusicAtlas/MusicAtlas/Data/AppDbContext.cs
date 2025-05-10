@@ -13,7 +13,8 @@ namespace MusicAtlas.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=musicatlas.db");
+            var connectionString = Path.Combine(Secrets.DbFolderPath, "musicatlas.db");
+            optionsBuilder.UseSqlite($"Data Source={connectionString}");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
