@@ -5,6 +5,7 @@
         New,
         Refused,
         Accepted,
-        Processed
+        Processed,
+        Duplicate
     }
 }

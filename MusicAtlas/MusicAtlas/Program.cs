@@ -7,6 +7,38 @@ namespace MusicAtlas
     {
         static async Task Main(string[] args)
         {
+            Console.WriteLine("Choose an option:");
+            Console.WriteLine("1. Download from Spotify");
+            Console.WriteLine("2. Export CSV");
+            Console.WriteLine("3. Process CSV");
+
+            var option = int.Parse(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    await DownloadFromSpotify();
+                    break;
+                case 2:
+                    await ExportCSV();
+                    break;
+                default:
+                    Console.WriteLine("Invalid option");
+                    break;
+            }
+
+            Console.WriteLine("Done.");
+        }
+
+        private static async Task ExportCSV()
+        {
+            string path = @"C:\musicAtlas\export.csv";
+            ExportService exportService = new ExportService();
+            await exportService.Export(path);
+        }
+
+        private static async Task DownloadFromSpotify()
+        {
             string sootifyArtistId = "2rfkmr5WzRN9D9gAfb2ycd"; // Spotify artist ID
             long appleArtistId = 42125570;
             string artistName = "Vesna";
@@ -19,9 +51,8 @@ namespace MusicAtlas
                 AppleId = appleArtistId,
                 SpotifyId = sootifyArtistId
             };
-            await importService.Import(seedInfo);
 
-            Console.WriteLine("Done.");
+            await importService.Import(seedInfo);
         }
     }
 }
