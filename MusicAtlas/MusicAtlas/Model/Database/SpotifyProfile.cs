@@ -4,6 +4,11 @@ namespace MusicAtlas.Model.Database
 {
     public class SpotifyProfile
     {
+        public SpotifyProfile()
+        {
+            Genres = new List<Genre>();
+        }
+
         [Key]
         public string Id { get; set; }
         public string Name { get; set; }

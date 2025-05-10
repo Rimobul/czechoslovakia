@@ -38,9 +38,9 @@ namespace MusicAtlas.Data
                 .WithOne(o => o.DestinationArtist)
                 .HasForeignKey(o => o.DestinationArtistId);
 
-            modelBuilder.Entity<Artist>()
+            modelBuilder.Entity<SpotifyProfile>()
                 .HasMany(c => c.Genres)
-                .WithMany(o => o.Artists);
+                .WithMany(o => o.SpotifyProfiles);
 
             modelBuilder.Entity<Link>()
                 .HasKey(l => new { l.SourceArtistId, l.DestinationArtistId });

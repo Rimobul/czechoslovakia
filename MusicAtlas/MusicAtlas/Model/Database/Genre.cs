@@ -6,13 +6,13 @@ namespace MusicAtlas.Model.Database
     {
         public Genre()
         {
-            Artists = new List<Artist>();
+            SpotifyProfiles = new List<SpotifyProfile>();
         }
 
         [Key]
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public List<Artist> Artists { get; set; }
+        public List<SpotifyProfile> SpotifyProfiles { get; set; }
         public DateTime LastUpdated { get; internal set; }
     }
 }

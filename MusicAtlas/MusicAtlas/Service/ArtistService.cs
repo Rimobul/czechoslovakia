@@ -8,6 +8,13 @@ namespace MusicAtlas.Service
 {
     public class ArtistService
     {
+        private readonly GenreService genreService;
+
+        public ArtistService()
+        {
+            genreService = new GenreService();
+        }
+
         public async Task<Model.Database.Artist> AddNewArtist(AppDbContext context, Model.Spotify.Artist input, int sourceIteration, ArtistStatus status)
         {
             var result = new Model.Database.Artist
@@ -18,9 +25,8 @@ namespace MusicAtlas.Service
                 Status = status
             };
 
-            result.SpotifyProfiles.Add(MapNewSpotifyProfile(input, null));
-
-            await HandleGenres(context, input, result);
+            var spotifyProfile = MapNewSpotifyProfile(input, null);
+            result.SpotifyProfiles.Add(spotifyProfile);
 
             context.Artists.Add(result);
             await context.SaveChangesAsync();
@@ -52,30 +58,6 @@ namespace MusicAtlas.Service
             return artist;
         }
 
-        private async Task HandleGenres(AppDbContext context, Model.Spotify.Artist input, Model.Database.Artist result)
-        {
-            var inputGenres = input.Genres;
-
-            foreach (var genre in inputGenres)
-            {
-                var existingGenre = await context.Genres.FirstOrDefaultAsync(x => x.Name == genre);
-
-                if (existingGenre != null)
-                {
-                    result.Genres.Add(existingGenre);
-                }
-                else
-                {
-                    result.Genres.Add(new Genre
-                    {
-                        Id = Guid.NewGuid(),
-                        Name = genre,
-                        LastUpdated = DateTime.Now,
-                    });
-                }
-            }
-        }
-
         private SpotifyProfile MapNewSpotifyProfile(Model.Spotify.Artist input, Track? bestTrack)
         {
             return new SpotifyProfile
@@ -103,9 +85,18 @@ namespace MusicAtlas.Service
             throw new NotImplementedException();
         }
 
-        internal Task UpdateSpotifyProfile(AppDbContext context, Model.Database.Artist artist, Model.Spotify.Artist spotifyArtist, Track? bestTrack)
+        internal async Task UpdateSpotifyProfile(AppDbContext context, Model.Database.Artist artist, Model.Spotify.Artist spotifyArtist, Track? bestTrack)
         {
-            throw new NotImplementedException();
+            var spotifyProfile = artist.SpotifyProfiles.Single(x => x.Id == spotifyArtist.Id);
+
+            spotifyProfile.BestTrackPopularity = bestTrack?.Popularity ?? 0;
+            spotifyProfile.LastUpdated = DateTime.UtcNow;
+            spotifyProfile.Name = spotifyArtist.Name;
+            spotifyProfile.Popularity = spotifyArtist.Popularity;
+
+            await genreService.UpdateGenresIfNeeded(context, spotifyProfile, spotifyArtist);
+
+            await context.SaveChangesAsync();
         }
 
         internal async Task UpdateAppleProfile(AppDbContext context, Model.Database.Artist artist, object appleArtist)

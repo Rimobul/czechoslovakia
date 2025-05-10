@@ -1,4 +1,5 @@
-﻿using MusicAtlas.Service;
+﻿using MusicAtlas.Model.Processing;
+using MusicAtlas.Service;
 
 namespace MusicAtlas
 {
@@ -6,13 +7,19 @@ namespace MusicAtlas
     {
         static async Task Main(string[] args)
         {
-            string artistId = "2rfkmr5WzRN9D9gAfb2ycd"; // Spotify artist ID
+            string sootifyArtistId = "2rfkmr5WzRN9D9gAfb2ycd"; // Spotify artist ID
+            long appleArtistId = 42125570;
             string artistName = "Vesna";
             string market = "SK"; //"CZ";
 
             ImportService importService = new ImportService();
 
-            await importService.Import(artistId);
+            SeedInfo seedInfo = new SeedInfo
+            {
+                AppleId = appleArtistId,
+                SpotifyId = sootifyArtistId
+            };
+            await importService.Import(seedInfo);
 
             Console.WriteLine("Done.");
         }
