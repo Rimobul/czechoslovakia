@@ -22,12 +22,22 @@ namespace MusicAtlas
                 case 2:
                     await ExportCSV();
                     break;
+                case 3:
+                    await ProcessCSV();
+                    break;
                 default:
                     Console.WriteLine("Invalid option");
                     break;
             }
 
             Console.WriteLine("Done.");
+        }
+
+        private static async Task ProcessCSV()
+        {
+            string path = @"C:\musicAtlas\export.csv";
+            CsvProcessingService csvProcessingService = new CsvProcessingService();
+            await csvProcessingService.Process(path);
         }
 
         private static async Task ExportCSV()

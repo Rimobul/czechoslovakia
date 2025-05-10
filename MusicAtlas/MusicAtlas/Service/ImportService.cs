@@ -48,9 +48,12 @@ namespace MusicAtlas.Service
 
             //var appleAccessToken = await appleService.GetAccessToken();
 
+            // Spotify IDs which already exist and should not be imported again
+            HashSet<string> skipIds = context.SpotifyProfiles.Select(x => x.Id).ToHashSet();
+
             foreach (var artist in acceptedArtists)
             {
-                await UpdateSpotifyInfo(context, artist, spotifyAccessToken);
+                await UpdateSpotifyInfo(context, artist, spotifyAccessToken, skipIds);
                 //await UpdateAppleInfo(context, artist, appleAccessToken);
                 await MarkAsProcessed(context, artist);
 
@@ -86,7 +89,7 @@ namespace MusicAtlas.Service
         //    }
         //}
 
-        private async Task UpdateSpotifyInfo(AppDbContext context, Model.Database.Artist artist, string spotifyAccessToken)
+        private async Task UpdateSpotifyInfo(AppDbContext context, Model.Database.Artist artist, string spotifyAccessToken, HashSet<string> skipIds)
         {
             var spotifyProfiles = artist.SpotifyProfiles;
 
@@ -107,7 +110,7 @@ namespace MusicAtlas.Service
                 var slovakSearchResult = await spotifyService.SearchSpotify(spotifyArtist.Name, Constants.SlovakMarket, spotifyAccessToken);
 
                 var linkableArtists = linkService.ExtractSpotifyArtists(
-                    spotifyArtist,
+                    skipIds,
                     new List<TrackCollection> { czechTracks, slovakTracks },
                     new List<ArtistCollection> { czechSearchResult, slovakSearchResult });
 
