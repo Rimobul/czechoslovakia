@@ -20,6 +20,7 @@ namespace MusicAtlas.Service
 
                 var newArtists = context.Artists
                     .Where(x => x.Status == ArtistStatus.New)
+                    .OrderBy(x => x.Name)
                     .Take(100);
 
                 var exportArtists = ConvertToExportArtists(newArtists);

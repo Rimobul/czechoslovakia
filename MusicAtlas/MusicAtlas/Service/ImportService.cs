@@ -42,7 +42,8 @@ namespace MusicAtlas.Service
         {
             var acceptedArtists = context.Artists
                 .Where(x => x.Status == ArtistStatus.Accepted)
-                .Include(x => x.SpotifyProfiles).ThenInclude(x => x.Genres);
+                .Include(x => x.SpotifyProfiles).ThenInclude(x => x.Genres)
+                .ToList();
 
             var spotifyAccessToken = await spotifyService.GetAccessToken();
 
@@ -50,9 +51,13 @@ namespace MusicAtlas.Service
 
             // Spotify IDs which already exist and should not be imported again
             HashSet<string> skipIds = context.SpotifyProfiles.Select(x => x.Id).ToHashSet();
+            var index = 0;
 
             foreach (var artist in acceptedArtists)
             {
+                index++;
+                Console.WriteLine($"{DateTime.UtcNow} - Processing {artist.Name} ({index}/{acceptedArtists.Count})");
+
                 await UpdateSpotifyInfo(context, artist, spotifyAccessToken, skipIds);
                 //await UpdateAppleInfo(context, artist, appleAccessToken);
                 await MarkAsProcessed(context, artist);
