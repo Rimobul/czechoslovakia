@@ -5,6 +5,7 @@ namespace MusicAtlas.Model.Processing
     internal class ExportArtist
     {
         public Guid Id { get; set; }
+        public string SpotifyLink { get; internal set; }
         public string Name { get; set; }
         public int Iteration { get; set; }
         public ArtistStatus Status { get; set; }
