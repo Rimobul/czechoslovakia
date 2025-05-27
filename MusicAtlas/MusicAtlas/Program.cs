@@ -7,30 +7,36 @@ namespace MusicAtlas
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Choose an option:");
-            Console.WriteLine("1. Download from Spotify");
-            Console.WriteLine("2. Export CSV");
-            Console.WriteLine("3. Process CSV");
-
-            var option = int.Parse(Console.ReadLine());
-
-            switch (option)
+            while (true)
             {
-                case 1:
-                    await DownloadFromSpotify();
-                    break;
-                case 2:
-                    await ExportCSV();
-                    break;
-                case 3:
-                    await ProcessCSV();
-                    break;
-                default:
-                    Console.WriteLine("Invalid option");
-                    break;
-            }
+                Console.WriteLine("Choose an option:");
+                Console.WriteLine("1. Download from Spotify");
+                Console.WriteLine("2. Export CSV");
+                Console.WriteLine("3. Process CSV");
+                Console.WriteLine("0. Exit");
 
-            Console.WriteLine("Done.");
+                var option = int.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+                        await DownloadFromSpotify();
+                        break;
+                    case 2:
+                        await ExportCSV();
+                        break;
+                    case 3:
+                        await ProcessCSV();
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
+                }
+
+                Console.WriteLine("Done.");
+            }
         }
 
         private static async Task ProcessCSV()
