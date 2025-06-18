@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Book Antiqua', 'Palatino Linotype', 'Palatino', serif;
   font-size: 16px;
   line-height: 1.6;
   background: var(--bg);
@@ -56,21 +56,40 @@ body.dark {
   width: 60px;
   height: 40px;
   margin-right: 20px;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  background: #fff;
   border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.flag-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    #dc143c 0px,
+    #dc143c 4px,
+    #0e3a8a 4px,
+    #0e3a8a 8px,
+    #fff 8px,
+    #fff 12px
+  );
 }
 
 .flag-stripe {
-  flex: 1;
+  display: none;
 }
 
 .flag-stripe.blue {
-  background: var(--blue);
+  display: none;
 }
 
 .flag-stripe.red {
-  background: var(--red);
+  display: none;
 }
 
 .title {
@@ -79,7 +98,7 @@ body.dark {
   color: var(--accent);
   margin: 0;
   flex: 1;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Book Antiqua', 'Palatino Linotype', 'Palatino', serif;
 }
 
 .header-controls {
