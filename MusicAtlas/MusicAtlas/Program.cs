@@ -13,6 +13,7 @@ namespace MusicAtlas
                 Console.WriteLine("1. Download from Spotify");
                 Console.WriteLine("2. Export CSV");
                 Console.WriteLine("3. Process CSV");
+                Console.WriteLine("4. Show stats");
                 Console.WriteLine("0. Exit");
 
                 var option = int.Parse(Console.ReadLine());
@@ -28,6 +29,9 @@ namespace MusicAtlas
                     case 3:
                         await ProcessCSV();
                         break;
+                    case 4:
+                        await ShowStatistics();
+                        break;
                     case 0:
                         return;
                     default:
@@ -36,6 +40,19 @@ namespace MusicAtlas
                 }
 
                 Console.WriteLine("Done.");
+            }
+        }
+
+        private static async Task ShowStatistics()
+        {
+            Console.WriteLine("Select level for which the stats should me shown.");
+            var maxIteration = int.Parse(Console.ReadLine());
+            StatisticsService statisticsService = new StatisticsService();
+            var statistic = await statisticsService.GetStatistics(maxIteration);
+
+            foreach (string statisticItem in statistic)
+            {
+                Console.WriteLine(statisticItem);
             }
         }
 
