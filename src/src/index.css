@@ -1,0 +1,40 @@
+/* Reset and base styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+
+  --bg: #242424;
+  --text: rgba(255, 255, 255, 0.87);
+  --blue: #646cff;
+  --red: #b7ff00;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: var(--blue);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--red);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.5em 0;
+}
+
+/* Remove Vite/React demo styles */
+.logo, .card, .read-the-docs {
+  display: none !important;
+}
