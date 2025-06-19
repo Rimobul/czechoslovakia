@@ -18,14 +18,14 @@ namespace MusicAtlas
             {
                 context.Database.EnsureCreated();
 
-                var allArtists = context.Artists
+                var allArtists = await context.Artists
                     .Where(x => x.Status == Model.Database.ArtistStatus.Processed
                         && x.Iteration <= maxIteration)
                     .Include(x => x.SpotifyProfiles)
                     .ThenInclude(x => x.Genres)
                     .Include(x => x.SourceLinks)
                     .Include(x => x.DestinationLinks)
-                    .ToList();
+                    .ToListAsync();
 
                 var artistIds = allArtists.Select(x => x.Id).ToHashSet();
 

@@ -23,7 +23,7 @@ namespace MusicAtlas.Service
                     .Include(x => x.SpotifyProfiles)
                     .Where(x => x.Status == ArtistStatus.New)
                     .OrderBy(x => x.Name)
-                    .Take(100);
+                    .Take(50);
 
                 var exportArtists = ConvertToExportArtists(newArtists);
 
