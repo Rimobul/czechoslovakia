@@ -1,74 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import './App.css'
-
-const navTree = [
-  {
-    key: 'item1',
-    children: [
-      { key: 'subitem11', link: '#' },
-      { key: 'subitem12', link: '#' },
-    ],
-  },
-  {
-    key: 'item2',
-    children: [],
-  },
-  {
-    key: 'item3',
-    children: [
-      { key: 'subitem31', link: '#' },
-      { key: 'subitem32', link: '#' },
-      { key: 'subitem33', link: '#' },
-    ],
-  },
-  {
-    key: 'item4',
-    children: [],
-  },
-  {
-    key: 'item5',
-    children: [],
-  },
-]
-
-function TreeMenu({ items }: { items: typeof navTree }) {
-  const { t } = useTranslation()
-  const [open, setOpen] = useState<string | null>(null)
-  
-  return (
-    <ul className="tree-menu">
-      {items.map((item) => (
-        <li key={item.key}>
-          <button
-            className="tree-menu-label"
-            aria-expanded={open === item.key}
-            onClick={() => setOpen(open === item.key ? null : item.key)}
-          >
-            {t(`menu.${item.key}`)}
-          </button>
-          {item.children.length > 0 && open === item.key && (
-            <ul className="submenu">
-              {item.children.map((child) => (
-                <li key={child.key}>
-                  <a href={child.link}>{t(`menu.${child.key}`)}</a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
-    </ul>
-  )
-}
 
 function App() {
   const { t, i18n } = useTranslation()
   const [dark, setDark] = useState(() =>
     window.matchMedia('(prefers-color-scheme: dark)').matches
   )
+  const [scrolled, setScrolled] = useState(false)
 
-  // Toggle theme and update body class
+  // Handle scroll for header shrinking
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Toggle theme
   const toggleTheme = () => {
     setDark((d) => {
       document.body.classList.toggle('dark', !d)
@@ -82,79 +32,148 @@ function App() {
   }
 
   // Ensure correct theme on mount
-  if (dark) document.body.classList.add('dark')
-  else document.body.classList.remove('dark')
+  useEffect(() => {
+    if (dark) document.body.classList.add('dark')
+    else document.body.classList.remove('dark')
+  }, [dark])
 
   return (
-    <div className="page-container">
-      {/* Header */}
-      <header className="header">
-        <div className="flag-icon">
-          <div className="flag-stripe blue"></div>
-          <div className="flag-stripe red"></div>
-        </div>
-        <h1 className="title">{t('title')}</h1>
-        <div className="header-controls">
-          <div className="language-switcher">
-            <button 
-              className={i18n.language === 'cs' ? 'active' : ''}
-              onClick={() => changeLanguage('cs')}
-            >
-              CS
-            </button>
-            <button 
-              className={i18n.language === 'sk' ? 'active' : ''}
-              onClick={() => changeLanguage('sk')}
-            >
-              SK
-            </button>
-            <button 
-              className={i18n.language === 'en' ? 'active' : ''}
-              onClick={() => changeLanguage('en')}
-            >
-              EN
-            </button>
+    <div className="app">
+      {/* Top Navigation */}
+      <nav className={`top-nav ${scrolled ? 'scrolled' : ''}`}>
+        <div className="nav-container">
+          <div className="nav-left">
+            <div className="logo">
+              <div className="logo-icon"></div>
+              <span className={`logo-text ${scrolled ? 'small' : ''}`}>
+                {scrolled ? 'NČ' : t('title')}
+              </span>
+            </div>
           </div>
-          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-            <span className="toggle-dot" />
-          </button>
+          <div className="nav-center">
+            <a href="#about" className="nav-link">{t('nav.about')}</a>
+            <span className="nav-separator">|</span>
+            <a href="#history" className="nav-link">{t('nav.history')}</a>
+            <span className="nav-separator">|</span>
+            <a href="#vision" className="nav-link">{t('nav.vision')}</a>
+            <span className="nav-separator">|</span>
+            <a href="#join" className="nav-link">{t('nav.join')}</a>
+            <span className="nav-separator">|</span>
+            <a href="#contact" className="nav-link">{t('nav.contact')}</a>
+          </div>
+          <div className="nav-right">
+            <div className="language-switcher">
+              <button 
+                className={i18n.language === 'cs' ? 'active' : ''}
+                onClick={() => changeLanguage('cs')}
+              >
+                CZ
+              </button>
+              <span>|</span>
+              <button 
+                className={i18n.language === 'sk' ? 'active' : ''}
+                onClick={() => changeLanguage('sk')}
+              >
+                Q
+              </button>
+              <span>|</span>
+              <button className="theme-toggle" onClick={toggleTheme}>
+                ☀
+              </button>
+            </div>
+          </div>
         </div>
-      </header>
-
-      {/* Navigation */}
-      <nav className="nav-bar">
-        <a href="#" className="nav-link">{t('nav.vision')}</a>
-        <span className="nav-separator">–</span>
-        <a href="#" className="nav-link">{t('nav.news')}</a>
-        <span className="nav-separator">–</span>
-        <a href="#" className="nav-link">{t('nav.blog')}</a>
-        <span className="nav-separator">–</span>
-        <a href="#" className="nav-link">{t('nav.atlas')}</a>
-        <span className="nav-separator">-</span>
-        <a href="#" className="nav-link">{t('nav.maps')}</a>
       </nav>
 
-      {/* Main Content */}
-      <div className="main-layout">
-        {/* Sidebar Menu */}
-        <aside className="sidebar">
-          <TreeMenu items={navTree} />
-        </aside>
-
-        {/* Content Area */}
-        <main className="content-area">
-          <p className="content-text">
-            {t('content.lorem')}
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-background"></div>
+        <div className="hero-content">
+          <h1 className="hero-title">
+            {t('hero.title')}
+          </h1>
+          <p className="hero-subtitle">
+            {t('hero.subtitle')}
           </p>
-          <div className="content-image">
-            <img 
-              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" 
-              alt="Architecture"
-              loading="lazy"
-            />
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <main className="main-content">
+        <div className="content-container">
+          {/* Sidebar */}
+          <aside className="sidebar">
+            <div className="sidebar-section">
+              <h3>{t('sidebar.about')}</h3>
+              <ul>
+                <li><a href="#who">{t('sidebar.who')}</a></li>
+                <li><a href="#what">{t('sidebar.what')}</a></li>
+                <li><a href="#why">{t('sidebar.why')}</a></li>
+                <li><a href="#goals">{t('sidebar.goals')}</a></li>
+                <li><a href="#mission">{t('sidebar.mission')}</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          {/* Content Area */}
+          <div className="content-area">
+            <section className="content-section">
+              <h2>{t('content.whoWeAre.title')}</h2>
+              <p>{t('content.whoWeAre.text')}</p>
+              
+              <div className="content-image">
+                <img 
+                  src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" 
+                  alt="Mountain landscape"
+                />
+              </div>
+
+              <h2>{t('content.whatWeWant.title')}</h2>
+              <p>{t('content.whatWeWant.text')}</p>
+            </section>
           </div>
-        </main>
-      </div>
+
+          {/* News Feed */}
+          <aside className="news-feed">
+            <h3>{t('news.title')}</h3>
+            <div className="news-item">
+              <p>{t('news.item1')}</p>
+            </div>
+            <div className="news-item">
+              <p>{t('news.item2')}</p>
+            </div>
+            <div className="news-item">
+              <p>{t('news.item3')}</p>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-section">
+            <h4>{t('footer.findUs')}</h4>
+            <div className="footer-map">
+              {/* Placeholder for map */}
+              <svg width="200" height="120" viewBox="0 0 200 120">
+                <path d="M20,20 L180,20 L180,100 L20,100 Z" fill="var(--accent)" opacity="0.3"/>
+                <text x="100" y="65" textAnchor="middle" fill="var(--text)" fontSize="12">
+                  {t('footer.mapPlaceholder')}
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div className="footer-section">
+            <h4>{t('footer.social')}</h4>
+            <div className="social-links">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
