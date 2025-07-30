@@ -12,8 +12,8 @@ const translations = {
             contact: "Zapojit se"
         },
         home: {
-            title: "Občanská iniciativa za sjednocení Československa",
-            subtitle: "Společně budujeme mosty mezi Českou republikou a Slovenskem",
+            title: "Nové Československo",
+            subtitle: "Iniciativa za sjednocení Československa",
             learn_more: "Zjistit více",
             get_involved: "Zapojit se",
             features: {
@@ -32,23 +32,32 @@ const translations = {
             }
         },
         about: {
-            title: "O naší iniciativě",
-            subtitle: "Naše vize budoucnosti založené na vzájemné spolupráci",
-            history: {
-                title: "Naše historie",
-                text: "Československo existovalo jako demokratický stát od roku 1918 do roku 1992. Naše iniciativa navazuje na bohaté dědictví společného soužití a usiluje o obnovení přirozených vazeb mezi českým a slovenským národem."
+            title: "Vize iniciativy Nové Československo",
+            subtitle: "Československo neskončilo",
+            opening: {
+                paragraph1: "Přesto, že uplynuly více než tři desetiletí po oficiálním rozdělení, na každém kroku vidíme živoucí spojení mezi Českem a Slovenskem. V Česku studují studenti a léčí lékaři ze Slovenska. Na Slovensku se čtou české knížky. V rádiích hrají společně české, slovenské i československé písničky. V televizích se díváme na koprodukované filmy a Československé talentové soutěže. V novinách se pořád dovídáme jeden o druhém to dobré, i to špatné. Téměř každá firma a instituce má zastoupení jak v Česku, tak i na Slovensku. Organizují se \"federální\" derby a sportovci vyjadřují touhu po společné reprezentaci.",
+                paragraph2: "Často to vypadá, že Československo je fakticky pořád tady. Jenom politici, zákony a úřady nám vytváří umělé bariéry. Pevně věříme, že je na čase tyto zbytečné bariéry odstranit."
             },
-            mission: {
-                title: "Naše mise",
-                text: "Věříme, že Češi a Slováci mají společnou budoucnost. Naším cílem není politická unifikace, ale vytvoření platformy pro hlubší spolupráci v oblasti kultury, vzdělávání, podnikání a občanské společnosti."
+            vision: {
+                title: "🎯 Krok za krokem k společnému státu",
+                text: "Nejsme vedení nostalgií, ale vizí budoucnosti, která bude silnější, svobodnější a soudržnější. Chceme stát, který spojí talenty, ekonomiky, kulturu i občanský hlas obou národů."
             },
-            values: {
-                title: "Naše hodnoty",
-                democracy: "Demokracie a svoboda",
-                cooperation: "Vzájemná spolupráce",
-                respect: "Respekt k tradicím",
-                future: "Společná budoucnost"
-            }
+            beliefs: {
+                title: "💡 Čemu věříme",
+                partnership: "V přirozené partnerství mezi Čechy a Slováky",
+                connection: "V propojení kultur, vzdělávání, podnikání i sportu",
+                initiative: "V sílu občanské iniciativy, která předbíhá politická rozhodnutí",
+                discussion: "V otevřenou diskusi o budoucnosti společného státu"
+            },
+            goals: {
+                title: "🛠️ Čeho chceme docílit",
+                community: "Spájet příznivce a budujeme komunitu",
+                events: "Organizovat veřejné akce, debaty a setkání",
+                support: "Podporovat studenty, podnikatele, zaměstnance i umělce při přeshraničním působení",
+                politics: "Vyzvat politické strany v Česku i na Slovensku, aby se témou sjednocení začali zabývat a k zaujetí jasného postoje"
+            },
+            calltoaction: "Připojte se k nám!",
+            slogan: "Nové Československo\nLepší spolu"
         },
         events: {
             title: "Nadcházející akce",
@@ -184,8 +193,8 @@ const translations = {
             contact: "Zapojiť sa"
         },
         home: {
-            title: "Občianska iniciatíva za zjednotenie Československa",
-            subtitle: "Spoločne budujeme mosty medzi Českou republikou a Slovenskom",
+            title: "Nové Československo",
+            subtitle: "Iniciatíva za zjednotenie Československa",
             learn_more: "Zistiť viac",
             get_involved: "Zapojiť sa",
             features: {
@@ -204,23 +213,32 @@ const translations = {
             }
         },
         about: {
-            title: "O našej iniciatíve",
-            subtitle: "Naša vízia budúcnosti založená na vzájomnej spolupráci",
-            history: {
-                title: "Naša história",
-                text: "Československo existovalo ako demokratický štát od roku 1918 do roku 1992. Naša iniciatíva nadväzuje na bohaté dedičstvo spoločného súžitia a usiluje o obnovenie prirodzených väzieb medzi českým a slovenským národom."
+            title: "Vízia iniciatívy Nové Československo",
+            subtitle: "Československo neskončilo",
+            opening: {
+                paragraph1: "Napriek tomu, že uplynuli viac ako tri desaťročia od oficiálneho rozdelenia, na každom kroku vidíme živé spojenie medzi Českom a Slovenskom. V Česku študujú študenti a liečia lekári zo Slovenska. Na Slovensku sa čítajú české knižky. V rádiách hrajú spoločne české, slovenské i československé pesničky. V televíziách sa pozeráme na koprodukované filmy a Československé talentové súťaže. V novinách sa stále dozvedáme jeden o druhom to dobré, aj to zlé. Takmer každá firma a inštitúcia má zastúpenie ako v Česku, tak aj na Slovensku. Organizujú sa \"federálne\" derby a športovci vyjadrujú túžbu po spoločnej reprezentácii.",
+                paragraph2: "Často to vyzerá, že Československo je fakticky stále tu. Len politici, zákony a úrady nám vytvárajú umelé bariéry. Pevne veríme, že je na čase tieto zbytočné bariéry odstrániť."
             },
-            mission: {
-                title: "Naša misia",
-                text: "Veríme, že Česi a Slováci majú spoločnú budúcnosť. Naším cieľom nie je politická unifikácia, ale vytvorenie platformy pre hlbšiu spoluprácu v oblasti kultúry, vzdelávania, podnikania a občianskej spoločnosti."
+            vision: {
+                title: "🎯 Krok za krokom k spoločnému štátu",
+                text: "Nie sme vedení nostalgiou, ale víziou budúcnosti, ktorá bude silnejšia, slobodnejšia a súdržnejšia. Chceme štát, ktorý spojí talenty, ekonomiky, kultúru i občiansky hlas oboch národov."
             },
-            values: {
-                title: "Naše hodnoty",
-                democracy: "Demokracia a sloboda",
-                cooperation: "Vzájomná spolupráca",
-                respect: "Rešpekt k tradíciám",
-                future: "Spoločná budúcnosť"
-            }
+            beliefs: {
+                title: "💡 Čomu veríme",
+                partnership: "V prirodzené partnerstvo medzi Čechmi a Slovákmi",
+                connection: "V prepojenie kultúr, vzdelávania, podnikania i športu",
+                initiative: "V silu občianskej iniciatívy, ktorá predbiehá politické rozhodnutia",
+                discussion: "V otvorenú diskusiu o budúcnosti spoločného štátu"
+            },
+            goals: {
+                title: "🛠️ Čoho chceme dosiahnuť",
+                community: "Spájať priaznivcov a budujeme komunitu",
+                events: "Organizovať verejné akcie, debaty a stretnutia",
+                support: "Podporovať študentov, podnikateľov, zamestnancov i umelcov pri cezhraničnom pôsobení",
+                politics: "Vyzvať politické strany v Česku i na Slovensku, aby sa témou zjednotenia začali zaoberať a zaujali jasný postoj"
+            },
+            calltoaction: "Pripojte sa k nám!",
+            slogan: "Nové Československo\nLepšie spolu"
         },
         events: {
             title: "Nadchádzajúce akcie",
@@ -356,8 +374,8 @@ const translations = {
             contact: "Get Involved"
         },
         home: {
-            title: "Citizens' Initiative for Czechoslovak Reunification",
-            subtitle: "Together we build bridges between the Czech Republic and Slovakia",
+            title: "New Czechoslovakia",
+            subtitle: "Initiative for Czechoslovak Reunification",
             learn_more: "Learn More",
             get_involved: "Get Involved",
             features: {
@@ -376,23 +394,32 @@ const translations = {
             }
         },
         about: {
-            title: "About Our Initiative",
-            subtitle: "Our vision for a future based on mutual cooperation",
-            history: {
-                title: "Our History",
-                text: "Czechoslovakia existed as a democratic state from 1918 to 1992. Our initiative builds on the rich heritage of shared coexistence and strives to restore natural bonds between the Czech and Slovak nations."
+            title: "Vision of the New Czechoslovakia Initiative",
+            subtitle: "Czechoslovakia never ended",
+            opening: {
+                paragraph1: "Despite more than three decades having passed since the official division, we see living connections between Czechia and Slovakia at every step. Students from Slovakia study and doctors heal in Czechia. Czech books are read in Slovakia. Radio stations play Czech, Slovak, and Czechoslovak songs together. We watch co-produced films and Czechoslovak talent shows on television. In newspapers, we still learn about each other's good and bad news. Almost every company and institution has representation in both Czechia and Slovakia. \"Federal\" derbies are organized and athletes express desire for joint representation.",
+                paragraph2: "It often seems that Czechoslovakia is still factually here. Only politicians, laws, and offices create artificial barriers for us. We firmly believe it's time to remove these unnecessary barriers."
             },
-            mission: {
-                title: "Our Mission",
-                text: "We believe that Czechs and Slovaks have a common future. Our goal is not political unification, but creating a platform for deeper cooperation in culture, education, business, and civil society."
+            vision: {
+                title: "🎯 Step by step towards a common state",
+                text: "We are not driven by nostalgia, but by a vision of the future that will be stronger, freer, and more cohesive. We want a state that connects the talents, economies, culture, and civic voice of both nations."
             },
-            values: {
-                title: "Our Values",
-                democracy: "Democracy and freedom",
-                cooperation: "Mutual cooperation",
-                respect: "Respect for traditions",
-                future: "Common future"
-            }
+            beliefs: {
+                title: "💡 What we believe in",
+                partnership: "In natural partnership between Czechs and Slovaks",
+                connection: "In connecting cultures, education, business, and sports",
+                initiative: "In the power of civic initiative that precedes political decisions",
+                discussion: "In open discussion about the future of a common state"
+            },
+            goals: {
+                title: "🛠️ What we want to achieve",
+                community: "Unite supporters and build community",
+                events: "Organize public events, debates, and meetings",
+                support: "Support students, entrepreneurs, employees, and artists in cross-border activities",
+                politics: "Call on political parties in Czechia and Slovakia to start addressing the topic of reunification and take a clear stance"
+            },
+            calltoaction: "Join us!",
+            slogan: "New Czechoslovakia\nBetter together"
         },
         events: {
             title: "Upcoming Events",

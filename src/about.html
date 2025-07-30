@@ -15,40 +15,8 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="flag-icon">🇨🇿🇸🇰</span>
-                <span data-translate="nav.logo">Nové Československo</span>
-            </div>
-            
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link" data-translate="nav.home">Domů</a>
-                <a href="about.html" class="nav-link active" data-translate="nav.about">O iniciativě</a>
-                <a href="events.html" class="nav-link" data-translate="nav.events">Akce</a>
-                <a href="business.html" class="nav-link" data-translate="nav.business">Podnikání</a>
-                <a href="news.html" class="nav-link" data-translate="nav.news">Novinky</a>
-                <a href="contact.html" class="nav-link" data-translate="nav.contact">Zapojit se</a>
-            </div>
-            
-            <div class="nav-controls">
-                <div class="language-selector">
-                    <button class="lang-btn active" data-lang="cs">🇨🇿</button>
-                    <button class="lang-btn" data-lang="sk">🇸🇰</button>
-                    <button class="lang-btn" data-lang="en">🇬🇧</button>
-                </div>
-                <button class="theme-toggle" aria-label="Toggle theme">
-                    <span class="theme-icon">🌙</span>
-                </button>
-                <button class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
+    <!-- Header will be loaded here -->
+    <div id="header"></div>
 
     <!-- Main Content -->
     <main class="page-main">
@@ -56,25 +24,38 @@
         <section class="page-content">
             <div class="container">
                 <div class="section-header">
-                    <h1 class="section-title" data-translate="about.title">O naší iniciativě</h1>
-                    <p class="section-subtitle" data-translate="about.subtitle">Naše vize budoucnosti založené na vzájemné spolupráci</p>
+                    <h1 class="section-title" data-translate="about.title">Vize iniciativy Nové Československo</h1>
+                    <p class="section-subtitle"><strong data-translate="about.subtitle">Československo neskončilo</strong></p>
                 </div>
                 
                 <div class="content-grid">
                     <div class="content-text">
-                        <h2 data-translate="about.history.title">Naše historie</h2>
-                        <p data-translate="about.history.text">Československo existovalo jako demokratický stát od roku 1918 do roku 1992. Naše iniciativa navazuje na bohaté dědictví společného soužití a usiluje o obnovení přirozených vazeb mezi českým a slovenským národem.</p>
+                        <p data-translate="about.opening.paragraph1">Přesto, že uplynuly více než tři desetiletí po oficiálním rozdělení, na každém kroku vidíme živoucí spojení mezi Českem a Slovenskem. V Česku studují studenti a léčí lékaři ze Slovenska. Na Slovensku se čtou české knížky. V rádiích hrají společně české, slovenské i československé písničky. V televizích se díváme na koprodukované filmy a Československé talentové soutěže. V novinách se pořád dovídáme jeden o druhém to dobré, i to špatné. Téměř každá firma a instituce má zastoupení jak v Česku, tak i na Slovensku. Organizují se "federální" derby a sportovci vyjadřují touhu po společné reprezentaci.</p>
                         
-                        <h2 data-translate="about.mission.title">Naše mise</h2>
-                        <p data-translate="about.mission.text">Věříme, že Češi a Slováci mají společnou budoucnost. Naším cílem není politická unifikace, ale vytvoření platformy pro hlubší spolupráci v oblasti kultury, vzdělávání, podnikání a občanské společnosti.</p>
+                        <p data-translate="about.opening.paragraph2">Často to vypadá, že Československo je fakticky pořád tady. Jenom politici, zákony a úřady nám vytváří umělé bariéry. Pevně věříme, že je na čase tyto zbytečné bariéry odstranit.</p>
                         
-                        <h2 data-translate="about.values.title">Naše hodnoty</h2>
+                        <h2 data-translate="about.vision.title">🎯 Krok za krokem k společnému státu</h2>
+                        <p data-translate="about.vision.text">Nejsme vedení nostalgií, ale vizí budoucnosti, která bude silnější, svobodnější a soudržnější.<br>
+                        Chceme stát, který spojí talenty, ekonomiky, kulturu i občanský hlas obou národů.</p>
+                        
+                        <h2 data-translate="about.beliefs.title">💡 Čemu věříme</h2>
                         <ul class="values-list">
-                            <li data-translate="about.values.democracy">Demokracie a svoboda</li>
-                            <li data-translate="about.values.cooperation">Vzájemná spolupráce</li>
-                            <li data-translate="about.values.respect">Respekt k tradicím</li>
-                            <li data-translate="about.values.future">Společná budoucnost</li>
+                            <li data-translate="about.beliefs.partnership">V přirozené partnerství mezi Čechy a Slováky</li>
+                            <li data-translate="about.beliefs.connection">V propojení kultur, vzdělávání, podnikání i sportu</li>
+                            <li data-translate="about.beliefs.initiative">V sílu občanské iniciativy, která předbíhá politická rozhodnutí</li>
+                            <li data-translate="about.beliefs.discussion">V otevřenou diskusi o budoucnosti společného státu</li>
                         </ul>
+                        
+                        <h2 data-translate="about.goals.title">🛠️ Čeho chceme docílit</h2>
+                        <ul class="values-list">
+                            <li data-translate="about.goals.community">Spájet příznivce a budujeme komunitu</li>
+                            <li data-translate="about.goals.events">Organizovat veřejné akce, debaty a setkání</li>
+                            <li data-translate="about.goals.support">Podporovat studenty, podnikatele, zaměstnance i umělce při přeshraničním působení</li>
+                            <li data-translate="about.goals.politics">Vyzvat politické strany v Česku i na Slovensku, aby se témou sjednocení začali zabývat a k zaujetí jasného postoje</li>
+                        </ul>
+                        
+                        <p><strong data-translate="about.calltoaction">Připojte se k nám!</strong></p>
+                        <p><em data-translate="about.slogan">Nové Československo<br>Lepší spolu</em></p>
                     </div>
                     <div class="content-image">
                         <img src="https://images.unsplash.com/photo-1564594985645-4427056293b4?w=600&h=400&fit=crop" alt="Prague Castle" class="about-image">
@@ -84,55 +65,10 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4 data-translate="footer.about.title">O nás</h4>
-                    <p data-translate="footer.about.text">Občanská iniciativa za obnovu přirozených vazeb mezi Českou republikou a Slovenskem.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 data-translate="footer.links.title">Rychlé odkazy</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html" data-translate="footer.links.about">O iniciativě</a></li>
-                        <li><a href="events.html" data-translate="footer.links.events">Akce</a></li>
-                        <li><a href="business.html" data-translate="footer.links.business">Podnikání</a></li>
-                        <li><a href="contact.html" data-translate="footer.links.contact">Kontakt</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 data-translate="footer.contact.title">Kontakt</h4>
-                    <p>Email: info@noveceskoslovensko.org</p>
-                    <p>Tel: +420 123 456 789</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4 data-translate="footer.map.title">Historické Československo</h4>
-                    <div class="footer-map">
-                        <svg viewBox="0 0 200 120" class="map-svg">
-                            <path d="M20,40 L180,40 L180,80 L20,80 Z" fill="var(--accent-blue)" opacity="0.3"/>
-                            <path d="M20,40 L120,40 L120,80 L20,80 Z" fill="var(--accent-red)" opacity="0.3"/>
-                            <text x="70" y="65" fill="currentColor" font-size="12" text-anchor="middle">Czechia</text>
-                            <text x="150" y="65" fill="currentColor" font-size="12" text-anchor="middle">Slovakia</text>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Občanská iniciativa za sjednocení Československa. <span data-translate="footer.rights">Všechna práva vyhrazena.</span></p>
-                <div class="footer-language">
-                    <button class="lang-btn small" data-lang="cs">🇨🇿 Čeština</button>
-                    <button class="lang-btn small" data-lang="sk">🇸🇰 Slovenčina</button>
-                    <button class="lang-btn small" data-lang="en">🇬🇧 English</button>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer will be loaded here -->
+    <div id="footer"></div>
 
+    <script src="js/includes.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
 </body>
