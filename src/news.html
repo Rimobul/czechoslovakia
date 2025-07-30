@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="title">Občanská iniciativa za sjednocení Československa</title>
-    <meta name="description" content="Občanská iniciativa za znovusjednocení Československa - podporujeme přeshraniční spolupráci mezi Českou republikou a Slovenskem">
+    <title data-translate="news.title">Aktuality - Občanská iniciativa za sjednocení Československa</title>
+    <meta name="description" content="Nejnovější zprávy a aktuality z činnosti občanské iniciativy za sjednocení Československa">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
@@ -24,11 +24,11 @@
             </div>
             
             <div class="nav-menu">
-                <a href="index.html" class="nav-link active" data-translate="nav.home">Domů</a>
+                <a href="index.html" class="nav-link" data-translate="nav.home">Domů</a>
                 <a href="about.html" class="nav-link" data-translate="nav.about">O iniciativě</a>
                 <a href="events.html" class="nav-link" data-translate="nav.events">Akce</a>
                 <a href="business.html" class="nav-link" data-translate="nav.business">Podnikání</a>
-                <a href="news.html" class="nav-link" data-translate="nav.news">Novinky</a>
+                <a href="news.html" class="nav-link active" data-translate="nav.news">Novinky</a>
                 <a href="contact.html" class="nav-link" data-translate="nav.contact">Zapojit se</a>
             </div>
             
@@ -51,40 +51,52 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
+    <main class="page-main">
+        <!-- News Section -->
         <section class="page-content">
-            <div class="hero">
-                <div class="hero-background"></div>
-                <div class="hero-content">
-                    <h1 class="hero-title" data-translate="home.title">Občanská iniciativa za sjednocení Československa</h1>
-                    <p class="hero-subtitle" data-translate="home.subtitle">Společně budujeme mosty mezi Českou republikou a Slovenskem</p>
-                    <div class="hero-buttons">
-                        <a href="about.html" class="btn-primary" data-translate="home.learn_more">Zjistit více</a>
-                        <a href="contact.html" class="btn-secondary" data-translate="home.get_involved">Zapojit se</a>
-                    </div>
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title" data-translate="news.title">Aktuality</h1>
+                    <p class="section-subtitle" data-translate="news.subtitle">Nejnovější zprávy z našich aktivit</p>
                 </div>
-            </div>
-            
-            <div class="home-features">
-                <div class="container">
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">🤝</div>
-                            <h3 data-translate="home.features.cooperation.title">Přeshraniční spolupráce</h3>
-                            <p data-translate="home.features.cooperation.description">Podporujeme projekty spojující české a slovenské občany</p>
+                
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=300&fit=crop" alt="Conference" class="news-image">
+                        <div class="news-content">
+                            <span class="news-category" data-translate="news.categories.events">Akce</span>
+                            <h3 data-translate="news.featured.title">Úspěšná konference v Praze</h3>
+                            <p data-translate="news.featured.excerpt">Více než 500 účastníků diskutovalo o budoucnosti česko-slovenských vztahů</p>
+                            <div class="news-meta">
+                                <span class="news-date">28. listopadu 2024</span>
+                                <a href="#" class="news-link" data-translate="news.read_more">Číst více</a>
+                            </div>
                         </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">🎭</div>
-                            <h3 data-translate="home.features.culture.title">Kulturní dědictví</h3>
-                            <p data-translate="home.features.culture.description">Oslavujeme společnou historii a tradice našich národů</p>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-content">
+                            <span class="news-category" data-translate="news.categories.business">Podnikání</span>
+                            <h3 data-translate="news.business.title">Nové partnerství mezi firmami</h3>
+                            <p data-translate="news.business.excerpt">Podepsáno 15 nových smluv o spolupráci</p>
+                            <div class="news-meta">
+                                <span class="news-date">25. listopadu 2024</span>
+                                <a href="#" class="news-link" data-translate="news.read_more">Číst více</a>
+                            </div>
                         </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">💼</div>
-                            <h3 data-translate="home.features.business.title">Obchodní příležitosti</h3>
-                            <p data-translate="home.features.business.description">Vytváříme platformu pro podnikatelskou spolupráci</p>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-content">
+                            <span class="news-category" data-translate="news.categories.culture">Kultura</span>
+                            <h3 data-translate="news.culture.title">Kulturní výměna pokračuje</h3>
+                            <p data-translate="news.culture.excerpt">Nový program pro mladé umělce</p>
+                            <div class="news-meta">
+                                <span class="news-date">22. listopadu 2024</span>
+                                <a href="#" class="news-link" data-translate="news.read_more">Číst více</a>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>

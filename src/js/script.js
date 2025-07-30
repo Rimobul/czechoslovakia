@@ -4,7 +4,6 @@ class CzechoslovakWebsite {
     constructor() {
         this.currentLanguage = 'cs';
         this.currentTheme = 'light';
-        this.currentPage = 'home';
         
         this.init();
     }
@@ -123,43 +122,17 @@ class CzechoslovakWebsite {
     
     // Navigation Management
     initNavigation() {
-        const hash = window.location.hash.slice(1);
-        if (hash && document.getElementById(hash)) {
-            this.currentPage = hash;
-        }
-        this.showPage(this.currentPage);
-    }
-    
-    showPage(pageId) {
-        // Hide all sections
-        const sections = document.querySelectorAll('.page-section');
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
-        
-        // Show target section
-        const targetSection = document.getElementById(pageId);
-        if (targetSection) {
-            targetSection.classList.add('active');
-            this.currentPage = pageId;
-            
-            // Update URL hash
-            history.pushState(null, null, `#${pageId}`);
-            
-            // Update navigation links
-            this.updateNavigationLinks();
-            
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        this.updateNavigationLinks();
     }
     
     updateNavigationLinks() {
         const navLinks = document.querySelectorAll('.nav-link');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
         navLinks.forEach(link => {
             link.classList.remove('active');
             const href = link.getAttribute('href');
-            if (href === `#${this.currentPage}`) {
+            if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
                 link.classList.add('active');
             }
         });
@@ -178,16 +151,6 @@ class CzechoslovakWebsite {
         langButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 this.setLanguage(btn.dataset.lang);
-            });
-        });
-        
-        // Navigation links
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const pageId = link.getAttribute('href').slice(1);
-                this.showPage(pageId);
             });
         });
         
@@ -222,40 +185,10 @@ class CzechoslovakWebsite {
             donateBtn.addEventListener('click', () => this.handleDonateClick());
         }
         
-        // Browser navigation
-        window.addEventListener('popstate', () => {
-            const hash = window.location.hash.slice(1) || 'home';
-            this.showPage(hash);
-        });
-        
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.altKey) {
                 switch(e.key) {
-                    case '1':
-                        e.preventDefault();
-                        this.showPage('home');
-                        break;
-                    case '2':
-                        e.preventDefault();
-                        this.showPage('about');
-                        break;
-                    case '3':
-                        e.preventDefault();
-                        this.showPage('events');
-                        break;
-                    case '4':
-                        e.preventDefault();
-                        this.showPage('business');
-                        break;
-                    case '5':
-                        e.preventDefault();
-                        this.showPage('news');
-                        break;
-                    case '6':
-                        e.preventDefault();
-                        this.showPage('contact');
-                        break;
                     case 't':
                         e.preventDefault();
                         this.toggleTheme();
@@ -430,13 +363,6 @@ class CzechoslovakWebsite {
     }
 }
 
-// Global functions for button onclick handlers
-function showPage(pageId) {
-    if (window.website) {
-        window.website.showPage(pageId);
-    }
-}
-
 // Initialize the website when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     window.website = new CzechoslovakWebsite();
@@ -454,7 +380,6 @@ document.addEventListener('DOMContentLoaded', () => {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 0 0 1rem 1rem;
             padding: 1rem;
             gap: 0.5rem;
             box-shadow: 0 10px 25px var(--shadow-medium);

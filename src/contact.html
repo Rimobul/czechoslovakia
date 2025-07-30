@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="title">Občanská iniciativa za sjednocení Československa</title>
-    <meta name="description" content="Občanská iniciativa za znovusjednocení Československa - podporujeme přeshraniční spolupráci mezi Českou republikou a Slovenskem">
+    <title data-translate="contact.title">Zapojte se do iniciativy - Občanská iniciativa za sjednocení Československa</title>
+    <meta name="description" content="Zapojte se do občanské iniciativy za sjednocení Československa - dobrovolnictví, podpora a kontakt">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
@@ -24,12 +24,12 @@
             </div>
             
             <div class="nav-menu">
-                <a href="index.html" class="nav-link active" data-translate="nav.home">Domů</a>
+                <a href="index.html" class="nav-link" data-translate="nav.home">Domů</a>
                 <a href="about.html" class="nav-link" data-translate="nav.about">O iniciativě</a>
                 <a href="events.html" class="nav-link" data-translate="nav.events">Akce</a>
                 <a href="business.html" class="nav-link" data-translate="nav.business">Podnikání</a>
                 <a href="news.html" class="nav-link" data-translate="nav.news">Novinky</a>
-                <a href="contact.html" class="nav-link" data-translate="nav.contact">Zapojit se</a>
+                <a href="contact.html" class="nav-link active" data-translate="nav.contact">Zapojit se</a>
             </div>
             
             <div class="nav-controls">
@@ -51,38 +51,61 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <!-- Home Section -->
+    <main class="page-main">
+        <!-- Contact Section -->
         <section class="page-content">
-            <div class="hero">
-                <div class="hero-background"></div>
-                <div class="hero-content">
-                    <h1 class="hero-title" data-translate="home.title">Občanská iniciativa za sjednocení Československa</h1>
-                    <p class="hero-subtitle" data-translate="home.subtitle">Společně budujeme mosty mezi Českou republikou a Slovenskem</p>
-                    <div class="hero-buttons">
-                        <a href="about.html" class="btn-primary" data-translate="home.learn_more">Zjistit více</a>
-                        <a href="contact.html" class="btn-secondary" data-translate="home.get_involved">Zapojit se</a>
-                    </div>
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title" data-translate="contact.title">Zapojte se do iniciativy</h1>
+                    <p class="section-subtitle" data-translate="contact.subtitle">Staňte se součástí našeho hnutí za lepší budoucnost</p>
                 </div>
-            </div>
-            
-            <div class="home-features">
-                <div class="container">
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">🤝</div>
-                            <h3 data-translate="home.features.cooperation.title">Přeshraniční spolupráce</h3>
-                            <p data-translate="home.features.cooperation.description">Podporujeme projekty spojující české a slovenské občany</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-options">
+                        <div class="contact-card">
+                            <h3 data-translate="contact.volunteer.title">Dobrovolnictví</h3>
+                            <p data-translate="contact.volunteer.description">Pomozte nám organizovat akce a šířit myšlenku spolupráce</p>
+                            <button class="btn-primary" data-translate="contact.volunteer.button">Stát se dobrovolníkem</button>
                         </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">🎭</div>
-                            <h3 data-translate="home.features.culture.title">Kulturní dědictví</h3>
-                            <p data-translate="home.features.culture.description">Oslavujeme společnou historii a tradice našich národů</p>
+                        
+                        <div class="contact-card">
+                            <h3 data-translate="contact.donate.title">Podpora</h3>
+                            <p data-translate="contact.donate.description">Finančně podpořte naše aktivity a projekty</p>
+                            <button class="btn-secondary" data-translate="contact.donate.button">Přispět</button>
                         </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">💼</div>
-                            <h3 data-translate="home.features.business.title">Obchodní příležitosti</h3>
-                            <p data-translate="home.features.business.description">Vytváříme platformu pro podnikatelskou spolupráci</p>
+                        
+                        <div class="contact-card">
+                            <h3 data-translate="contact.newsletter.title">Newsletter</h3>
+                            <p data-translate="contact.newsletter.description">Získejte nejnovější informace o našich aktivitách</p>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="váš@email.cz" class="newsletter-input">
+                                <button class="btn-primary" data-translate="contact.newsletter.button">Odebírat</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3 data-translate="contact.info.title">Kontaktní informace</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong data-translate="contact.info.email">Email:</strong>
+                                <a href="mailto:info@noveceskoslovensko.org">info@noveceskoslovensko.org</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong data-translate="contact.info.phone">Telefon:</strong>
+                                <span>+420 123 456 789</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong data-translate="contact.info.address">Adresa:</strong>
+                                <span>Wenceslas Square 1, 110 00 Praha 1</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">📸 Instagram</a>
+                            <a href="#" class="social-link">💼 LinkedIn</a>
                         </div>
                     </div>
                 </div>

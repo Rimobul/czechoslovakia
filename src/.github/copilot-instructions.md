@@ -1,4 +1,18 @@
-# 🌐 Website Specification: Czechoslovak Reunification Citizen Initiative
+# 🌐 Website Specification:## 🎨 Design & Style
+- **Themes**: Light (white-based) and Dark (black-based)
+- **Accent Colors**: Red (#dc2626) and blue (#2563eb)
+- **Font Preference**: Elegant serif fonts (Playfair Display + Source Serif Pro)
+- **Aesthetic**: Crisp, modern, sleek, elegant, minimalist
+- **Design Elements**:
+  - **Sticky navigation header** - always visible when scrolling
+  - **Sharp, geometric design** - no rounded corners anywhere
+  - **Transparent buttons** - outlined style with colored borders instead of filled
+  - **Clean lines and minimal styling**
+- **Imagery**:
+  - Large scenic or urban images as top/background visuals
+  - Mountain landscape hero image with gradient overlay
+  - Visuals that evoke Czechoslovakia's nature and culture
+  - Footer: Stylized map of Czechoslovakiaovak Reunification Citizen Initiative
 
 ## 📍 Purpose & Overview
 A **read-only multi-page website** to present and promote a citizen initiative advocating for the **reunification of Czechoslovakia**, while also supporting cross-border **events**, **collaborations**, and **business partnerships** between Czechia and Slovakia.
@@ -12,12 +26,14 @@ A **read-only multi-page website** to present and promote a citizen initiative a
 - Localization: **Czech**, **Slovak**, and **English**
 
 ## 📄 Site Structure (Multi-Page)
-- **Home**: Mission statement, symbolic image, language/theme switcher
-- **About the Initiative**: History, motivation, objectives
-- **Events**: Community gatherings, cultural meetups
-- **Business & Cooperation**: Resources and support for binational projects
-- **News & Updates**: Blog-style posts, announcements
-- **Get Involved**: Ways to support, volunteer, donate
+Each page is a separate HTML file for better SEO and traditional navigation:
+- **Home (index.html)**: Mission statement, hero section with mountain background, feature cards
+- **About (about.html)**: History, motivation, objectives, values
+- **Events (events.html)**: Community gatherings, cultural meetups, upcoming activities
+- **Business (business.html)**: Resources and support for binational projects, startup accelerator
+- **News (news.html)**: Blog-style posts, announcements, latest updates
+- **Contact (contact.html)**: Ways to support, volunteer, donate, contact information
+- **Navigation**: Sticky header with links to all pages
 - **Footer (Global)**:
   - Contact info
   - Embedded map of historic Czechoslovakia
@@ -44,12 +60,16 @@ A **read-only multi-page website** to present and promote a citizen initiative a
 - No frameworks or build tools required
 
 ## 🧩 Interactive Features
-- Language selector (flags)
-- Theme toggle (light/dark/system)
-- Image gallery/slideshow
-- Embedded map (footer)
-- Social media links
-- Newsletter sign-up (optional)
+- **Multi-language support** (Czech, Slovak, English) with flag selectors
+- **Theme toggle** (light/dark/system preference) - always visible in header
+- **Sticky navigation** - header remains visible while scrolling
+- **Transparent buttons** with colored borders and hover effects
+- **Newsletter subscription** with form validation
+- **Contact forms** for volunteering and donations
+- **Responsive mobile menu** for smaller screens
+- **Keyboard shortcuts** (Alt+T for theme toggle)
+- **Embedded map** (footer) showing historic Czechoslovakia
+- **Social media links**
 
 ## 📷 Content Plan
 - **Text & Images**: Start with stock imagery and sample copy
