@@ -1,13 +1,373 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">Občanská iniciativa za sjednocení Československa</title>
+    <meta name="description" content="Občanská iniciativa za znovusjednocení Československa - podporujeme přeshraniční spolupráci mezi Českou republikou a Slovenskem">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='50' fill='%23ffffff'/><rect y='50' width='100' height='50' fill='%23dc2626'/><rect y='25' width='100' height='50' fill='%232563eb'/></svg>">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="flag-icon">🇨🇿🇸🇰</span>
+                <span data-translate="nav.logo">Nové Československo</span>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-translate="nav.home">Domů</a>
+                <a href="#about" class="nav-link" data-translate="nav.about">O iniciativě</a>
+                <a href="#events" class="nav-link" data-translate="nav.events">Akce</a>
+                <a href="#business" class="nav-link" data-translate="nav.business">Podnikání</a>
+                <a href="#news" class="nav-link" data-translate="nav.news">Novinky</a>
+                <a href="#contact" class="nav-link" data-translate="nav.contact">Zapojit se</a>
+            </div>
+            
+            <div class="nav-controls">
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="cs">🇨🇿</button>
+                    <button class="lang-btn" data-lang="sk">🇸🇰</button>
+                    <button class="lang-btn" data-lang="en">🇬🇧</button>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="hero-background"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title" data-translate="home.title">Občanská iniciativa za sjednocení Československa</h1>
+                    <p class="hero-subtitle" data-translate="home.subtitle">Společně budujeme mosty mezi Českou republikou a Slovenskem</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="showPage('about')" data-translate="home.learn_more">Zjistit více</button>
+                        <button class="btn-secondary" onclick="showPage('contact')" data-translate="home.get_involved">Zapojit se</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="home-features">
+                <div class="container">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🤝</div>
+                            <h3 data-translate="home.features.cooperation.title">Přeshraniční spolupráce</h3>
+                            <p data-translate="home.features.cooperation.description">Podporujeme projekty spojující české a slovenské občany</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🎭</div>
+                            <h3 data-translate="home.features.culture.title">Kulturní dědictví</h3>
+                            <p data-translate="home.features.culture.description">Oslavujeme společnou historii a tradice našich národů</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💼</div>
+                            <h3 data-translate="home.features.business.title">Obchodní příležitosti</h3>
+                            <p data-translate="home.features.business.description">Vytváříme platformu pro podnikatelskou spolupráci</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="about.title">O naší iniciativě</h2>
+                    <p class="section-subtitle" data-translate="about.subtitle">Naše vize budoucnosti založené na vzájemné spolupráci</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h3 data-translate="about.history.title">Naše historie</h3>
+                        <p data-translate="about.history.text">Československo existovalo jako demokratický stát od roku 1918 do roku 1992. Naše iniciativa navazuje na bohaté dědictví společného soužití a usiluje o obnovení přirozených vazeb mezi českým a slovenským národem.</p>
+                        
+                        <h3 data-translate="about.mission.title">Naše mise</h3>
+                        <p data-translate="about.mission.text">Věříme, že Češi a Slováci mají společnou budoucnost. Naším cílem není politická unifikace, ale vytvoření platformy pro hlubší spolupráci v oblasti kultury, vzdělávání, podnikání a občanské společnosti.</p>
+                        
+                        <h3 data-translate="about.values.title">Naše hodnoty</h3>
+                        <ul class="values-list">
+                            <li data-translate="about.values.democracy">Demokracie a svoboda</li>
+                            <li data-translate="about.values.cooperation">Vzájemná spolupráce</li>
+                            <li data-translate="about.values.respect">Respekt k tradicím</li>
+                            <li data-translate="about.values.future">Společná budoucnost</li>
+                        </ul>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1564594985645-4427056293b4?w=600&h=400&fit=crop" alt="Prague Castle" class="about-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="events.title">Nadcházející akce</h2>
+                    <p class="section-subtitle" data-translate="events.subtitle">Setkání, diskuse a kulturní události</p>
+                </div>
+                
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">15</span>
+                            <span class="date-month" data-translate="events.months.dec">Pro</span>
+                        </div>
+                        <div class="event-content">
+                            <h3 data-translate="events.conference.title">Konference o budoucnosti</h3>
+                            <p class="event-location" data-translate="events.conference.location">Praha, Národní divadlo</p>
+                            <p data-translate="events.conference.description">Diskuse o možnostech hlubší spolupráce mezi ČR a SR</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">28</span>
+                            <span class="date-month" data-translate="events.months.dec">Pro</span>
+                        </div>
+                        <div class="event-content">
+                            <h3 data-translate="events.cultural.title">Kulturní večer</h3>
+                            <p class="event-location" data-translate="events.cultural.location">Bratislava, Reduta</p>
+                            <p data-translate="events.cultural.description">Společný koncert českých a slovenských umělců</p>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">05</span>
+                            <span class="date-month" data-translate="events.months.jan">Led</span>
+                        </div>
+                        <div class="event-content">
+                            <h3 data-translate="events.business.title">Business forum</h3>
+                            <p class="event-location" data-translate="events.business.location">Brno, Výstaviště</p>
+                            <p data-translate="events.business.description">Networking a podnikatelské příležitosti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Section -->
+        <section id="business" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="business.title">Podnikání a spolupráce</h2>
+                    <p class="section-subtitle" data-translate="business.subtitle">Platforma pro rozvoj česko-slovenských obchodních vztahů</p>
+                </div>
+                
+                <div class="business-grid">
+                    <div class="business-card">
+                        <div class="business-icon">🚀</div>
+                        <h3 data-translate="business.startups.title">Startup accelerator</h3>
+                        <p data-translate="business.startups.description">Podporujeme inovativní projekty spojující oba trhy</p>
+                        <a href="#contact" class="card-link" data-translate="business.learn_more">Zjistit více</a>
+                    </div>
+                    
+                    <div class="business-card">
+                        <div class="business-icon">🏭</div>
+                        <h3 data-translate="business.manufacturing.title">Průmyslová spolupráce</h3>
+                        <p data-translate="business.manufacturing.description">Síťování výrobních podniků a dodavatelů</p>
+                        <a href="#contact" class="card-link" data-translate="business.learn_more">Zjistit více</a>
+                    </div>
+                    
+                    <div class="business-card">
+                        <div class="business-icon">🎓</div>
+                        <h3 data-translate="business.education.title">Vzdělávací programy</h3>
+                        <p data-translate="business.education.description">Výměnné stáže a společné projekty univerzit</p>
+                        <a href="#contact" class="card-link" data-translate="business.learn_more">Zjistit více</a>
+                    </div>
+                    
+                    <div class="business-card">
+                        <div class="business-icon">💡</div>
+                        <h3 data-translate="business.innovation.title">Inovační centrum</h3>
+                        <p data-translate="business.innovation.description">Společný výzkum a vývoj nových technologií</p>
+                        <a href="#contact" class="card-link" data-translate="business.learn_more">Zjistit více</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="news.title">Aktuality</h2>
+                    <p class="section-subtitle" data-translate="news.subtitle">Nejnovější zprávy z našich aktivit</p>
+                </div>
+                
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=300&fit=crop" alt="Conference" class="news-image">
+                        <div class="news-content">
+                            <span class="news-category" data-translate="news.categories.events">Akce</span>
+                            <h3 data-translate="news.featured.title">Úspěšná konference v Praze</h3>
+                            <p data-translate="news.featured.excerpt">Více než 500 účastníků diskutovalo o budoucnosti česko-slovenských vztahů</p>
+                            <div class="news-meta">
+                                <span class="news-date">28. listopadu 2024</span>
+                                <a href="#" class="news-link" data-translate="news.read_more">Číst více</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-content">
+                            <span class="news-category" data-translate="news.categories.business">Podnikání</span>
+                            <h3 data-translate="news.business.title">Nové partnerství mezi firmami</h3>
+                            <p data-translate="news.business.excerpt">Podepsáno 15 nových smluv o spolupráci</p>
+                            <div class="news-meta">
+                                <span class="news-date">25. listopadu 2024</span>
+                                <a href="#" class="news-link" data-translate="news.read_more">Číst více</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-content">
+                            <span class="news-category" data-translate="news.categories.culture">Kultura</span>
+                            <h3 data-translate="news.culture.title">Kulturní výměna pokračuje</h3>
+                            <p data-translate="news.culture.excerpt">Nový program pro mladé umělce</p>
+                            <div class="news-meta">
+                                <span class="news-date">22. listopadu 2024</span>
+                                <a href="#" class="news-link" data-translate="news.read_more">Číst více</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="contact.title">Zapojte se do iniciativy</h2>
+                    <p class="section-subtitle" data-translate="contact.subtitle">Staňte se součástí našeho hnutí za lepší budoucnost</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-options">
+                        <div class="contact-card">
+                            <h3 data-translate="contact.volunteer.title">Dobrovolnictví</h3>
+                            <p data-translate="contact.volunteer.description">Pomozte nám organizovat akce a šířit myšlenku spolupráce</p>
+                            <button class="btn-primary" data-translate="contact.volunteer.button">Stát se dobrovolníkem</button>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h3 data-translate="contact.donate.title">Podpora</h3>
+                            <p data-translate="contact.donate.description">Finančně podpořte naše aktivity a projekty</p>
+                            <button class="btn-secondary" data-translate="contact.donate.button">Přispět</button>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <h3 data-translate="contact.newsletter.title">Newsletter</h3>
+                            <p data-translate="contact.newsletter.description">Získejte nejnovější informace o našich aktivitách</p>
+                            <div class="newsletter-form">
+                                <input type="email" placeholder="váš@email.cz" class="newsletter-input">
+                                <button class="btn-primary" data-translate="contact.newsletter.button">Odebírat</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3 data-translate="contact.info.title">Kontaktní informace</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong data-translate="contact.info.email">Email:</strong>
+                                <a href="mailto:info@noveceskoslovensko.org">info@noveceskoslovensko.org</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong data-translate="contact.info.phone">Telefon:</strong>
+                                <span>+420 123 456 789</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong data-translate="contact.info.address">Adresa:</strong>
+                                <span>Wenceslas Square 1, 110 00 Praha 1</span>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">📸 Instagram</a>
+                            <a href="#" class="social-link">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-translate="footer.about.title">O nás</h4>
+                    <p data-translate="footer.about.text">Občanská iniciativa za obnovu přirozených vazeb mezi Českou republikou a Slovenskem.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer.links.title">Rychlé odkazy</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about" data-translate="footer.links.about">O iniciativě</a></li>
+                        <li><a href="#events" data-translate="footer.links.events">Akce</a></li>
+                        <li><a href="#business" data-translate="footer.links.business">Podnikání</a></li>
+                        <li><a href="#contact" data-translate="footer.links.contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer.contact.title">Kontakt</h4>
+                    <p>Email: info@noveceskoslovensko.org</p>
+                    <p>Tel: +420 123 456 789</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="footer.map.title">Historické Československo</h4>
+                    <div class="footer-map">
+                        <svg viewBox="0 0 200 120" class="map-svg">
+                            <path d="M20,40 L180,40 L180,80 L20,80 Z" fill="var(--accent-blue)" opacity="0.3"/>
+                            <path d="M20,40 L120,40 L120,80 L20,80 Z" fill="var(--accent-red)" opacity="0.3"/>
+                            <text x="70" y="65" fill="currentColor" font-size="12" text-anchor="middle">Czechia</text>
+                            <text x="150" y="65" fill="currentColor" font-size="12" text-anchor="middle">Slovakia</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Občanská iniciativa za sjednocení Československa. <span data-translate="footer.rights">Všechna práva vyhrazena.</span></p>
+                <div class="footer-language">
+                    <button class="lang-btn small" data-lang="cs">🇨🇿 Čeština</button>
+                    <button class="lang-btn small" data-lang="sk">🇸🇰 Slovenčina</button>
+                    <button class="lang-btn small" data-lang="en">🇬🇧 English</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/script.js"></script>
+</body>
 </html>

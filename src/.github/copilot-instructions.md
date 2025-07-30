@@ -1,38 +1,62 @@
-# Copilot Instructions for "New Czechoslovakia" Website
+# 🌐 Website Specification: Czechoslovak Reunification Citizen Initiative
 
-## Purpose
-This repository hosts the frontend code for the landing page of the **New Czechoslovakia** political-civil movement. The design emphasizes unity, modernity, and dignity, reflecting our mission to promote dialogue around the peaceful reunification of the Czech and Slovak republics.
+## 📍 Purpose & Overview
+A **read-only multi-page website** to present and promote a citizen initiative advocating for the **reunification of Czechoslovakia**, while also supporting cross-border **events**, **collaborations**, and **business partnerships** between Czechia and Slovakia.
 
-## Design Principles
-- **Visual tone**: Clean, serious, and hopeful. Balances tradition with modern, slightly futuristic UI.
-- **Color palette**: 
-  - Background: White or very light grey (#f9f9f9)
-  - Accents: Blood red (#b20000) and royal blue (#0033a0)
-  - Text: Black for body, white or blue for headers and links
-- **Layout**: 
-  - Sticky vertical top-aligned navigation menu with logo, language selector, theme toggle, and search
-  - Hero image at top with readable heading and subtitle overlay
-  - Three-column layout: section menu, main content, live news feed
-  - Footer with legal links and a clickable map of Czechoslovakia’s regions
+## 🎯 Target Audience
+- Czech and Slovak citizens of all ages:
+  - **Students** exploring education opportunities
+  - **Professionals** interested in cross-border cooperation
+  - **Seniors** nostalgic for historic unity
+- International visitors with Czech/Slovak heritage or cultural interest
+- Localization: **Czech**, **Slovak**, and **English**
 
-## Behavior and Features
+## 📄 Site Structure (Multi-Page)
+- **Home**: Mission statement, symbolic image, language/theme switcher
+- **About the Initiative**: History, motivation, objectives
+- **Events**: Community gatherings, cultural meetups
+- **Business & Cooperation**: Resources and support for binational projects
+- **News & Updates**: Blog-style posts, announcements
+- **Get Involved**: Ways to support, volunteer, donate
+- **Footer (Global)**:
+  - Contact info
+  - Embedded map of historic Czechoslovakia
+  - Social media links
+  - Flag icons for language selection
+  - Theme toggle (light/dark/system preference)
+
+## 🎨 Design & Style
+- **Themes**: Light (white-based) and Dark (black-based)
+- **Accent Colors**: Red and blue
+- **Font Preference**: Elegant serif with flexibility
+- **Aesthetic**: Crisp, modern, sleek, elegant
+- **Imagery**:
+  - Large scenic or urban images as top/background visuals
+  - Visuals that evoke Czechoslovakia’s nature and culture
+  - Footer: Stylized map of Czechoslovakia
+
+## 📱 Responsiveness
+- Fully responsive across mobile, tablet, and desktop
+- Optimized UI for all devices
+
+## ⚙️ Technology Stack
+- **Frontend Only**: Vanilla HTML, CSS, JS
+- No frameworks or build tools required
+
+## 🧩 Interactive Features
+- Language selector (flags)
 - Theme toggle (light/dark/system)
-- Responsive design for desktop and mobile
-- Scroll behavior: Main heading shrinks and docks to top-left in nav on scroll
-- Accessibility: Semantic HTML, proper contrast, keyboard navigation support
+- Image gallery/slideshow
+- Embedded map (footer)
+- Social media links
+- Newsletter sign-up (optional)
 
-## Content Blocks
-- **Why Now?** and **Our Vision** articles feature images, concise persuasive text, and optional call-to-action buttons
-- **Live News Feed** updates automatically (to be implemented)
-- Footer includes regional navigation via image map (interactive SVG or <map> tag)
+## 📷 Content Plan
+- **Text & Images**: Start with stock imagery and sample copy
+- Mission statement, history section, and sample event listings provided during generation
 
-## Notes to Copilot
-- Use semantic HTML5 structure (header, nav, main, aside, footer)
-- Use Flexbox/Grid for responsive layout
-- Ensure accessibility: `aria` labels, keyboard support, sufficient color contrast
-- Keep JS modular and minimal; focus on progressive enhancement
-- Style with CSS custom properties to allow future theming
-
-## Future Enhancements
-- Server-side CMS integration for content/news
-- Animation for hero transitions and heading movement on scroll
+## 🌍 Domain & Hosting
+- No current domain
+- Open to suggestions
+- Static site hosting options:
+  - GitHub Pages
