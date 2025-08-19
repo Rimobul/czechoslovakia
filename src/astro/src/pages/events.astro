@@ -1,0 +1,48 @@
+---
+import Layout from '../components/Layout.astro';
+---
+<Layout title="Nadcházející akce">
+  <section class="page-content">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title" data-translate="events.title">Nadcházející akce</h1>
+        <p class="section-subtitle" data-translate="events.subtitle">Setkání, diskuse a kulturní události</p>
+      </div>
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-date">
+            <span class="date-day">15</span>
+            <span class="date-month" data-translate="events.months.dec">Pro</span>
+          </div>
+          <div class="event-content">
+            <h3 data-translate="events.conference.title">Konference o budoucnosti</h3>
+            <p class="event-location" data-translate="events.conference.location">Praha, Národní divadlo</p>
+            <p data-translate="events.conference.description">Diskuse o možnostech hlubší spolupráce mezi ČR a SR</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="date-day">28</span>
+            <span class="date-month" data-translate="events.months.dec">Pro</span>
+          </div>
+          <div class="event-content">
+            <h3 data-translate="events.cultural.title">Kulturní večer</h3>
+            <p class="event-location" data-translate="events.cultural.location">Bratislava, Reduta</p>
+            <p data-translate="events.cultural.description">Společný koncert českých a slovenských umělců</p>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="date-day">05</span>
+            <span class="date-month" data-translate="events.months.jan">Led</span>
+          </div>
+          <div class="event-content">
+            <h3 data-translate="events.business.title">Business forum</h3>
+            <p class="event-location" data-translate="events.business.location">Brno, Výstaviště</p>
+            <p data-translate="events.business.description">Networking a podnikatelské příležitosti</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

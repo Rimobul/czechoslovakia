@@ -1,0 +1,13 @@
+---
+import Layout from '../components/Layout.astro';
+const { pathname } = Astro.request;
+---
+<Layout title="Not Found">
+  <section class="page-content">
+    <div class="container">
+      <h1>404</h1>
+      <p>Page not found: {pathname}</p>
+      <p><a href="/">Return home</a></p>
+    </div>
+  </section>
+</Layout>

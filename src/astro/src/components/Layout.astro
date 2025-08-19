@@ -1,0 +1,29 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+const { title = 'Nové Československo', lang = 'cs' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang={lang} data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <script type="module" src="/js/translations.js"></script>
+    <script type="module" src="/js/script.js"></script>
+  </body>
+</html>
+
+<style>
+main { min-height: 60vh; }
+</style>
