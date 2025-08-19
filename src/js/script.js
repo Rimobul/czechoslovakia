@@ -218,12 +218,8 @@ class CzechoslovakWebsite {
                         : 'rgba(255, 255, 255, 0.25)';
                 }
                 
-                // Hide/show navbar on scroll
-                if (currentScrollY > lastScrollY && currentScrollY > 200) {
-                    navbar.style.transform = 'translateY(-100%)';
-                } else {
-                    navbar.style.transform = 'translateY(0)';
-                }
+                // Keep navbar always visible (sticky behavior)
+                navbar.style.transform = 'translateY(0)';
             }
             
             lastScrollY = currentScrollY;
@@ -363,8 +359,9 @@ class CzechoslovakWebsite {
     }
 }
 
-// Initialize the website when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize the website after includes are loaded so buttons exist
+function bootSite() {
+    if (window.website) return; // already booted
     window.website = new CzechoslovakWebsite();
     
     // Add some additional styling for mobile menu
@@ -441,4 +438,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
     
     console.log('🇨🇿🇸🇰 Československá iniciativa úspěšně načtena / Česko-slovenská iniciatíva úspešne načítaná / Czechoslovak initiative successfully loaded');
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.includesLoaded) {
+            bootSite();
+        } else {
+            document.addEventListener('includes:loaded', bootSite, { once: true });
+        }
+    });
+} else {
+    if (window.includesLoaded) bootSite();
+    else document.addEventListener('includes:loaded', bootSite, { once: true });
+}

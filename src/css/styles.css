@@ -163,8 +163,8 @@ img {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
-    z-index: 1000;
-    transition: all var(--transition-normal);
+    z-index: 1100;
+    transition: background var(--transition-normal), transform var(--transition-normal);
 }
 
 .nav-container {
