@@ -1,35 +1,66 @@
 # Proč by se mělo Československo sjednodit?
 
-1. Silnější hlas v EÚ a NATO.
-    - Už bychom nebyli dvě malé země, které si cizinci pletou s Čečenskem, nebo Slovinskem. Naopak, byli bychom zemí střední velikosti, která má v zahraničí zvučné jméno.
-2. Stabilnější vnitřní i zahraniční politika.
-    - Vždy, když stávající opozice nahradí koalici, prvních pár let jen demontuje a odvolává to, co předchozí vláda schválila. Jak v Česku, tak na Slovensku. Když vy na daních uberete, tak my přidáme. Když vy něco zavedete, my to zrušíme. Když vy táhnete k Západu, tak my k Východu. Ve společném státě by se tyto protichodné síly víc vyvažovali, a místo zbytečných rozkolů by museli hledat společnou cestu vpřed.
-3. Efektivnější státní správa.
-    - Jedna vláda, jeden parlament, méně duplicit.
-4. Společná armáda.
-    - Společně máme potenciál být 10. nejsilnější armáda v NATO.
-5. Větší jednotný trh.
-    - Více zákazníků znamená pro podnikatele větší obrat a znížení nákladů. Více firem v jednom státě znamená pro zákazníky větší kvalitu a nižší ceny.
-6. Lákavější pro zahraniční investice.
-    - Větší stát, více obyvatel, větší atraktivita pro cizí kapitál.
-7. Společná energetická politika.
-    - Propojení elektrických, plynových a vodovodních sítí znamená větší stabilitu a ochranu před případnými blackouty, vyplými ruskými kohoutky nebo suchem. 
-8. Jednotná kupní síla.
-    - Lepší vyjednávací podmínky při společném nákupu ze zahraničí. Třeba když stát bude chtít nakupovat vakcíny proti další pandemii, nebo uran pro jaderné elektrátny.
-9. Jazyková blízkost.
-    - Jednoducho si rozumieme.
-10. Společná historie.
-    - Těch téměř 100 společných let nejde jen tak zahodit.
-11. Sdílené hodnoty.
-    - Jsme takovými středoevropskými pragmatiky. Ideální rovnováha mezi západním idealismem a východním zpátečníctvem.
-12. Bohatší kultura.
-    - Více knih, hudby, filmů, obrazu a soch... 
-13. Společná věda a výzkum
-    - Víc hlav víc umí.
-14. Společné sportovní reprezentace.
-    - Víte kolik zlatých medajlí by naši sportovci získali, kdyby reprezentovali Československo společně? Všechny.
-15. Symbol světu.
-    - V dnešní době, kdy je společnost v každém státě, ale napříč zeměkoulí rozdělena nesmířitelnými ideologickými sváry můžeme ukázat, že vzájemná spolupráce je nejen potřebná, ale i možná.
+1. Silnější hlas v EU a NATO
+    - Nebyli bychom dvě malé země, které si cizinci pletou s Čečenskem nebo Slovinskem. Stali bychom se státem střední velikosti se zvučným jménem a větším vlivem na mezinárodní scéně.
+
+1. Stabilnější vnitřní politika
+    - Po každé změně vlády se v obou zemích často ruší kroky předchůdců. Ve společném státě by se protichůdné síly více vyvažovaly a hledala by se společná cesta vpřed místo zbytečných rozkolů.
+
+1. Jednoznačná mezinárodní orientace
+    - Stabilizovaním politcké scény bychom předešli lavírování mezi Východem a Západem. Přestaly bychom v našich partnerech vzbuzovat rozpaky a jednoznačně dali najevo, kam chceme patřit.
+
+1. Efektivnější státní správa
+    - Jedna vláda, jeden parlament, méně duplicit a úspornejší provoz.
+
+1. Společná armáda
+    - Společně bychom měli potenciál patřit mezi deset nejsilnějších armád NATO.
+
+1. Větší jednotný trh
+    - Více zákazníků znamená větší obrat pro podnikatele a nižší náklady. Větší konkurence zase přináší lepší kvalitu a nižší ceny pro spotřebitele.
+
+1. Lákavější pro zahraniční investice
+    - Větší stát s více obyvateli je atraktivnější pro zahraniční kapitál.
+
+1. Vyšší mezinárodní prestiž  
+    - Návrat značky „Československo“ by měl silný marketingový efekt — od turismu po export.
+
+1. Společná energetická politika
+    - Propojení elektrických, plynových a vodovodních sítí zvyšuje stabilitu a chrání před blackouty, výpadky dodávek nebo suchem.
+
+1. Silnější regionální rozvoj
+    - Společné plánování infrastruktury (dálnice, železnice, letiště) by odstranilo mezery a zlepšilo propojení regionů.
+
+1. Jednotná kupní síla
+    - Silnější vyjednávací pozice při společných nákupech — od vakcín po suroviny pro energetiku.
+
+1. Jazyková blízkost
+    - Bez překladatelů, bez bariér — jednoducho si rozumieme.
+
+1. Společná historie
+    - Téměř sto let společného státu je dědictví, které má hodnotu.
+
+1. Sdílené hodnoty
+    - Středoevropský pragmatismus: rovnováha mezi západním idealismem a východním konzervatismem.
+
+1. Bohatší kultura
+    - Více knih, hudby, filmů, výtvarného umění i folkloru.
+
+1. Společná věda a výzkum
+    - Víc hlav víc ví — a společné projekty mají větší šanci na mezinárodní úspěch.
+
+1. Společné sportovní reprezentace
+    - Spojené sportovní tými by byli neporazitelné.
+
+1. Silnější kulturní a turistická značka
+    - Spojením by vznikla destinace, která by nabízela Tatry i Prahu, Šumavu i Slovenský ráj, Karlovy Vary i Piešťany — vše pod jednou „značkou“. To by usnadnilo propagaci v zahraničí a přilákalo více turistů.
+
+1. Lepší ochrana přídrody a využití přírodních zdrojů a surovin
+    - Společný stát by mohl strategicky plánovat těžbu, ochranu a využívání nerostných surovin, lesů, vodních zdrojů a zemědělské půdy tak, aby se doplňovaly silné stránky obou částí země a zachovala přirozená biodiverzita.
+
+1. Symbol pro svět
+    - V době ideologických rozkolů bychom ukázali, že spolupráce je nejen potřebná, ale i možná.
+
+---
 
 ## Co může Česko nabídnout Slovensku?
 
