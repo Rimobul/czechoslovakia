@@ -57,7 +57,8 @@ Each page is a separate HTML file for better SEO and traditional navigation:
 
 ## ⚙️ Technology Stack
 - **Frontend Only**: Vanilla HTML, CSS, JS
-- No frameworks or build tools required
+- Using the astro framework for content (HTML)
+- Using Bulma as the CSS framework
 
 ## 🧩 Interactive Features
 - **Multi-language support** (Czech, Slovak, English) with flag selectors

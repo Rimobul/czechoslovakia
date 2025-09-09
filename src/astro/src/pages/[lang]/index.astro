@@ -1,0 +1,24 @@
+---
+import Layout from '../../components/Layout.astro';
+import { translations, languages } from '../../i18n/translations';
+export async function getStaticPaths() {
+  return languages.map(lang => ({ params: { lang } }));
+}
+const { lang } = Astro.params;
+const t = translations[lang];
+---
+<Layout title={t.title} lang={lang}>
+  <section class="page-content">
+    <div class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-content">
+        <h1 class="hero-title" data-translate="home.title">{t.home.title}</h1>
+        <p class="hero-subtitle" data-translate="home.subtitle">{t.home.subtitle}</p>
+        <div class="hero-buttons">
+          <a href={`/${lang}/about`} class="btn-primary" data-translate="home.learn_more">{t.home.learn_more}</a>
+          <a href={`/${lang}/contact`} class="btn-secondary" data-translate="home.get_involved">{t.home.get_involved}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

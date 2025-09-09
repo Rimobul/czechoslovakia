@@ -4,13 +4,26 @@ class SiteController {
     this.currentLanguage = 'cs';
     this.currentTheme = 'light';
     this.animationObserved = false;
+    this.translations = null;
     this.initTheme();
-    this.initLanguage();
-    this.bindEvents();
-    this.highlightNav();
-    this.updateContent();
-    this.initScrollEffects();
-    this.animateOnScroll();
+    this.loadTranslations().then(()=>{
+      this.initLanguage();
+      this.bindEvents();
+      this.highlightNav();
+      this.updateContent();
+      this.initScrollEffects();
+      this.animateOnScroll();
+    });
+  }
+  async loadTranslations(){
+    // Try dynamic import of ESM bundle (built asset path may vary if hashed; keep fallback to global)
+    try {
+      const mod = await import('/src/i18n/translations.ts');
+      this.translations = mod.translations;
+    } catch(e){
+      // Fallback to global if present
+      if (window.translations) this.translations = window.translations; else console.warn('Translations module not found');
+    }
   }
   initTheme(){
     const saved = localStorage.getItem('theme');
@@ -31,11 +44,13 @@ class SiteController {
   initLanguage(){
     const saved = localStorage.getItem('language');
     const browser = navigator.language.slice(0,2);
-    if (saved && translations[saved]) this.currentLanguage = saved; else if (translations[browser]) this.currentLanguage = browser;
+  const translations = this.translations;
+  if (saved && translations[saved]) this.currentLanguage = saved; else if (translations[browser]) this.currentLanguage = browser;
     this.updateLanguageButtons();
   }
   setLanguage(lang){
-    if(!translations[lang]) return;
+  const translations = this.translations;
+  if(!translations || !translations[lang]) return;
     this.currentLanguage = lang;
     localStorage.setItem('language', lang);
     document.documentElement.lang = lang;
@@ -51,7 +66,9 @@ class SiteController {
     return path.split('.').reduce((o,k)=>o && o[k], obj);
   }
   updateContent(){
-    const t = translations[this.currentLanguage];
+  const translations = this.translations;
+  if(!translations) return;
+  const t = translations[this.currentLanguage];
     document.querySelectorAll('[data-translate]').forEach(el=>{
       const key = el.dataset.translate;
       const val = this.getNested(t, key);
@@ -148,7 +165,7 @@ class SiteController {
       button.textContent = this.currentLanguage === 'cs' ? 'Úspěch!' : this.currentLanguage === 'sk' ? 'Úspech!' : 'Success!';
       input.value='';
       setTimeout(()=>{
-        button.textContent = translations[this.currentLanguage]?.contact?.newsletter?.button || 'Subscribe';
+  button.textContent = this.translations[this.currentLanguage]?.contact?.newsletter?.button || 'Subscribe';
         button.disabled = false;
       }, 1600);
     }, 1400);

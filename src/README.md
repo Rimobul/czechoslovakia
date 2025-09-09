@@ -1,79 +1,60 @@
-# 🇨🇿🇸🇰 Nové Československo - Website
+# 🇨🇿🇸🇰 Nové Československo - Website (Astro Migration)
 
-## 🚀 How to Run the Website
+This project has been migrated from ad‑hoc static HTML with client-side includes to an Astro static site for reliable componentization, theming, and future extensibility.
 
-This website uses JavaScript includes for header and footer, which require a local HTTP server to work properly due to browser security restrictions.
+## ✅ Current Source of Truth
 
-### Option 1: Python HTTP Server (Recommended)
+```
+astro/
+    src/
+        components/ (Header, Footer, Layout)
+        pages/       (index, about, events, business, news, contact, 404)
+        i18n/        (translations.ts – ESM translations data)
+    public/
+        css/styles.css
+        js/script.js
+        favicon.svg
+```
+
+Legacy root files (e.g. `index.html`, `about.html`, `css/`, `js/`, `includes/`) are deprecated and retained temporarily for reference. They can be deleted after deployment validation.
+
+## 🚀 Develop
 ```bash
-# Navigate to the src directory
-cd src
-
-# Start the server
-python -m http.server 3000
-
-# Open in browser
-# Visit: http://localhost:3000
+cd astro
+npm install
+npx astro dev
+# visit http://localhost:4321
 ```
 
-### Option 2: Node.js HTTP Server
+## 🏗️ Build
 ```bash
-# Install a simple HTTP server
-npm install -g http-server
-
-# Navigate to src directory and start server
-cd src
-http-server -p 3000
-
-# Visit: http://localhost:3000
+cd astro
+npx astro build
 ```
+Static output: `astro/dist/`
 
-### Option 3: VS Code Live Server
-1. Install the "Live Server" extension in VS Code
-2. Right-click on `index.html` 
-3. Select "Open with Live Server"
+## � Internationalization
+Client-side language switching still updates text via data-translate attributes. Translations now live in `src/i18n/translations.ts` (ES module) and are dynamically imported by the client script.
 
-## 🏗️ Project Structure
+Planned enhancement: dedicated i18n routes (`/cs/...`, `/sk/...`, `/en/...`) with pre-rendered language variants.
 
-```
-src/
-├── index.html          # Home page
-├── about.html          # About page
-├── events.html         # Events page
-├── business.html       # Business page
-├── news.html           # News page
-├── contact.html        # Contact page
-├── css/
-│   └── styles.css      # Main stylesheet
-├── js/
-│   ├── includes.js     # Header/footer loader
-│   ├── translations.js # Multi-language support
-│   └── script.js       # Main JavaScript
-└── includes/
-    ├── header.html     # Shared header
-    └── footer.html     # Shared footer
-```
+## 🎨 Design Principles
+Sharp geometric aesthetic, no rounded corners, dual accent colors (Red #dc2626, Blue #2563eb), elegant serif typography (Playfair Display + Source Serif Pro), light/dark theme support.
 
-## 🌍 Features
+## ✨ Features
+- Component-based layout (Astro)
+- Multi-language (CS/SK/EN) client toggle
+- Theme toggle with system preference detection
+- Sticky, responsive navigation & mobile menu
+- Newsletter form (simulated submission + feedback)
+- Scroll-triggered card animations
 
-- ✅ Multi-language support (Czech, Slovak, English)
-- ✅ Responsive design
-- ✅ Dark/Light theme toggle
-- ✅ Modular header/footer includes
-- ✅ Sticky navigation
-- ✅ Modern CSS with no rounded corners
-- ✅ Transparent button design
+## 🗺️ Next Steps (Optional)
+1. Generate static language routes (`/cs`, `/sk`, `/en`).
+2. Remove legacy root files after production deploy.
+3. Add sitemap & SEO metadata per page.
+4. Split JS into smaller, route-level hydrated islands if necessary.
 
-## ❗ Troubleshooting
+## 📜 License
+Internal civic initiative project (add explicit license if distributing).
 
-**Problem**: Header and footer not loading
-**Solution**: Make sure you're running the website through an HTTP server (not opening files directly)
-
-**Problem**: CORS errors in console
-**Solution**: Use one of the server options above instead of opening HTML files directly
-
-## 🎨 Design
-
-- **Colors**: Red (#dc2626) and Blue (#2563eb)
-- **Fonts**: Playfair Display + Source Serif Pro
-- **Style**: Modern, minimalist, sharp geometric design
