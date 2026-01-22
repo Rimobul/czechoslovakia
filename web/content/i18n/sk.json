@@ -1,0 +1,61 @@
+{
+  "common": {
+    "home": "Domov",
+    "blog": "Blog",
+    "maps": "Mapy",
+    "external": "Externé zdroje",
+    "about": "O mne",
+    "readMore": "Čítať ďalej",
+    "viewAll": "Zobraziť všetko",
+    "backTo": "Späť na",
+    "loading": "Načítavanie...",
+    "error": "Nastala chyba"
+  },
+  "landing": {
+    "heroTitle": "Nové ČeskoSlovensko",
+    "heroSubtitle": "Porovnávame Česko a Slovensko",
+    "intro": "Vitajte na stránkach venovaných porovnaniu Českej republiky a Slovenska. Nájdete tu články, interaktívne mapy a dáta o oboch krajinách, ktoré kedysi tvorili jeden štát.",
+    "latestArticles": "Najnovšie články",
+    "latestMap": "Najnovšia mapa",
+    "viewAllArticles": "Zobraziť všetky články →",
+    "viewAllMaps": "Zobraziť všetky mapy →"
+  },
+  "blog": {
+    "title": "Blog",
+    "by": "Autor:",
+    "publishedOn": "Publikované",
+    "categories": "Kategórie",
+    "backToBlog": "← Späť na Blog"
+  },
+  "maps": {
+    "title": "Mapy",
+    "addedOn": "Pridané",
+    "backToMaps": "← Späť na Mapy"
+  },
+  "external": {
+    "title": "Externé zdroje",
+    "intro": "Výber článkov a videí o Česku a Slovensku z rôznych zdrojov.",
+    "notTranslated": "Popisy sú poskytnuté autorom a nemusia byť vo vašom jazyku.",
+    "filterByType": "Typ",
+    "filterByCategory": "Kategória",
+    "sortBy": "Zoradiť podľa",
+    "dateAdded": "Dátumu pridania",
+    "allTypes": "Všetko",
+    "articles": "Články",
+    "videos": "Videá"
+  },
+  "about": {
+    "title": "O mne",
+    "aboutMe": "O mne",
+    "whyProject": "Prečo tento projekt?",
+    "acknowledgments": "Poďakovanie"
+  },
+  "footer": {
+    "copyright": "© 2026 Nové ČeskoSlovensko",
+    "madeWith": "Vytvorené s pomocou"
+  },
+  "errors": {
+    "notFound": "Stránka nenájdená",
+    "contentNotAvailable": "Tento obsah zatiaľ nie je dostupný v slovenčine."
+  }
+}

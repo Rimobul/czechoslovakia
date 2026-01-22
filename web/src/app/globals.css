@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --color-primary: #000000;
+  --color-secondary: #333333;
+  --color-link: #0066CC;
+  --color-error: #CC0000;
+  --color-border: #E0E0E0;
+  --color-background: #FFFFFF;
+}
+
+body {
+  font-family: 'Merriweather', Georgia, serif;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Prose styling for MDX content */
+.prose {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.prose h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--color-border);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--color-secondary);
+}
+
+.prose ul, .prose ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* Callout component styles */
+.callout {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.callout-info {
+  background-color: #EBF5FF;
+  border-left: 4px solid var(--color-link);
+}
+
+.callout-warning {
+  background-color: #FFF8E6;
+  border-left: 4px solid #F59E0B;
+}
+
+.callout-tip {
+  background-color: #ECFDF5;
+  border-left: 4px solid #10B981;
+}
+
+/* Mobile bottom nav */
+@media (max-width: 640px) {
+  .mobile-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid var(--color-border);
+    z-index: 50;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  body {
+    padding-bottom: 80px;
+  }
+}

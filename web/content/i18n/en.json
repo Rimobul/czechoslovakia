@@ -1,0 +1,61 @@
+{
+  "common": {
+    "home": "Home",
+    "blog": "Blog",
+    "maps": "Maps",
+    "external": "Resources",
+    "about": "About",
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "backTo": "Back to",
+    "loading": "Loading...",
+    "error": "An error occurred"
+  },
+  "landing": {
+    "heroTitle": "New Czechoslovakia",
+    "heroSubtitle": "Comparing Czechia and Slovakia",
+    "intro": "Welcome to a website dedicated to comparing Czechia and Slovakia. Here you'll find articles, interactive maps, and data about both nations that once formed a single country.",
+    "latestArticles": "Latest Articles",
+    "latestMap": "Latest Map",
+    "viewAllArticles": "View all articles →",
+    "viewAllMaps": "View all maps →"
+  },
+  "blog": {
+    "title": "Blog",
+    "by": "By",
+    "publishedOn": "Published on",
+    "categories": "Categories",
+    "backToBlog": "← Back to Blog"
+  },
+  "maps": {
+    "title": "Maps",
+    "addedOn": "Added on",
+    "backToMaps": "← Back to Maps"
+  },
+  "external": {
+    "title": "External Resources",
+    "intro": "Curated collection of articles and videos about Czechia and Slovakia.",
+    "notTranslated": "Descriptions are provided by the author and may not be in your selected language.",
+    "filterByType": "Type",
+    "filterByCategory": "Category",
+    "sortBy": "Sort by",
+    "dateAdded": "Date added",
+    "allTypes": "All",
+    "articles": "Articles",
+    "videos": "Videos"
+  },
+  "about": {
+    "title": "About",
+    "aboutMe": "About Me",
+    "whyProject": "Why This Project?",
+    "acknowledgments": "Acknowledgments"
+  },
+  "footer": {
+    "copyright": "© 2026 New Czechoslovakia",
+    "madeWith": "Made with"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "contentNotAvailable": "This content is not yet available in English. Showing Czech version."
+  }
+}

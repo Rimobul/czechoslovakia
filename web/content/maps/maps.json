@@ -1,0 +1,20 @@
+{
+  "maps": [
+    {
+      "slug": "population-density",
+      "embedType": "flourish",
+      "embedUrl": "https://flo.uri.sh/visualisation/12345678/embed",
+      "thumbnail": "/images/maps/population-density.svg",
+      "dateAdded": "2026-01-18",
+      "hasExtendedContent": true
+    },
+    {
+      "slug": "gdp-regions",
+      "embedType": "flourish",
+      "embedUrl": "https://flo.uri.sh/visualisation/87654321/embed",
+      "thumbnail": "/images/maps/gdp-regions.svg",
+      "dateAdded": "2026-01-12",
+      "hasExtendedContent": false
+    }
+  ]
+}

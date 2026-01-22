@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "guardian-velvet-divorce",
+      "type": "article",
+      "title": "The Velvet Divorce: How Czechoslovakia Split Peacefully",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/czechoslovakia",
+      "thumbnail": "/images/external/guardian-velvet.svg",
+      "dateAdded": "2026-01-20",
+      "categories": ["history", "politics"],
+      "description": "Vynikající retrospektiva pokojného rozdělení Československa s rozhovory s klíčovými politickými postavami z obou zemí."
+    },
+    {
+      "id": "youtube-prague-bratislava",
+      "type": "video",
+      "title": "Prague vs Bratislava: Which Capital is Better?",
+      "source": "YouTube - Geography Now",
+      "url": "https://www.youtube.com/watch?v=example",
+      "thumbnail": "/images/external/geo-now-capitals.svg",
+      "dateAdded": "2026-01-15",
+      "categories": ["travel", "culture"],
+      "description": "Zábavné srovnání obou hlavních měst zahrnující životní náklady, atrakce a místní kulturu."
+    },
+    {
+      "id": "economist-czech-economy",
+      "type": "article",
+      "title": "Czech Republic: Central Europe's Economic Engine",
+      "source": "The Economist",
+      "url": "https://www.economist.com/czech-economy",
+      "thumbnail": "/images/external/economist-czech.svg",
+      "dateAdded": "2026-01-10",
+      "categories": ["economics"],
+      "description": "Hloubková analýza českého výrobního sektoru a jeho role v evropských dodavatelských řetězcích."
+    },
+    {
+      "id": "bbc-tatra-mountains",
+      "type": "video",
+      "title": "The Wild Tatras: Europe's Smallest Alpine Range",
+      "source": "BBC Earth",
+      "url": "https://www.youtube.com/watch?v=example2",
+      "thumbnail": "/images/external/bbc-tatras.svg",
+      "dateAdded": "2026-01-05",
+      "categories": ["nature", "travel"],
+      "description": "Nádherný dokumentární film o Vysokých Tatrách na slovensko-polské hranici."
+    }
+  ]
+}
