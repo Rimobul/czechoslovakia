@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "fa86509b7936043953d5bd9ec486c329",
-    "previewModeSigningKey": "4926abe26352a23b5345e5ee2d1525eb459f312b8f78f4b9248676ab0ff8a9de",
-    "previewModeEncryptionKey": "950e36fd8aa95b7439956b03f51c418f860aed058f3b1668181aaa0c46c19067"
-  }
-}
+{"version":4,"routes":{"/cs/blog":{},"/sk/blog":{},"/en/blog":{},"/cs":{},"/sk":{},"/en":{},"/cs/blog/beer-culture":{},"/cs/blog/comparing-gdp":{},"/cs/blog/language-differences":{},"/cs/blog/velvet-divorce":{},"/sk/blog/beer-culture":{},"/sk/blog/comparing-gdp":{},"/sk/blog/language-differences":{},"/sk/blog/velvet-divorce":{},"/en/blog/beer-culture":{},"/en/blog/comparing-gdp":{},"/en/blog/language-differences":{},"/en/blog/velvet-divorce":{}},"dynamicRoutes":{"/[lang]/blog":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]/blog","routeRegex":"^\\/([^/]+?)\\/blog(?:\\/)?$","allowHeader":[]},"/[lang]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]},"/[lang]/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[lang]/blog/[slug]","routeRegex":"^\\/([^/]+?)\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"698ec7cd8235ae8e2f2ba2da56224314","previewModeSigningKey":"5be81d3771e13689c2c638addf9b9702fb5400244cb883746381e51b229bfd2c","previewModeEncryptionKey":"8df8e2bb6508562c5b83ce0cc70766f4ebfd1af1d61d7c421a5350996533d0c0"}}

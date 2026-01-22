@@ -2,6 +2,8 @@ import { redirect } from 'next/navigation';
 import { cookies, headers } from 'next/headers';
 import { Language, defaultLanguage, languages } from '@/lib/i18n';
 
+export const dynamic = 'force-dynamic';
+
 export default async function RootPage() {
   // Check for language preference cookie
   const cookieStore = await cookies();
