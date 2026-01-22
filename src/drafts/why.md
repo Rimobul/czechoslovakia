@@ -85,3 +85,15 @@ Největší obavou obyvatel Česka zas bylo, že na Slovensko jenom doplácí. J
 Když se na to podíváme ještě detailněji, zjistíme, že takový Bratislavský kraj je na tom líp, než všechny kraje Česka - z výjimkou Hlavního města Prahy. Naopak, Ústecký a Karlovarský kraj by se lehce mohli zařadit k nechudším krajům Slovenska. A nikdo neříká, že by se Česko mělo zbavit Moravy, nebo severozápadních Čech, aby na tom bylo líp.
 
 Právě naopak, Slovensko může Českou (posléze, společnou Československou) ekonomiku doplnit a posílit. Už nyní nejůspěšnější Slováci odjíždí do Česka studovat, pracovat a odvádět daně. Méně vytížená slovenská pracovní síla může zaplnit neobsazena pracovní místa v českých továrnach. A mladší populace Slovenska může ulevit přetíženému důchodovému systému.
+
+Na jakých základech lze postavit snovusjenocení.
+Spojuje nás společná historie, podobné jazyky a kultura. Naše země jsou provázany na ekonomické i rodinné úrovni. V mnoha ohledech Československo pořád přetrvává.
+
+Jaké jsou argumenty proti spojení Československa
+I když naše státy vycházejí ze stejných právních základů, naše zákony, administrativa a ekonomika se v mnoha detailech liší. Sjednotit všechna pravidla by zabralo několik let.
+
+Jak se k myšlence staví veřejnost?
+Je to tak půl na půl. Z průzkumů vyplývá, že zhruba 45% obyvatel v obou státech je pro sjednocení, 45% proti a zbývajících 10% není rozhodnuto. Zajímavé je, že tento poměr je zhruba stejný napříč generacemi. To znamená, že návrat Československa by chtěli stejně pamětníci, jako i mladí, kteří společný stát nikdy nezažili.
+
+Je sjednocení vůbec reálné?
+Určitě ano, ale bude to vyžadovat spoustu úsilí. V první řadě je potřeba toto téma dostat do veřejné diskuze. Je důležité, aby sjednocování probíhalo jak seshora dolu (sjednocení se stane témou velkých politických stran), tak zespoda nahoru (lidé a firmy začnou budovat společné organizace).
