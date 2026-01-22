@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/repos/czechoslovakia/web/src/app/layout.tsx"],"sourcesContent":["import type { Metadata } from 'next';\r\nimport './globals.css';\r\n\r\nexport const metadata: Metadata = {\r\n  title: 'NČS - Nové ČeskoSlovensko',\r\n  description: 'Porovnáváme Česko a Slovensko - články, mapy a data',\r\n};\r\n\r\nexport default function RootLayout({\r\n  children,\r\n}: {\r\n  children: React.ReactNode;\r\n}) {\r\n  return children;\r\n}\r\n"],"names":[],"mappings":";;;;;;;AAGO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;AACf;AAEe,SAAS,WAAW,EACjC,QAAQ,EAGT;IACC,OAAO;AACT"}}]
-}
