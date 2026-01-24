@@ -164,7 +164,7 @@ content/external/external-content.json
 - Entire card clickable
 - Opens external URL in new tab (`target="_blank"`)
 - Include `rel="noopener noreferrer"` for security
-- Hover state: `box-shadow: inset 0 0 0 1px rgba(235, 235, 235, 0.4)`
+- Hover state: slightly lighter transparent background
 
 ### Type Badges
 - **Article:** `tag` with default styling (semi-transparent background)

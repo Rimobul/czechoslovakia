@@ -79,7 +79,7 @@ const config: Config = {
       },
       boxShadow: {
         'card': 'none',
-        'card-hover': 'inset 0 0 0 1px rgba(235, 235, 235, 0.4)',
+        'card-hover': 'none',
       },
     },
   },

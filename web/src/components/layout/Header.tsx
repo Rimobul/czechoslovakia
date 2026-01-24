@@ -29,10 +29,10 @@ export default function Header({ lang }: HeaderProps) {
   };
 
   return (
-    <header className="hidden sm:block sticky top-0 bg-white border-b border-border z-50">
-      <div className="max-w-6xl mx-auto px-4">
+    <header className="hidden sm:block sticky top-0 bg-neutral-primary border-b border-border-primary z-50 w-full">
+      <div className="w-full px-6">
         <nav className="flex items-center justify-between h-16">
-          <Link href={`/${lang}`} className="font-sans font-bold text-xl text-primary no-underline hover:no-underline">
+          <Link href={`/${lang}`} className="font-sans font-medium text-xl text-text-primary no-underline hover:no-underline">
             NČS
           </Link>
 
@@ -41,10 +41,10 @@ export default function Header({ lang }: HeaderProps) {
               <Link
                 key={item.key}
                 href={item.href}
-                className={`font-sans text-sm no-underline hover:text-accent-link transition-colors ${
+                className={`font-sans text-sm no-underline hover:text-accent-primary transition-colors ${
                   pathname === item.href || (item.key !== 'home' && pathname.startsWith(item.href))
-                    ? 'text-accent-link font-medium'
-                    : 'text-secondary'
+                    ? 'text-accent-primary font-medium'
+                    : 'text-text-secondary'
                 }`}
               >
                 {item.label}
@@ -55,12 +55,12 @@ export default function Header({ lang }: HeaderProps) {
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="font-sans text-sm text-secondary hover:text-accent-link uppercase"
+                className="font-sans text-sm text-text-secondary hover:text-accent-primary uppercase"
               >
                 {lang}
               </button>
               {langMenuOpen && (
-                <div className="absolute right-0 top-full mt-2 bg-white border border-border rounded shadow-lg py-1 min-w-[120px]">
+                <div className="absolute right-0 top-full mt-2 bg-neutral-secondary border border-border-secondary py-1 min-w-[120px]">
                   {languages.map((l) => (
                     <button
                       key={l}
@@ -68,8 +68,8 @@ export default function Header({ lang }: HeaderProps) {
                         switchLanguage(l);
                         setLangMenuOpen(false);
                       }}
-                      className={`block w-full text-left px-4 py-2 font-sans text-sm hover:bg-gray-50 ${
-                        l === lang ? 'text-accent-link font-medium' : 'text-secondary'
+                      className={`block w-full text-left px-4 py-2 font-sans text-sm hover:bg-white/10 ${
+                        l === lang ? 'text-accent-primary font-medium' : 'text-text-secondary'
                       }`}
                     >
                       {getLanguageDisplayName(l)}

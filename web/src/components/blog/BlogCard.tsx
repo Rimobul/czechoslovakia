@@ -10,9 +10,9 @@ interface BlogCardProps {
 
 export default function BlogCard({ post, lang }: BlogCardProps) {
   return (
-    <article className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+    <article className="overflow-hidden bg-white/15 hover:bg-white/20 transition-colors">
       <Link href={`/${lang}/blog/${post.slug}`} className="no-underline">
-        <div className="aspect-video relative bg-gray-100">
+        <div className="aspect-video relative bg-neutral-secondary">
           <Image
             src={post.thumbnail}
             alt={post.title}
@@ -27,7 +27,7 @@ export default function BlogCard({ post, lang }: BlogCardProps) {
             {post.categories.map((cat) => (
               <span
                 key={cat}
-                className="font-sans text-xs px-2 py-1 bg-gray-100 text-secondary rounded"
+                className="font-sans text-xs px-2 py-1 bg-white/20 text-text-primary"
               >
                 {cat}
               </span>
@@ -35,17 +35,17 @@ export default function BlogCard({ post, lang }: BlogCardProps) {
           </div>
 
           {/* Title */}
-          <h3 className="font-sans font-bold text-lg text-primary mb-2 line-clamp-2">
+          <h3 className="font-sans font-medium text-lg text-text-primary mb-2 line-clamp-2">
             {post.title}
           </h3>
 
           {/* Excerpt */}
-          <p className="text-sm text-secondary mb-3 line-clamp-2">
+          <p className="text-sm text-text-secondary mb-3 line-clamp-2">
             {post.excerpt}
           </p>
 
           {/* Meta */}
-          <div className="font-sans text-xs text-secondary">
+          <div className="font-sans text-xs text-text-secondary">
             {post.author} · {formatDate(post.date, lang)}
           </div>
         </div>

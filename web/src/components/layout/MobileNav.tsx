@@ -21,7 +21,7 @@ export default function MobileNav({ lang }: MobileNavProps) {
   ];
 
   return (
-    <nav className="mobile-nav sm:hidden">
+    <nav className="mobile-nav sm:hidden fixed bottom-0 left-0 right-0 bg-neutral-secondary border-t border-border-primary z-50">
       <div className="flex overflow-x-auto scrollbar-hide">
         {navItems.map((item) => {
           if (item.key === 'lang') {
@@ -38,7 +38,7 @@ export default function MobileNav({ lang }: MobileNavProps) {
               key={item.key}
               href={item.href}
               className={`flex flex-col items-center justify-center px-4 py-3 min-w-[70px] no-underline ${
-                isActive ? 'text-accent-link' : 'text-secondary'
+                isActive ? 'text-accent-primary' : 'text-text-secondary'
               }`}
             >
               <span className="text-lg mb-1">{item.icon}</span>
@@ -65,7 +65,7 @@ function LangSwitcher({ lang, pathname }: { lang: Language; pathname: string }) 
   return (
     <button
       onClick={handleSwitch}
-      className="flex flex-col items-center justify-center px-4 py-3 min-w-[70px] text-secondary"
+      className="flex flex-col items-center justify-center px-4 py-3 min-w-[70px] text-text-secondary"
     >
       <span className="text-lg mb-1">🌐</span>
       <span className="font-sans text-xs uppercase">{lang}</span>

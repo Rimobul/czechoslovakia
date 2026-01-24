@@ -79,9 +79,8 @@
 - Large hero sections with background images and dark overlays
 - Bold, prominent title text with text-wrap: balance
 - Sharp edges (border-radius: 0) for modern, editorial feel
-- Subtle borders using rgba transparency
+- Cards use 85% transparent grey background (no borders)
 - Generous section padding (8rem desktop, 5rem mobile)
-- Cards with inset box-shadow borders for interactive states
 
 ---
 
