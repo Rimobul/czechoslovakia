@@ -87,11 +87,22 @@ content/external/external-content.json
 
 **Route:** `/[lang]/external`
 
+### Page Styling
+- Section class: `section` (dark background #0e0d0c)
+- Container class: `container`
+- Light text (#ebebeb) on dark background
+
 ### Header
-- Page title (localized): "External Resources" / "Externí zdroje" / "Externé zdroje"
-- Brief intro explaining this is curated external content
+- Page title (localized): `heading_h1`
+- Brief intro: `paragraph_large text-color_secondary`
+- "External Resources" / "Externí zdroje" / "Externé zdroje"
 
 ### Filters & Sorting
+
+**Styling:**
+- Filter container: `flex gap-medium margin-bottom_large`
+- Select inputs: `input_field is-select` with dark background
+- Labels: `input_label`
 
 **Filter Options:**
 - By type: All / Articles / Videos
@@ -105,18 +116,16 @@ content/external/external-content.json
 
 ### Content Grid
 
+**Grid classes:** `grid_3-col gap-medium`
+
 ```
 ┌─────────────────────────────────────────┐
-│ Type: [All ▼]  Category: [All ▼]        │  ← Filters
-│ Sort by: [Date Added ▼]                 │  ← Sorting
+│ Type: [All ▼]  Category: [All ▼]        │  ← input_field is-select
+│ Sort by: [Date Added ▼]                 │
 ├─────────────────────────────────────────┤
 │                                         │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐ │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐ │  ← card on-secondary
 │  │ Card 1  │  │ Card 2  │  │ Card 3  │ │
-│  └─────────┘  └─────────┘  └─────────┘ │
-│                                         │
-│  ┌─────────┐  ┌─────────┐  ┌─────────┐ │
-│  │ Card 4  │  │ Card 5  │  │ Card 6  │ │
 │  └─────────┘  └─────────┘  └─────────┘ │
 │                                         │
 └─────────────────────────────────────────┘
@@ -126,23 +135,28 @@ content/external/external-content.json
 
 ## External Content Card
 
+**Card Classes:**
+- Card wrapper: `card on-secondary` (darker background #151515)
+- Link wrapper: `content-block-link w-inline-block`
+- Opens in new tab
+
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
-│         [Thumbnail Image]               │
+│         [Thumbnail Image]               │  ← image-ratio_16x9
 │                                    ▶️   │  ← Video icon overlay (if type=video)
 │                                         │
 ├─────────────────────────────────────────┤
-│  ARTICLE · The Guardian                 │  ← Type badge + Source
+│  ARTICLE · The Guardian                 │  ← tag + source text
 │                                         │
-│  The Velvet Divorce: 30 Years On        │  ← Title (linked, opens new tab)
+│  The Velvet Divorce: 30 Years On        │  ← heading_h3
 │                                         │
-│  An excellent retrospective on the      │  ← Description
+│  An excellent retrospective on the      │  ← paragraph text-color_secondary
 │  peaceful separation of Czechoslovakia, │
 │  featuring interviews with key...       │
 │                                         │
-│  History · Politics                     │  ← Category badges
-│  Added: January 20, 2026                │  ← Date added
+│  History · Politics                     │  ← tag_group (small tags)
+│  January 20, 2026                       │  ← eyebrow
 └─────────────────────────────────────────┘
 ```
 
@@ -150,10 +164,11 @@ content/external/external-content.json
 - Entire card clickable
 - Opens external URL in new tab (`target="_blank"`)
 - Include `rel="noopener noreferrer"` for security
+- Hover state: `box-shadow: inset 0 0 0 1px rgba(235, 235, 235, 0.4)`
 
 ### Type Badges
-- **Article:** Gray/neutral badge
-- **Video:** Red badge (YouTube-like) with play icon
+- **Article:** `tag` with default styling (semi-transparent background)
+- **Video:** `tag` with red accent background (accent-primary)
 
 ---
 

@@ -12,45 +12,52 @@ A simple, personal page introducing the author, explaining the motivation behind
 
 ## Design Principles
 
-- Clean and minimal
+- Dark theme consistent with site design
+- Clean and minimal layout
 - Personal but professional
 - No contact information (spam/phishing prevention)
-- Black & white photography
+- Black & white photography for elegance
+- Sharp edges, no rounded corners
 
 ---
 
 ## Page Layout
 
+**Page Styling:**
+- Section class: `section` (dark background #0e0d0c)
+- Container class: `container is-small` (max-width: 1000px)
+- Light text (#ebebeb) on dark background
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
-│                    ABOUT                                │  ← H1, centered
+│                    ABOUT                                │  ← heading_h1, centered
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │                 ┌─────────────┐                        │
 │                 │             │                        │
-│                 │   [B&W      │                        │
+│                 │   [B&W      │                        │  ← grayscale filter
 │                 │   Photo]    │                        │
 │                 │             │                        │
 │                 └─────────────┘                        │
 │                                                         │
-│                   Your Name                             │
+│                   Your Name                             │  ← heading_h3, centered
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  ## About Me                                            │
+│  ## About Me                                            │  ← heading_h2
 │                                                         │
-│  Brief personal introduction paragraph. Background,     │
-│  interests, connection to Czech/Slovak topics...        │
+│  Brief personal introduction paragraph. Background,     │  ← paragraph_large
+│  interests, connection to Czech/Slovak topics...        │     text-color_secondary
 │                                                         │
-│  ## Why This Project?                                   │
+│  ## Why This Project?                                   │  ← heading_h2
 │                                                         │
 │  Motivation paragraph explaining what inspired the      │
 │  creation of this website. Why compare CZ and SK?       │
 │  What do you hope readers will learn or discover?       │
 │                                                         │
-│  ## Acknowledgments                                     │
+│  ## Acknowledgments                                     │  ← heading_h2
 │                                                         │
 │  This website was created with assistance from          │
 │  GitHub Copilot (Claude), an AI programming assistant.  │
@@ -148,25 +155,37 @@ content/about/
 ## Styling Details
 
 ### Typography
-- **Page title (H1):** Sans-serif, large, centered
-- **Section headings (H2):** Sans-serif, medium
-- **Body text:** Serif, regular
+- **Page title (H1):** Jost font, `heading_h1`, centered, light text
+- **Section headings (H2):** Jost font, `heading_h2`, weight 500
+- **Body text:** Jost font, `paragraph_large`, `text-color_secondary`
+- **Author name:** `heading_h3`, centered
 
 ### Layout
-- Max-width: 600px (narrower than articles for intimacy)
-- Centered content
-- Generous whitespace
-- Photo: Centered above content
+- Container: `container is-small` (max-width: 1000px)
+- Content: `prose` class for article-style formatting
+- Centered content with generous whitespace
+- Section padding: 8rem vertical (standard)
 
 ### Photo Styling
 ```css
 .author-photo {
   width: 200px;
   height: 200px;
-  border-radius: 50%;  /* or 12px for rounded rectangle */
+  border-radius: 0;  /* Sharp edges, no rounded corners */
   filter: grayscale(100%);
   object-fit: cover;
   margin: 2rem auto;
+  display: block;
+}
+```
+
+### Section Dividers
+Use `divider` class between content sections:
+```css
+.divider {
+  border-top: 1px solid rgba(235, 235, 235, 0.2);
+  padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 ```
 

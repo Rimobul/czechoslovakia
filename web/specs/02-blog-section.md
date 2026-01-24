@@ -161,13 +161,20 @@ Interactive reader poll (results stored in localStorage or optional backend).
 ```
 
 ### Callout
-Highlighted information box.
+Highlighted information box with left border accent.
 
 ```tsx
 <Callout type="info" | "warning" | "tip">
   Important information here...
 </Callout>
 ```
+
+**Styling:**
+- Container: `callout` class with border-left
+- Info type: Red accent border, subtle red background tint
+- Warning type: Yellow accent border
+- Tip type: Green accent border
+- Sharp corners (border-radius: 0)
 
 ### ImageGallery
 Carousel of images.
@@ -226,28 +233,37 @@ export async function getBlogPost(slug: string, lang: string) {
 
 **Route:** `/[lang]/blog`
 
-### Layout
-- Main content area with article cards
-- Optional sidebar with category filter
+### Page Styling
+- Section class: `section` (dark background #0e0d0c)
+- Container class: `container`
+- Header with H2 title: `heading_h2 max-width_large`
 
-### Sidebar (Optional)
-- Category filter (checkbox or links)
-- Future: Archive by year/month
+### Layout
+- Main content area with article cards in 3-column grid
+- Grid class: `grid_3-col gap-large`
+- Optional sidebar with category filter
 
 ### Article Cards
 
+**Card Component Classes:**
+- Link wrapper: `content-block-link w-inline-block`
+- Image container: `image-ratio_1x1 margin-bottom_xsmall`
+- Image: `image_cover`
+- Tag group: `tag_group margin-bottom_xsmall`
+- Tag: `tag` (date display)
+- Title: `heading_h3 text-decoration_none`
+- Excerpt: `paragraph text-decoration_none`
+
 ```
 ┌─────────────────────────────────────────┐
-│  [Thumbnail Image]                      │
+│  [Thumbnail Image - 1:1 ratio]          │  ← image-ratio_1x1
 ├─────────────────────────────────────────┤
-│  Economics · Data                       │  ← Category badges
+│  November 21, 2025                      │  ← tag (date)
 │                                         │
-│  Comparing GDP: Czechia vs Slovakia     │  ← Title (H3, linked)
+│  Comparing GDP: Czechia vs Slovakia     │  ← heading_h3
 │                                         │
-│  An in-depth analysis of economic       │  ← Excerpt
-│  growth patterns in both countries...   │
-│                                         │
-│  Your Name · January 22, 2026           │  ← Author & date
+│  An in-depth analysis of economic       │  ← paragraph
+│  growth patterns in both countries...   │  ← text-color_secondary
 └─────────────────────────────────────────┘
 ```
 
@@ -261,41 +277,48 @@ export async function getBlogPost(slug: string, lang: string) {
 
 **Route:** `/[lang]/blog/[slug]`
 
+### Page Styling
+- Section class: `section` (dark background #0e0d0c)
+- Container class: `container is-small` (max-width: 1000px)
+- Light text (#ebebeb) on dark background
+
 ### Layout
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                  [Featured Image]                       │
+│                  [Featured Image]                       │  ← image-ratio_16x9
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  COMPARING GDP: CZECHIA VS SLOVAKIA                     │  ← H1, sans-serif
+│  COMPARING GDP: CZECHIA VS SLOVAKIA                     │  ← heading_h1, Jost font
 │                                                         │
-│  Economics · Data                                       │  ← Categories
-│  By Your Name · January 22, 2026                        │  ← Metadata
+│  Economics · Data                                       │  ← tag_group
+│  By Your Name · November 22, 2025                       │  ← eyebrow text
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  [MDX Content Rendered Here]                            │
+│  [MDX Content Rendered Here]                            │  ← rich-text prose
 │                                                         │
-│  Introduction paragraph...                              │
+│  Introduction paragraph...                              │  ← paragraph_large
 │                                                         │
-│  ## Subheading                                          │
+│  ## Subheading                                          │  ← heading_h2
 │                                                         │
 │  More content with <InteractiveMap /> ...               │
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  ← Back to Blog                                         │
+│  ← Back to Blog                                         │  ← text-color_accent-primary
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
 
 ### Content Styling
-- Max-width: 700px (centered)
-- Typography: Serif for body, sans-serif for headings
-- Images: Full content-width with captions
-- Code blocks: Syntax highlighting
-- Blockquotes: Left border, italic
+- Container: `prose` class, max-width: 800px (centered)
+- Typography: Jost font throughout (no serif)
+- Body text: `paragraph_large` with `text-color_secondary`
+- Headings: `heading_h2`, `heading_h3` with primary text color
+- Images: Full content-width, no border-radius
+- Blockquotes: 3px left border (primary text color), italic
+- Links: Red accent color (`text-color_accent-primary`)
 
 ---
 

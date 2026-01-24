@@ -132,24 +132,38 @@ Population data from the 2021 census was divided by district area...
 
 **Route:** `/[lang]/maps`
 
+### Page Styling
+- Section class: `section` (dark background #0e0d0c)
+- Container class: `container`
+- Light text on dark background
+
 ### Layout
-- Grid of map cards
-- Sidebar with list navigation (quick jump to specific map)
+- Header with H2 title and optional intro paragraph
+- Grid of map cards: `grid_2-col gap-medium` or `grid_3-col`
+- Optional sidebar with list navigation (quick jump to specific map)
 
 ### Map Cards
+
+**Card Component Classes:**
+- Card wrapper: `card on-secondary` (darker background #151515)
+- Image container: `image-ratio_16x9 margin-bottom_small`
+- Image: `image_cover`
+- Title: `heading_h3`
+- Description: `paragraph text-color_secondary`
+- Date: `eyebrow` or small text with secondary color
 
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
-│         [Map Thumbnail/Preview]         │
+│         [Map Thumbnail - 16:9]          │  ← image-ratio_16x9
 │                                         │
 ├─────────────────────────────────────────┤
-│  Population Density by District         │  ← Title
+│  Population Density by District         │  ← heading_h3
 │                                         │
-│  Interactive map showing population     │  ← Description
-│  per square kilometer across...         │
+│  Interactive map showing population     │  ← paragraph
+│  per square kilometer across...         │  ← text-color_secondary
 │                                         │
-│  Added: January 22, 2026                │  ← Date
+│  January 22, 2026                       │  ← eyebrow
 └─────────────────────────────────────────┘
 ```
 
@@ -157,9 +171,9 @@ Population data from the 2021 census was divided by district area...
 - Default: Newest first (by dateAdded)
 
 ### Grid Layout
-- Desktop: 2-3 columns
+- Desktop: 2-3 columns (`grid_2-col` or `grid_3-col`)
 - Tablet: 2 columns
-- Mobile: Single column
+- Mobile: Single column (grid auto-collapses)
 
 ---
 
@@ -167,22 +181,27 @@ Population data from the 2021 census was divided by district area...
 
 **Route:** `/[lang]/maps/[slug]`
 
+### Page Styling
+- Section class: `section` (dark background #0e0d0c)
+- Container class: `container`
+- Light text (#ebebeb) on dark background
+
 ### Layout
 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
-│  POPULATION DENSITY BY DISTRICT                         │  ← H1, sans-serif
+│  POPULATION DENSITY BY DISTRICT                         │  ← heading_h1, Jost font
 │                                                         │
-│  Interactive map showing population per square...       │  ← Description
-│                                                         │
-│  Added: January 22, 2026                                │
+│  Interactive map showing population per square...       │  ← paragraph_large
+│                                                         │     text-color_secondary
+│  January 22, 2026                                       │  ← eyebrow
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  ┌─────────────────────────────────────────────────┐   │
 │  │                                                 │   │
-│  │            [Interactive Map Embed]              │   │
+│  │            [Interactive Map Embed]              │   │  ← Full-width embed
 │  │                                                 │   │
 │  │         (Flourish/Google Maps/etc.)             │   │
 │  │                                                 │   │
@@ -191,10 +210,10 @@ Population data from the 2021 census was divided by district area...
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  [Extended MDX Content - if hasExtendedContent=true]    │
+│  [Extended MDX Content - if hasExtendedContent=true]    │  ← prose class
 │                                                         │
-│  ## About This Map                                      │
-│  Methodology, data sources, observations...            │
+│  ## About This Map                                      │  ← heading_h2
+│  Methodology, data sources, observations...            │  ← paragraph_large
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │

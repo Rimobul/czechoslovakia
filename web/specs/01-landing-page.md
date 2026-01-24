@@ -14,27 +14,33 @@ The landing page serves as the main entry point, introducing visitors to the web
 
 ### 1. Hero Section
 
-**Layout:** Full-viewport-width container
+**Layout:** Full-viewport-width container with background image
 
 **Components:**
-- Background image spanning full width
-- Semi-transparent dark overlay for text readability (optional, based on image)
-- Large bold title (H1) centered over image
-- Subtitle/tagline (optional)
+- Background image spanning full width with dark gradient overlay
+- CSS: `background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('...')`
+- Logo/icon centered above title
+- Large bold title (H1) with uppercase text
+- Subtitle/tagline below (H2 style)
 
 **Styling:**
-- Image: High-quality photograph related to Czechoslovakia
-- Title: Sans-serif, bold, white text with subtle shadow
+- Background: Dark overlay over high-quality photograph
+- Title: Jost font, weight 500, light text (#ebebeb)
+- Section class: `section hero-background`
 - Height: 70-100vh on desktop, 50-70vh on mobile
+- Container class: `container is-max` for full-width
 
 **Example:**
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
-│                    [Background Image]                   │
+│                    [Dark Background Image]              │
 │                                                         │
+│                      [Logo Icon]                        │
 │              NOVÉ ČESKOSLOVENSKO                        │
+│                   Lepší spolu                           │
 │                                                         │
+│   [3-column intro text grid]                           │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -43,28 +49,62 @@ The landing page serves as the main entry point, introducing visitors to the web
 
 ### 2. Introduction Block
 
-**Layout:** Centered text block below hero
+**Layout:** Centered container below hero with 3-column grid
 
 **Content:**
-- 2-3 sentence paragraph explaining the website's purpose
-- Brief mention of what visitors will find (articles, maps, data)
+- Spread across 3 columns on desktop
+- Left column: First paragraph about Czech-Slovak connection
+- Middle column: Second paragraph about exploring the vision
+- Right column: CTA button (optional)
 
 **Styling:**
-- Max-width: 700px
-- Font: Serif, regular weight
-- Generous padding (top/bottom: 4rem)
-- Text alignment: Center
+- Container class: `container`
+- Grid class: `grid_3-col gap-small`
+- Text class: `paragraph` (body size, secondary text color)
+- Text color: Light text on dark background
+- Generous padding (inherited from hero section)
 
 **Localized Content:**
 ```yaml
-cs: "Vítejte na stránkách věnovaných srovnání České republiky a Slovenska..."
-sk: "Vitajte na stránkach venovaných porovnaniu Českej republiky a Slovenska..."
-en: "Welcome to a website dedicated to comparing Czechia and Slovakia..."
+cs: "I víc, než 30 let po rozdělení společného státu jsou si Češi a Slováci výjimečně blízcí..."
+sk: "Aj viac ako 30 rokov po rozdelení spoločného štátu sú si Česi a Slováci výnimočne blízki..."
+en: "Even more than 30 years after the split, Czechs and Slovaks remain exceptionally close..."
 ```
 
 ---
 
-### 3. Latest Blog Posts Block
+### 3. Features/Reasons Block (NEW - from oldweb)
+
+**Title:**
+- CS: "7 důvodů pro Československo"
+- SK: "7 dôvodov pre Československo"
+- EN: "7 Reasons for Czechoslovakia"
+
+**Layout:**
+- Section class: `section is-secondary`
+- Header with eyebrow text and H2 heading centered
+- 2-column grid of feature cards
+
+**Card Component (FeatureCard):**
+```
+┌─────────────────────────────────┐
+│  [Icon Image]                   │
+│                                 │
+│  Feature Title (accent color)  │
+│  Description text...            │
+│                                 │
+└─────────────────────────────────┘
+```
+
+**Card Styling:**
+- Class: `card card_body on-secondary`
+- Title class: `paragraph_large text-color_accent-primary`
+- Description class: `paragraph_small text-color_secondary`
+- Grid container: `grid_2-col gap-small`
+
+---
+
+### 4. Latest Blog Posts Block
 
 **Title:** 
 - CS: "Nejnovější články"
@@ -72,7 +112,8 @@ en: "Welcome to a website dedicated to comparing Czechia and Slovakia..."
 - EN: "Latest Articles"
 
 **Layout:** 
-- Desktop: 3-column grid
+- Section class: `section` (primary dark background)
+- Desktop: 3-column grid (`grid_3-col gap-large`)
 - Tablet: 2-column grid
 - Mobile: Single column, stacked
 
@@ -81,51 +122,90 @@ en: "Welcome to a website dedicated to comparing Czechia and Slovakia..."
 **Card Component (BlogCard):**
 ```
 ┌─────────────────────┐
-│   [Thumbnail]       │
+│   [Thumbnail]       │  ← class: image-ratio_1x1 margin-bottom_xsmall
 │                     │
 ├─────────────────────┤
-│ Category Badge      │
-│ Article Title       │
-│ Intro excerpt...    │
-│ Jan 22, 2026        │
+│ Tag (Date)          │  ← class: tag margin-bottom_xsmall
+│ Article Title       │  ← class: heading_h3 text-decoration_none
+│ Intro excerpt...    │  ← class: paragraph text-decoration_none
 └─────────────────────┘
 ```
+
+**Card Styling:**
+- Link wrapper class: `content-block-link`
+- Image class: `image_cover`
+- No visible card border, relies on content structure
 
 **Card Data (from MDX frontmatter):**
 - `thumbnail` → Card image
 - `title[lang]` → Card title (linked to article)
-- `excerpt[lang]` → Short intro text (max ~100 chars)
-- `date` → Formatted publish date
-- `categories` → Category badge(s)
+- `excerpt[lang]` → Short intro text
+- `date` → Formatted date in tag
 
 **Footer Link:** "View all articles →" linking to `/[lang]/blog`
 
 ---
 
-### 4. Latest Map Block
+### 5. FAQ Section (NEW - from oldweb)
+
+**Title:**
+- CS: "Časté dotazy"
+- SK: "Časté otázky"
+- EN: "FAQ"
+
+**Layout:**
+- Section class: `section is-secondary`
+- Container class: `container is-small`
+- Header with eyebrow text ("ČASTÉ DOTAZY") and H2 centered
+- Subheading paragraph
+
+**Content:** List of FAQ items as expandable dividers
+
+**FAQ Item:**
+```
+┌─────────────────────────────────────────────────────────┐
+│ Question Title (heading_h4)                             │
+│ Answer paragraph (rich-text paragraph_large)            │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Styling:**
+- Each FAQ item: `divider` class (border-top, padding)
+- Question: `heading_h4`
+- Answer: `rich-text paragraph_large`
+
+---
+
+### 6. Latest Map Block
 
 **Title:**
 - CS: "Nejnovější mapa"
 - SK: "Najnovšia mapa"
 - EN: "Latest Map"
 
-**Layout:** Full-width section with centered content
+**Layout:**
+- Section class: `section` (primary dark background)
+- 2-column grid: Image on left, content card on right
+- Grid classes: `grid_2-col tablet-1-col gap-small`
 
 **Content:** Most recently added map
 
 **Display:**
 ```
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│                   [Map Preview Image]                   │
-│                                                         │
-├─────────────────────────────────────────────────────────┤
-│  Map Title                                              │
-│  Short description of what the map shows...            │
-│                                                         │
-│  [View Map →]                                           │
-└─────────────────────────────────────────────────────────┘
+┌───────────────────────────┬─────────────────────────────┐
+│                           │                             │
+│   [Map Preview Image]     │   Card with content:        │
+│   class: image-ratio_4x3  │   - H3 title                │
+│   image_cover             │   - Description paragraph   │
+│                           │   - Email signup form       │
+│                           │                             │
+└───────────────────────────┴─────────────────────────────┘
 ```
+
+**Card Styling:**
+- Card class: `card_body is-y-center is-secondary`
+- Title: `heading_h3`
+- Form: horizontal layout with input and button
 
 **Data (from maps.json):**
 - `thumbnail` → Preview image

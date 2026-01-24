@@ -38,66 +38,82 @@
 ## Design System
 
 ### Visual Style
-- **Aesthetic:** Newspaper/academic - clean, professional, content-focused
-- **Mood:** Minimalist with occasional bold visual elements
+- **Aesthetic:** Modern, bold, dark-themed design inspired by contemporary web design
+- **Mood:** Sleek, professional with strong visual contrast and clean typography
+- **Inspiration:** Webflow-based design with CSS custom properties and utility classes
 
 ### Color Palette
 
 | Role | Color | Usage |
 |------|-------|-------|
-| Primary Text | Black (#000000) | Body text, headings |
-| Background | White (#FFFFFF) | Page background |
-| Secondary Text | Dark Gray (#333333) | Metadata, captions |
-| Accent - Links | Blue (#0066CC) | Hyperlinks, interactive elements |
-| Accent - Validation/Error | Red (#CC0000) | Error states, required fields |
-| Borders/Dividers | Light Gray (#E0E0E0) | Separators, card borders |
+| Neutral Primary | Dark (#0e0d0c) | Main background |
+| Neutral Secondary | Darker (#151515) | Secondary sections, cards |
+| Neutral Inverse | Light (#ebebeb) | Text on dark, inverse sections |
+| Accent Primary | Red (#d3433b) | Buttons, CTAs, highlights |
+| Accent Hover | Light Red (#de736d) | Button hover states |
+| Accent Text | Bright Red (#f34f48) | Links, accent text on dark |
+| Text Primary | Light (#ebebeb) | Main text on dark backgrounds |
+| Text Secondary | Light 60% | Muted text, descriptions |
+| Border Primary | Light 10% | Subtle borders |
+| Border Secondary | Light 20% | Card borders, dividers |
 
 ### Typography
 
-| Element | Font Type | Style |
-|---------|-----------|-------|
-| Headings (H1-H6) | Sans-serif | Bold, large sizes |
-| Body Text | Serif | Regular weight, newspaper-style |
-| Navigation | Sans-serif | Medium weight |
-| Metadata (dates, authors) | Sans-serif | Small, muted color |
+| Element | Font | Size | Style |
+|---------|------|------|-------|
+| Display | Jost | 5.61rem | Weight 500, -0.01em spacing |
+| H1 | Jost | 4.21rem | Weight 500, -0.01em spacing |
+| H2 | Jost | 2.37rem | Weight 500, -0.01em spacing |
+| H3 | Jost | 1.78rem | Weight 500, -0.01em spacing |
+| H4 | Jost | 1.33rem | Weight 500, -0.01em spacing |
+| Body XL | Jost | 1.5rem | Regular, line-height 1.6 |
+| Body Large | Jost | 1.13rem | Regular, line-height 1.6 |
+| Body | Jost | 1rem | Regular, line-height 1.6 |
+| Body Small | Jost | 0.88rem | Regular, line-height 1.6 |
+| Eyebrow | Jost | 0.9rem | Uppercase, 0.01em spacing |
 
-**Suggested Font Pairings:**
-- Headings: Inter, Helvetica Neue, or Source Sans Pro
-- Body: Merriweather, Georgia, or Source Serif Pro
+**Font Stack:** Jost, Inter, Helvetica Neue, sans-serif
 
 ### Visual Elements
-- Large hero images spanning full viewport width
-- Bold, prominent title text over hero images
-- Generous whitespace for readability
-- Subtle borders and dividers
-- Black & white imagery preferred (especially for About page)
+- Dark background with light text for strong contrast
+- Large hero sections with background images and dark overlays
+- Bold, prominent title text with text-wrap: balance
+- Sharp edges (border-radius: 0) for modern, editorial feel
+- Subtle borders using rgba transparency
+- Generous section padding (8rem desktop, 5rem mobile)
+- Cards with inset box-shadow borders for interactive states
 
 ---
 
 ## Layout & Navigation
 
 ### Page Layout
-- **Content Width:** Centered column layout (max-width ~800px for readability)
-- **Responsive:** Fluid adaptation for all screen sizes
-- **Sidebar:** Optional, used for sub-navigation (e.g., list of blog posts, maps)
+- **Background:** Dark (#0e0d0c) primary, darker (#151515) for sections
+- **Content Width:** Centered container layout (max-width: 1280px)
+- **Section Padding:** 8rem vertical on desktop, 5rem on mobile
+- **Responsive:** Fluid adaptation with grid-based layouts
 
 ### Navigation - Desktop
-- **Position:** Top horizontal navbar
-- **Behavior:** Sticky (always visible on scroll)
+- **Position:** Top horizontal navbar, sticky
+- **Style:** Dark background with light text
+- **Behavior:** Always visible on scroll
 - **Items:** Home, Blog, Maps, External Content, About, Language Picker
 
 ### Navigation - Mobile
 - **Position:** Bottom horizontal navbar
+- **Style:** Dark secondary background with border-top
 - **Behavior:** Sticky, horizontally scrollable
 - **Rationale:** Optimized for thumb navigation while holding phone
 - **Items:** Same as desktop, icon-based with labels
 
 ### Footer
+- **Style:** Dark inverse background (#ebebeb) with dark text
 - **Content:** 
-  - Navigation links to all sections
-  - Short "About the Authors" blurb (mentioning human author + AI collaboration)
+  - Navigation links to all sections (large text)
+  - Social media icons
+  - Short "About the Authors" blurb
   - Copyright notice
-- **Style:** Simple, minimal
+- **Layout:** 2-column grid with divider
 
 ---
 
