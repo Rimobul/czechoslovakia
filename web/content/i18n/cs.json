@@ -57,5 +57,11 @@
   "errors": {
     "notFound": "Stránka nenalezena",
     "contentNotAvailable": "Tento obsah zatím není dostupný v českém jazyce."
+  },
+  "theme": {
+    "light": "Světlý",
+    "dark": "Tmavý",
+    "system": "Systém",
+    "toggle": "Přepnout motiv"
   }
 }

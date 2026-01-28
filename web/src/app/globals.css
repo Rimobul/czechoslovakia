@@ -4,15 +4,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   THEME VARIABLES - Light & Dark Mode Support
+   ============================================ */
+
 :root {
+  /* Spacing (theme-independent) */
+  --spacing-section: 8rem;
+  --spacing-section-tablet: 7rem;
+  --spacing-section-mobile: 5rem;
+  
+  /* Container (theme-independent) */
+  --container-width: 1280px;
+  --container-padding: 1rem;
+  
+  /* Accent colors (consistent across themes) */
+  --color-accent-primary: #d3433b;
+  --color-accent-primary-hover: #de736d;
+}
+
+/* Dark Theme (default) */
+:root,
+:root.dark {
   /* Core neutral colors */
   --color-neutral-primary: #0e0d0c;
   --color-neutral-secondary: #151515;
   --color-neutral-inverse: #ebebeb;
   
-  /* Accent colors */
-  --color-accent-primary: #d3433b;
-  --color-accent-primary-hover: #de736d;
+  /* Accent on dark */
   --color-accent-on-dark: #f34f48;
   
   /* Text colors */
@@ -24,14 +43,33 @@
   --color-border-primary: rgba(235, 235, 235, 0.1);
   --color-border-secondary: rgba(235, 235, 235, 0.2);
   
-  /* Spacing */
-  --spacing-section: 8rem;
-  --spacing-section-tablet: 7rem;
-  --spacing-section-mobile: 5rem;
+  /* Card backgrounds */
+  --color-card-bg: rgba(235, 235, 235, 0.15);
+  --color-card-bg-hover: rgba(235, 235, 235, 0.2);
+}
+
+/* Light Theme */
+:root.light {
+  /* Core neutral colors */
+  --color-neutral-primary: #fafafa;
+  --color-neutral-secondary: #f0f0f0;
+  --color-neutral-inverse: #1a1a1a;
   
-  /* Container */
-  --container-width: 1280px;
-  --container-padding: 1rem;
+  /* Accent on light */
+  --color-accent-on-dark: #c23830;
+  
+  /* Text colors */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: rgba(26, 26, 26, 0.65);
+  --color-text-inverse: #fafafa;
+  
+  /* Border colors */
+  --color-border-primary: rgba(26, 26, 26, 0.1);
+  --color-border-secondary: rgba(26, 26, 26, 0.15);
+  
+  /* Card backgrounds */
+  --color-card-bg: rgba(0, 0, 0, 0.05);
+  --color-card-bg-hover: rgba(0, 0, 0, 0.08);
 }
 
 html {
@@ -147,16 +185,16 @@ a:hover {
 .card {
   border: none;
   border-radius: 0;
-  background-color: rgba(235, 235, 235, 0.15); /* 85% transparent grey */
+  background-color: var(--color-card-bg);
   transition: background-color 0.2s ease;
 }
 
 .card:hover {
-  background-color: rgba(235, 235, 235, 0.2);
+  background-color: var(--color-card-bg-hover);
 }
 
 .card.on-secondary {
-  background-color: rgba(235, 235, 235, 0.15);
+  background-color: var(--color-card-bg);
 }
 
 .card_body {

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Language, t, getLanguageDisplayName, languages } from '@/lib/i18n';
 import { useState } from 'react';
+import ThemeSwitcher from './ThemeSwitcher';
 
 interface HeaderProps {
   lang: Language;
@@ -50,6 +51,9 @@ export default function Header({ lang }: HeaderProps) {
                 {item.label}
               </Link>
             ))}
+
+            {/* Theme Switcher */}
+            <ThemeSwitcher lang={lang} />
 
             {/* Language Picker */}
             <div className="relative">

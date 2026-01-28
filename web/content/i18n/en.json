@@ -57,5 +57,11 @@
   "errors": {
     "notFound": "Page not found",
     "contentNotAvailable": "This content is not yet available in English. Showing Czech version."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "toggle": "Toggle theme"
   }
 }

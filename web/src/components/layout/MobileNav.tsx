@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Language, t } from '@/lib/i18n';
+import { MobileThemeSwitcher } from './ThemeSwitcher';
 
 interface MobileNavProps {
   lang: Language;
@@ -17,6 +18,7 @@ export default function MobileNav({ lang }: MobileNavProps) {
     { key: 'maps', href: `/${lang}/maps`, label: t(lang, 'common.maps'), icon: '🗺️' },
     { key: 'external', href: `/${lang}/external`, label: t(lang, 'common.external'), icon: '🔗' },
     { key: 'about', href: `/${lang}/about`, label: t(lang, 'common.about'), icon: '👤' },
+    { key: 'theme', href: '#theme', label: 'theme', icon: 'theme' },
     { key: 'lang', href: '#lang', label: lang.toUpperCase(), icon: '🌐' },
   ];
 
@@ -24,6 +26,10 @@ export default function MobileNav({ lang }: MobileNavProps) {
     <nav className="mobile-nav sm:hidden fixed bottom-0 left-0 right-0 bg-neutral-secondary border-t border-border-primary z-50">
       <div className="flex overflow-x-auto scrollbar-hide">
         {navItems.map((item) => {
+          if (item.key === 'theme') {
+            return <MobileThemeSwitcher key={item.key} lang={lang} />;
+          }
+
           if (item.key === 'lang') {
             return (
               <LangSwitcher key={item.key} lang={lang} pathname={pathname} />

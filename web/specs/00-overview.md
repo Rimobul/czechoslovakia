@@ -38,11 +38,16 @@
 ## Design System
 
 ### Visual Style
-- **Aesthetic:** Modern, bold, dark-themed design inspired by contemporary web design
+- **Aesthetic:** Modern, bold, themed design inspired by contemporary web design
 - **Mood:** Sleek, professional with strong visual contrast and clean typography
 - **Inspiration:** Webflow-based design with CSS custom properties and utility classes
+- **Theming:** Supports light, dark, and system (auto-detect) themes
 
 ### Color Palette
+
+The site supports both light and dark themes. Colors are defined as CSS custom properties.
+
+#### Dark Theme (Default)
 
 | Role | Color | Usage |
 |------|-------|-------|
@@ -56,6 +61,21 @@
 | Text Secondary | Light 60% | Muted text, descriptions |
 | Border Primary | Light 10% | Subtle borders |
 | Border Secondary | Light 20% | Card borders, dividers |
+
+#### Light Theme
+
+| Role | Color | Usage |
+|------|-------|-------|
+| Neutral Primary | Light (#fafafa) | Main background |
+| Neutral Secondary | Off-white (#f0f0f0) | Secondary sections, cards |
+| Neutral Inverse | Dark (#1a1a1a) | Text on light, inverse sections |
+| Accent Primary | Red (#d3433b) | Buttons, CTAs, highlights |
+| Accent Hover | Light Red (#de736d) | Button hover states |
+| Accent Text | Dark Red (#c23830) | Links, accent text on light |
+| Text Primary | Dark (#1a1a1a) | Main text on light backgrounds |
+| Text Secondary | Dark 65% | Muted text, descriptions |
+| Border Primary | Dark 10% | Subtle borders |
+| Border Secondary | Dark 15% | Card borders, dividers |
 
 ### Typography
 
@@ -94,16 +114,16 @@
 
 ### Navigation - Desktop
 - **Position:** Top horizontal navbar, sticky
-- **Style:** Dark background with light text
+- **Style:** Themed background with contrasting text
 - **Behavior:** Always visible on scroll
-- **Items:** Home, Blog, Maps, External Content, About, Language Picker
+- **Items:** Home, Blog, Maps, External Content, About, Theme Switcher, Language Picker
 
 ### Navigation - Mobile
 - **Position:** Bottom horizontal navbar
-- **Style:** Dark secondary background with border-top
+- **Style:** Themed secondary background with border-top
 - **Behavior:** Sticky, horizontally scrollable
 - **Rationale:** Optimized for thumb navigation while holding phone
-- **Items:** Same as desktop, icon-based with labels
+- **Items:** Same as desktop plus Theme Switcher, icon-based with labels
 
 ### Footer
 - **Style:** Dark inverse background (#ebebeb) with dark text
@@ -150,7 +170,9 @@ components/
 │   ├── MobileNav.tsx       # Bottom mobile navigation
 │   ├── Footer.tsx
 │   ├── Layout.tsx          # Page wrapper
-│   └── Sidebar.tsx         # Sub-navigation sidebar
+│   ├── Sidebar.tsx         # Sub-navigation sidebar
+│   ├── ThemeProvider.tsx   # Theme context provider
+│   └── ThemeSwitcher.tsx   # Theme toggle components
 ├── common/
 │   ├── LanguagePicker.tsx
 │   ├── Card.tsx            # Reusable content card
@@ -257,6 +279,7 @@ content/
 | [04-external-content.md](04-external-content.md) | External content specification |
 | [05-about-page.md](05-about-page.md) | About page specification |
 | [06-localization.md](06-localization.md) | Localization requirements |
+| [07-theming.md](07-theming.md) | Theme system specification |
 
 ---
 

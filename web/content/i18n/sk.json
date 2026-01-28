@@ -57,5 +57,11 @@
   "errors": {
     "notFound": "Stránka nenájdená",
     "contentNotAvailable": "Tento obsah zatiaľ nie je dostupný v slovenčine."
+  },
+  "theme": {
+    "light": "Svetlý",
+    "dark": "Tmavý",
+    "system": "Systém",
+    "toggle": "Prepnúť motív"
   }
 }
