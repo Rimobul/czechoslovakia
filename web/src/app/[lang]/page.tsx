@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Language, languages, t } from '@/lib/i18n';
 import { getBlogPosts } from '@/lib/blog';
 import { getMaps } from '@/lib/maps';
 import BlogCard from '@/components/blog/BlogCard';
 import MapCard from '@/components/maps/MapCard';
+import HeroSection from '@/components/landing/HeroSection';
 
 interface PageProps {
   params: Promise<{ lang: string }>;
@@ -27,23 +27,10 @@ export default async function LandingPage({ params }: PageProps) {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[70vh] min-h-[400px] flex items-center justify-center bg-gray-900">
-        <Image
-          src="/images/hero.svg"
-          alt="Czechoslovakia"
-          fill
-          className="object-cover opacity-60"
-          priority
-        />
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-            {t(lang, 'landing.heroTitle')}
-          </h1>
-          <p className="text-xl sm:text-2xl font-sans opacity-90">
-            {t(lang, 'landing.heroSubtitle')}
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        heroTitle={t(lang, 'landing.heroTitle')}
+        heroSubtitle={t(lang, 'landing.heroSubtitle')}
+      />
 
       {/* Introduction */}
       <section className="py-16 px-4">
