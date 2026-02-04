@@ -15,7 +15,7 @@ export default function Footer({ lang }: FooterProps) {
   ];
 
   return (
-    <footer className="border-t border-border mt-16 py-12 bg-gray-50">
+    <footer className="h-[50vh] min-h-[300px] border-t border-border flex items-center justify-center bg-gray-50">
       <div className="max-w-content mx-auto px-4">
         <div className="flex flex-col items-center gap-6">
           {/* Navigation Links */}

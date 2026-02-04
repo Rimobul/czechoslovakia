@@ -33,9 +33,9 @@ export default async function LandingPage({ params }: PageProps) {
       />
 
       {/* Introduction */}
-      <section className="py-16 px-4">
-        <div className="max-w-narrow mx-auto text-center">
-          <p className="text-lg leading-relaxed">
+      <section className="h-screen min-h-[500px] flex items-center justify-center px-4">
+        <div className="w-[50%] sm:w-[80%] mx-auto text-center">
+          <p className="leading-relaxed text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem]">
             {t(lang, 'landing.intro')}
           </p>
         </div>
@@ -43,12 +43,12 @@ export default async function LandingPage({ params }: PageProps) {
 
       {/* Latest Articles */}
       {latestPosts.length > 0 && (
-        <section className="py-16 px-4 bg-gray-50">
+        <section className="h-screen min-h-[600px] flex flex-col items-center justify-center px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">
               {t(lang, 'landing.latestArticles')}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-3 sm:grid-cols-1 gap-8">
               {latestPosts.map((post) => (
                 <BlogCard key={post.slug} post={post} lang={lang} />
               ))}
@@ -67,7 +67,7 @@ export default async function LandingPage({ params }: PageProps) {
 
       {/* Latest Map */}
       {latestMap && (
-        <section className="py-16 px-4">
+        <section className="h-screen min-h-[600px] flex flex-col items-center justify-center px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">
               {t(lang, 'landing.latestMap')}
