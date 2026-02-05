@@ -45,10 +45,10 @@ export default async function LandingPage({ params }: PageProps) {
       {latestPosts.length > 0 && (
         <section className="h-screen min-h-[600px] flex flex-col items-center justify-center px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">
+            <h2 className="text-3xl font-bold text-center mb-16">
               {t(lang, 'landing.latestArticles')}
             </h2>
-            <div className="grid grid-cols-3 sm:grid-cols-1 gap-8">
+            <div className="grid grid-cols-3 sm:grid-cols-1 gap-10">
               {latestPosts.map((post) => (
                 <BlogCard key={post.slug} post={post} lang={lang} />
               ))}
@@ -69,7 +69,7 @@ export default async function LandingPage({ params }: PageProps) {
       {latestMap && (
         <section className="h-screen min-h-[600px] flex flex-col items-center justify-center px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">
+            <h2 className="text-3xl font-bold text-center mb-16">
               {t(lang, 'landing.latestMap')}
             </h2>
             <MapCard map={latestMap} lang={lang} />

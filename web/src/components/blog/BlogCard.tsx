@@ -9,15 +9,18 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ post, lang }: BlogCardProps) {
+  console.log('Rendering BlogCard for:', post);
+
   return (
-    <article className="overflow-hidden bg-white/15 hover:bg-white/20 transition-colors">
+    <article className="overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
       <Link href={`/${lang}/blog/${post.slug}`} className="no-underline">
-        <div className="aspect-video relative bg-neutral-secondary">
+        <div className="aspect-video bg-neutral-secondary">
           <Image
             src={post.thumbnail}
             alt={post.title}
-            fill
-            className="object-cover"
+            width={800}
+            height={450}
+            className="object-cover w-full h-full"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
