@@ -1,10 +1,12 @@
 {
   "common": {
     "home": "Home",
+    "news": "News",
     "blog": "Blog",
     "maps": "Maps",
     "external": "Resources",
     "about": "About",
+    "theme": "Theme",
     "readMore": "Read more",
     "viewAll": "View all",
     "backTo": "Back to",
@@ -12,7 +14,7 @@
     "error": "An error occurred"
   },
   "landing": {
-    "heroTitle": "New Czechoslovakia",
+    "heroTitle": "CS Data",
     "heroSubtitle": "#Better Together",
     "intro": "Welcome to a website dedicated to comparing Czechia and Slovakia. Here you'll find articles, interactive maps, and data about both nations that once formed a single country.",
     "latestArticles": "Latest Articles",
@@ -26,6 +28,10 @@
     "publishedOn": "Published on",
     "categories": "Categories",
     "backToBlog": "← Back to Blog"
+  },
+  "news": {
+    "title": "News",
+    "intro": "Short updates and announcements about new content on CS Data."
   },
   "maps": {
     "title": "Maps",
@@ -51,7 +57,7 @@
     "acknowledgments": "Acknowledgments"
   },
   "footer": {
-    "copyright": "© 2026 New Czechoslovakia",
+    "copyright": "© 2026 CS Data",
     "madeWith": "Made with"
   },
   "errors": {

@@ -8,6 +8,7 @@ interface FooterProps {
 export default function Footer({ lang }: FooterProps) {
   const navItems = [
     { href: `/${lang}`, label: t(lang, 'common.home') },
+    { href: `/${lang}/news`, label: t(lang, 'common.news') },
     { href: `/${lang}/blog`, label: t(lang, 'common.blog') },
     { href: `/${lang}/maps`, label: t(lang, 'common.maps') },
     { href: `/${lang}/external`, label: t(lang, 'common.external') },

@@ -18,9 +18,6 @@
   --container-width: 1280px;
   --container-padding: 1rem;
   
-  /* Accent colors (consistent across themes) */
-  --color-accent-primary: #d3433b;
-  --color-accent-primary-hover: #de736d;
 }
 
 /* Dark Theme (default) */
@@ -31,8 +28,10 @@
   --color-neutral-secondary: #151515;
   --color-neutral-inverse: #ebebeb;
   
-  /* Accent on dark */
-  --color-accent-on-dark: #f34f48;
+  /* Accent colors (blue in dark theme) */
+  --color-accent-primary: #2f7be8;
+  --color-accent-primary-hover: #5a9cf0;
+  --color-accent-on-dark: #6aa8ff;
   
   /* Text colors */
   --color-text-primary: #ebebeb;
@@ -46,6 +45,9 @@
   /* Card backgrounds */
   --color-card-bg: rgba(235, 235, 235, 0.15);
   --color-card-bg-hover: rgba(235, 235, 235, 0.2);
+
+  /* Menu overlay background (white on dark theme) */
+  --color-menu-overlay: rgba(255, 255, 255, 0.12);
 }
 
 /* Light Theme */
@@ -55,7 +57,9 @@
   --color-neutral-secondary: #f0f0f0;
   --color-neutral-inverse: #1a1a1a;
   
-  /* Accent on light */
+  /* Accent colors (red in light theme) */
+  --color-accent-primary: #d3433b;
+  --color-accent-primary-hover: #de736d;
   --color-accent-on-dark: #c23830;
   
   /* Text colors */
@@ -70,6 +74,9 @@
   /* Card backgrounds */
   --color-card-bg: rgba(0, 0, 0, 0.05);
   --color-card-bg-hover: rgba(0, 0, 0, 0.08);
+
+  /* Menu overlay background (black on light theme) */
+  --color-menu-overlay: rgba(0, 0, 0, 0.08);
 }
 
 html {

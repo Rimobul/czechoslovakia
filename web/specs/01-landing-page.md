@@ -37,7 +37,7 @@ The landing page serves as the main entry point, introducing visitors to the web
 │                    [Dark Background Image]              │
 │                                                         │
 │                      [Logo Icon]                        │
-│              NOVÉ ČESKOSLOVENSKO                        │
+│                    CS DATA                              │
 │                   Lepší spolu                           │
 │                                                         │
 │   [3-column intro text grid]                           │

@@ -36,7 +36,7 @@ export default function HeroSection({ heroTitle, heroSubtitle }: HeroSectionProp
         <div className="w-[30vw] min-w-[80px] max-w-[1200px] mb-6">
           <Image
             src={logoSrc}
-            alt="New Czechoslovakia Logo"
+            alt="CS Data Logo"
             width={1200}
             height={1200}
             className="w-full h-auto"

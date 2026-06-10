@@ -213,7 +213,7 @@ Use `divider` class between content sections:
 ## SEO
 
 - **Title tag:** "About | NCS" / "O mně | NČS" / "O mne | NČS"
-- **Meta description:** "Learn about the creator of New Czechoslovakia and the motivation behind this project."
+- **Meta description:** "Learn about the creator of CS Data and the motivation behind this project."
 
 ---
 

@@ -62,11 +62,15 @@ export default function ThemeSwitcher({ lang }: ThemeSwitcherProps) {
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setMenuOpen(!menuOpen)}
-        className="p-2 text-text-secondary hover:text-accent-primary transition-colors"
+        className={`font-sans text-xs lg:text-sm text-center no-underline transition-opacity px-2 lg:px-3 py-2 inline-flex items-center whitespace-nowrap bg-transparent border-0 rounded-none appearance-none ${
+          menuOpen ? 'opacity-100' : 'opacity-80 hover:opacity-100'
+        }`}
+        style={{ color: 'var(--color-accent-primary)' }}
         aria-label={t(lang, 'theme.toggle')}
         title={t(lang, 'theme.toggle')}
       >
-        {themeIcons[theme]}
+        <span className="inline-flex">{themeIcons[theme]}</span>
+        <span className="ml-2">{t(lang, 'common.theme')}</span>
       </button>
       {menuOpen && (
         <div className="absolute right-0 top-full mt-2 bg-neutral-secondary border border-border-secondary py-1 min-w-[140px] z-50">
@@ -113,11 +117,12 @@ export function MobileThemeSwitcher({ lang }: ThemeSwitcherProps) {
   return (
     <button
       onClick={handleSwitch}
-      className="flex flex-col items-center justify-center px-4 py-3 min-w-[70px] text-text-secondary"
+      className="flex items-center justify-center gap-2.5 px-3 py-4 min-h-[56px] bg-transparent border-0 rounded-none appearance-none opacity-80 hover:opacity-100"
+      style={{ color: 'var(--color-accent-primary)' }}
       aria-label={t(lang, 'theme.toggle')}
     >
-      <span className="text-lg mb-1">{themeIcons[theme]}</span>
-      <span className="font-sans text-xs">{getLabel()}</span>
+      <span className="inline-flex p-1">{themeIcons[theme]}</span>
+      <span className="font-sans text-xs ml-1.5">{getLabel()}</span>
     </button>
   );
 }

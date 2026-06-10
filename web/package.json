@@ -1,7 +1,7 @@
 {
   "name": "ncs-web",
   "version": "1.0.0",
-  "description": "New Czechoslovakia - Comparing Czechia and Slovakia",
+  "description": "CS Data - Comparing Czechia and Slovakia",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

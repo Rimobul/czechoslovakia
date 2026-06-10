@@ -222,7 +222,7 @@ content/i18n/
     "title": "About"
   },
   "footer": {
-    "copyright": "© 2026 New Czechoslovakia",
+    "copyright": "© 2026 CS Data",
     "madeWith": "Made with"
   },
   "errors": {

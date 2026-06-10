@@ -1,10 +1,12 @@
 {
   "common": {
     "home": "Domov",
+    "news": "Novinky",
     "blog": "Blog",
     "maps": "Mapy",
     "external": "Externé zdroje",
     "about": "O mne",
+    "theme": "Motív",
     "readMore": "Čítať ďalej",
     "viewAll": "Zobraziť všetko",
     "backTo": "Späť na",
@@ -12,7 +14,7 @@
     "error": "Nastala chyba"
   },
   "landing": {
-    "heroTitle": "Nové Československo",
+    "heroTitle": "CS Data",
     "heroSubtitle": "#Lepší spolu",
     "intro": "Vitajte na stránkach venovaných porovnaniu Českej republiky a Slovenska. Nájdete tu články, interaktívne mapy a dáta o oboch krajinách, ktoré kedysi tvorili jeden štát.",
     "latestArticles": "Najnovšie články",
@@ -26,6 +28,10 @@
     "publishedOn": "Publikované",
     "categories": "Kategórie",
     "backToBlog": "← Späť na Blog"
+  },
+  "news": {
+    "title": "Novinky",
+    "intro": "Krátke aktuality a oznámenia o novom obsahu na CS Data."
   },
   "maps": {
     "title": "Mapy",
@@ -51,7 +57,7 @@
     "acknowledgments": "Poďakovanie"
   },
   "footer": {
-    "copyright": "© 2026 Nové ČeskoSlovensko",
+    "copyright": "© 2026 CS Data",
     "madeWith": "Vytvorené s pomocou"
   },
   "errors": {

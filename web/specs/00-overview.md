@@ -1,13 +1,13 @@
-# New Czechoslovakia (NCS) - Project Overview
+# CS Data (NCS) - Project Overview
 
 ## Project Identity
 
-**Project Name:** New Czechoslovakia  
+**Project Name:** CS Data  
 **Domain:** ncs.eu  
 **Title Localization:**
-- English: "New Czechoslovakia"
-- Czech: "Nové ČeskoSlovensko"
-- Slovak: "Nové ČeskoSlovensko"
+- English: "CS Data"
+- Czech: "CS Data"
+- Slovak: "CS Data"
 
 **Purpose:** A content-rich website presenting data, articles, and maps comparing information about Czechia and Slovakia. The site serves as a platform for original analysis, curated external resources, and interactive visualizations.
 
