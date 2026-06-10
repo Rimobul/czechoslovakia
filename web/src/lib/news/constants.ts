@@ -43,11 +43,43 @@ export const FEED_SOURCES: FeedSource[] = [
   { source: 'iRozhlas.cz', url: 'https://www.irozhlas.cz/rss/irozhlas/tag/86697' },
   // iRozhlas.cz — national feed (bucket-5)
   { source: 'iRozhlas.cz', url: 'https://www.irozhlas.cz/rss/irozhlas/section/zpravy-domov' },
+  // Denik.cz — national/regional feeds (prefix-based regional parser)
+  { source: 'Denik.cz', url: 'https://www.denik.cz/rss/podnikani.html' },
+  { source: 'Denik.cz', url: 'https://www.denik.cz/rss/sport.html' },
+  { source: 'Denik.cz', url: 'https://www.denik.cz/rss/zpravy.html' },
+  // Lidovky.cz — single feed (domov-only items)
+  { source: 'Lidovky.cz', url: 'https://servis.lidovky.cz/rss.aspx' },
+  // Aktualne.cz — regional feeds
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/jihocesky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/jihomoravsky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/karlovarsky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/vysocina' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/kralovehradecky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/liberecky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/moravskoslezsky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/olomoucky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/pardubicky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/plzensky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/praha' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/stredocesky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/ustecky' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/zlinsky' },
+  // Aktualne.cz — national feeds
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/domaci' },
+  { source: 'Aktualne.cz', url: 'https://www.aktualne.cz/rss/ceska-ekonomika' },
+  // DenikN.cz — domestic feeds (prefix-based regional parser)
+  { source: 'Denik N.cz', url: 'https://denikn.cz/cesko/feed/' },
+  { source: 'Denik N.cz', url: 'https://denikn.cz/tag/nazor/feed' },
+  { source: 'Denik N.cz', url: 'https://denikn.cz/kultura/feed' },
+  { source: 'Denik N.cz', url: 'https://denikn.cz/sport/feed' },
   // ČTK — national/regional feed
   { source: 'ČTK', url: 'https://www.ceskenoviny.cz/sluzby/rss/cr.php' },
+  // HN.cz — domestic feeds (prefix-based regional parser)
+  { source: 'HN.cz', url: 'https://domaci.hn.cz/?m=rss' },
+  { source: 'HN.cz', url: 'https://byznys.hn.cz/?p=02R000_rss' },
+  { source: 'HN.cz', url: 'https://investice.hn.cz/?m=rss' },
   { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/rss/xml/' },
   { source: 'Dennik N', url: 'https://dennikn.sk/feed/' },
-  { source: 'HN.cz', url: 'https://archiv.hn.cz/?m=rss' },
 ];
 
 export const ALLOWED_HOST_PARTS = [
@@ -56,6 +88,9 @@ export const ALLOWED_HOST_PARTS = [
   'seznamzpravy.cz',
   'idnes.cz',
   'irozhlas.cz',
+  'denik.cz',
+  'lidovky.cz',
+  'aktualne.cz',
   'ceskenoviny.cz',
   'pravda.sk',
   'dennikn.sk',

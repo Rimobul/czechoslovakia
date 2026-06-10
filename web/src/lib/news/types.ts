@@ -38,6 +38,11 @@ export interface FeedSource {
 export interface SourceParser {
   source: string;
   /**
+   * Optional gate for provider-specific filtering.
+   * Return false to drop the item before bucket assignment.
+   */
+  shouldIncludeItem?(itemXml: string): boolean;
+  /**
    * Extract region buckets from item XML.
    * Returns array of bucket IDs that this article belongs to.
    */

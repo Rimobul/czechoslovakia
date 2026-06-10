@@ -17,6 +17,12 @@ export function parseFeedItems(xml: string, feed: FeedSource): ParsedFeedItem[] 
   return itemMatches
     .map((match) => {
       const itemXml = match[1];
+      const parser = FEED_PARSERS.get(feed.url) ?? PARSERS.get(feed.source);
+
+      if (parser?.shouldIncludeItem && !parser.shouldIncludeItem(itemXml)) {
+        return null;
+      }
+
       const title = getTagValue(itemXml, 'title');
       const url = getTagValue(itemXml, 'link');
       const publishedAt = getTagValue(itemXml, 'pubDate');
@@ -36,7 +42,6 @@ export function parseFeedItems(xml: string, feed: FeedSource): ParsedFeedItem[] 
 
       // Per-URL parser takes precedence; fall back to per-source parser
       let buckets: string[] = [];
-      const parser = FEED_PARSERS.get(feed.url) ?? PARSERS.get(feed.source);
       if (parser) {
         buckets = parser.extractBuckets(itemXml);
       }
@@ -51,6 +56,7 @@ export function parseFeedItems(xml: string, feed: FeedSource): ParsedFeedItem[] 
         buckets: buckets.length > 0 ? buckets : undefined,
       };
     })
+    .filter((item): item is ParsedFeedItem => Boolean(item))
     .filter((item) => item.title && item.url && isAllowedHost(item.url));
 }
 

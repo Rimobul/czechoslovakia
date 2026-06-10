@@ -4,20 +4,9 @@
 
 import { SourceParser } from '../types';
 import { getTagValue } from '../utils/xml';
-import { normalizeText } from '../utils/text';
+import { BucketPrefixRules, resolveBucketsByPrefixRules } from './prefix-engine';
 
-/**
- * A rule is either a single normalised prefix (substring match) or an array
- * of prefixes that ALL must appear in the text (combination match).
- */
-type AktualityPrefixRule = string | string[];
-
-interface AktualityBucketRules {
-  bucketId: string;
-  rules: AktualityPrefixRule[];
-}
-
-const AKTUALITY_BUCKET_RULES: AktualityBucketRules[] = [
+const AKTUALITY_BUCKET_RULES: BucketPrefixRules[] = [
   {
     bucketId: 'bucket-3',
     rules: [
@@ -59,14 +48,6 @@ const AKTUALITY_BUCKET_RULES: AktualityBucketRules[] = [
   },
 ];
 
-function textMatchesAktualityRule(normalizedText: string, rule: AktualityPrefixRule): boolean {
-  if (typeof rule === 'string') {
-    return normalizedText.includes(normalizeText(rule));
-  }
-  // Combination rule: every part must appear in the text
-  return rule.every((part) => normalizedText.includes(normalizeText(part)));
-}
-
 /**
  * Parser for Aktuality.sk — all subfeeds are Slovak domestic news (bucket-5).
  * Regional buckets (3, 4, 8) are determined via prefix matching on the article text.
@@ -74,18 +55,9 @@ function textMatchesAktualityRule(normalizedText: string, rule: AktualityPrefixR
 export const aktualitySkParser: SourceParser = {
   source: 'Aktuality.sk',
   extractBuckets(itemXml: string): string[] {
-    const buckets: string[] = ['bucket-5'];
-
     const title = getTagValue(itemXml, 'title');
     const description = getTagValue(itemXml, 'description');
-    const normalizedText = normalizeText(`${title} ${description}`);
-
-    for (const { bucketId, rules } of AKTUALITY_BUCKET_RULES) {
-      if (rules.some((rule) => textMatchesAktualityRule(normalizedText, rule))) {
-        buckets.push(bucketId);
-      }
-    }
-
-    return buckets;
+    const matchedBuckets = resolveBucketsByPrefixRules(`${title} ${description}`, AKTUALITY_BUCKET_RULES);
+    return ['bucket-5', ...matchedBuckets];
   },
 };

@@ -5,6 +5,10 @@
 import { SourceParser } from '../types';
 import { novinkyCzParser } from './novinky-cz';
 import { aktualitySkParser } from './aktuality-sk';
+import { denikCzParser } from './denik-cz';
+import { denikNCzParser } from './denikn-cz';
+import { hnCzParser } from './hn-cz';
+import { lidovkyCzParser } from './lidovky-cz';
 import { ctkParser } from './ctk';
 import { iDnesDomesticParser, makeFixedBucketParser } from './idnes';
 
@@ -22,6 +26,10 @@ export function registerParsers(): void {
   PARSERS.set('Novinky.cz', novinkyCzParser);
   PARSERS.set('Seznam Zpravy', novinkyCzParser); // Reuse Novinky.cz parser
   PARSERS.set('Aktuality.sk', aktualitySkParser);
+  PARSERS.set('Denik.cz', denikCzParser);
+  PARSERS.set('Denik N.cz', denikNCzParser);
+  PARSERS.set('HN.cz', hnCzParser);
+  PARSERS.set('Lidovky.cz', lidovkyCzParser);
   PARSERS.set('ČTK', ctkParser);
 
   // iDNES.cz regional feeds — bucket fixed by feed URL
@@ -65,4 +73,24 @@ export function registerParsers(): void {
     'https://www.irozhlas.cz/rss/irozhlas/section/zpravy-domov',
     makeFixedBucketParser('iRozhlas.cz', ['bucket-5'])
   );
+
+  // Aktualne.cz regional feeds — bucket fixed by feed URL
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/jihocesky', makeFixedBucketParser('Aktualne.cz', ['bucket-6']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/jihomoravsky', makeFixedBucketParser('Aktualne.cz', ['bucket-2']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/karlovarsky', makeFixedBucketParser('Aktualne.cz', ['bucket-6']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/vysocina', makeFixedBucketParser('Aktualne.cz', ['bucket-2']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/kralovehradecky', makeFixedBucketParser('Aktualne.cz', ['bucket-9']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/liberecky', makeFixedBucketParser('Aktualne.cz', ['bucket-9']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/moravskoslezsky', makeFixedBucketParser('Aktualne.cz', ['bucket-7']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/olomoucky', makeFixedBucketParser('Aktualne.cz', ['bucket-7']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/pardubicky', makeFixedBucketParser('Aktualne.cz', ['bucket-9']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/plzensky', makeFixedBucketParser('Aktualne.cz', ['bucket-6']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/praha', makeFixedBucketParser('Aktualne.cz', ['bucket-1']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/stredocesky', makeFixedBucketParser('Aktualne.cz', ['bucket-1']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/ustecky', makeFixedBucketParser('Aktualne.cz', ['bucket-1']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/zlinsky', makeFixedBucketParser('Aktualne.cz', ['bucket-7']));
+
+  // Aktualne.cz national feeds — bucket-5
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/domaci', makeFixedBucketParser('Aktualne.cz', ['bucket-5']));
+  FEED_PARSERS.set('https://www.aktualne.cz/rss/ceska-ekonomika', makeFixedBucketParser('Aktualne.cz', ['bucket-5']));
 }
