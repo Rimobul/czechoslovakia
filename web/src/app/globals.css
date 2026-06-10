@@ -465,6 +465,25 @@ a:hover {
   border-left-color: #10B981;
 }
 
+/* News page grid */
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* Mobile bottom nav */
 @media (max-width: 640px) {
   .mobile-nav {

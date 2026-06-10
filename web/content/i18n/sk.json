@@ -31,7 +31,8 @@
   },
   "news": {
     "title": "Novinky",
-    "intro": "Krátke aktuality a oznámenia o novom obsahu na CS Data."
+    "intro": "Krátke aktuality a oznámenia o novom obsahu na CS Data.",
+    "empty": "Aktuálne nie sú k dispozícii žiadne správy."
   },
   "maps": {
     "title": "Mapy",

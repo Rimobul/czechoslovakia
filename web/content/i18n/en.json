@@ -31,7 +31,8 @@
   },
   "news": {
     "title": "News",
-    "intro": "Short updates and announcements about new content on CS Data."
+    "intro": "Short updates and announcements about new content on CS Data.",
+    "empty": "No news available right now."
   },
   "maps": {
     "title": "Maps",
