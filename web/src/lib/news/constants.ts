@@ -79,7 +79,12 @@ export const FEED_SOURCES: FeedSource[] = [
   { source: 'HN.cz', url: 'https://byznys.hn.cz/?p=02R000_rss' },
   { source: 'HN.cz', url: 'https://investice.hn.cz/?m=rss' },
   { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/rss/xml/' },
-  { source: 'Dennik N', url: 'https://dennikn.sk/feed/' },
+  // DennikN.sk — domestic feeds (prefix-based regional parser)
+  { source: 'Dennik N', url: 'https://dennikn.sk/slovensko/feed/' },
+  { source: 'Dennik N', url: 'https://dennikn.sk/ekonomika/feed' },
+  { source: 'Dennik N', url: 'https://dennikn.sk/komentare/feed' },
+  { source: 'Dennik N', url: 'https://dennikn.sk/kultura/feed' },
+  { source: 'Dennik N', url: 'https://dennikn.sk/veda/feed' },
 ];
 
 export const ALLOWED_HOST_PARTS = [
