@@ -32,7 +32,9 @@
   "news": {
     "title": "News",
     "intro": "Short updates and announcements about new content on CS Data.",
-    "empty": "No news available right now."
+    "empty": "No news available right now.",
+    "loading": "Loading news…",
+    "error": "Failed to load news. Please try again."
   },
   "maps": {
     "title": "Maps",
