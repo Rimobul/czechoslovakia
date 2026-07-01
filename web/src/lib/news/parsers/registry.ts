@@ -9,6 +9,8 @@ import { denikCzParser } from './denik-cz';
 import { denikNCzParser } from './denikn-cz';
 import { dennikNSkParser } from './dennikn-sk';
 import { smeSkParser } from './sme-sk';
+import { topkySkParser } from './topky-sk';
+import { hnonlineSkParser } from './hnonline-sk';
 import { hnCzParser } from './hn-cz';
 import { lidovkyCzParser } from './lidovky-cz';
 import { ctkParser } from './ctk';
@@ -32,6 +34,8 @@ export function registerParsers(): void {
   PARSERS.set('Denik N.cz', denikNCzParser);
   PARSERS.set('Dennik N', dennikNSkParser);
   PARSERS.set('SME.sk', smeSkParser);
+  PARSERS.set('Topky.sk', topkySkParser);
+  PARSERS.set('HNonline.sk', hnonlineSkParser);
   PARSERS.set('HN.cz', hnCzParser);
   PARSERS.set('Lidovky.cz', lidovkyCzParser);
   PARSERS.set('ČTK', ctkParser);

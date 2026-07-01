@@ -100,6 +100,10 @@ export const FEED_SOURCES: FeedSource[] = [
   { source: 'Dennik N', url: 'https://dennikn.sk/komentare/feed' },
   { source: 'Dennik N', url: 'https://dennikn.sk/kultura/feed' },
   { source: 'Dennik N', url: 'https://dennikn.sk/veda/feed' },
+  // Topky.sk — domestic and regional feed (prefix-based regional parser)
+  { source: 'Topky.sk', url: 'https://www.topky.sk/rss/10/Spravy_-_Domace.rss' },
+  // HNonline.sk — domestic and regional feed (category-filtered, prefix-based regional parser)
+  { source: 'HNonline.sk', url: 'https://hnonline.sk/feed' },
 ];
 
 export const ALLOWED_HOST_PARTS = [
