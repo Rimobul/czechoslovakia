@@ -129,35 +129,35 @@ export const REGION_BUCKETS: RegionBucket[] = [
     terms: ['Ústecký', 'Středočeský', 'Praha', 'Hlavní město Praha'],
   },
   {
-    id: 'jizni-morava',
-    terms: ['Vysočina', 'Jihomoravský'],
-  },
-  {
-    id: 'zapadne-slovensko',
-    terms: ['Bratislavský', 'Nitriansky', 'Trnavský'],
-  },
-  {
-    id: 'vychodne-slovensko',
-    terms: ['Košický', 'Prešovský'],
-  },
-  {
-    id: 'cesko-slovensko',
-    terms: ['Česko', 'Slovensko', 'Czechia', 'Slovakia', 'Domácí'],
+    id: 'vychodni-cechy',
+    terms: ['Liberecký', 'Královéhradecký', 'Pardubický'],
   },
   {
     id: 'jizni-cechy',
     terms: ['Jihočeský', 'Plzeňský', 'Karlovarský'],
   },
   {
+    id: 'jizni-morava',
+    terms: ['Vysočina', 'Jihomoravský'],
+  },
+  {
+    id: 'cesko-slovensko',
+    terms: ['Česko', 'Slovensko', 'Czechia', 'Slovakia', 'Domácí'],
+  },
+  {
     id: 'severni-morava',
     terms: ['Moravskoslezský', 'Olomoucký', 'Zlínský'],
+  },
+  {
+    id: 'zapadne-slovensko',
+    terms: ['Bratislavský', 'Nitriansky', 'Trnavský'],
   },
   {
     id: 'stredne-slovensko',
     terms: ['Žilinský', 'Banskobystrický', 'Trenčiansky'],
   },
   {
-    id: 'vychodni-cechy',
-    terms: ['Liberecký', 'Královéhradecký', 'Pardubický'],
+    id: 'vychodne-slovensko',
+    terms: ['Košický', 'Prešovský'],
   },
 ];

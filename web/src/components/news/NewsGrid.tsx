@@ -11,9 +11,10 @@ interface NewsGridProps {
 
 function NewsCardSkeleton() {
   return (
-    <article className="border border-border-primary bg-neutral-secondary overflow-hidden h-full animate-pulse">
+    <article className="border border-border-primary bg-neutral-secondary overflow-hidden h-full animate-pulse flex flex-col">
+      <div className="bg-neutral-primary px-3 py-2 h-5" />
       <div className="aspect-video bg-neutral-primary" />
-      <div className="p-4 md:p-5 space-y-3">
+      <div className="p-4 md:p-5 space-y-3 flex-grow">
         <div className="h-3 bg-neutral-primary rounded w-1/4" />
         <div className="h-5 bg-neutral-primary rounded w-full" />
         <div className="h-5 bg-neutral-primary rounded w-3/4" />
@@ -54,7 +55,7 @@ export default function NewsGrid({ lang }: NewsGridProps) {
   return (
     <div className="news-grid">
       {items.slice(0, 9).map((item) => (
-        <NewsCard key={item.id} item={item} />
+        <NewsCard key={item.id} item={item} lang={lang} />
       ))}
     </div>
   );
