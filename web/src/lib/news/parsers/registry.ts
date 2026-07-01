@@ -8,6 +8,7 @@ import { aktualitySkParser } from './aktuality-sk';
 import { denikCzParser } from './denik-cz';
 import { denikNCzParser } from './denikn-cz';
 import { dennikNSkParser } from './dennikn-sk';
+import { smeSkParser } from './sme-sk';
 import { hnCzParser } from './hn-cz';
 import { lidovkyCzParser } from './lidovky-cz';
 import { ctkParser } from './ctk';
@@ -30,6 +31,7 @@ export function registerParsers(): void {
   PARSERS.set('Denik.cz', denikCzParser);
   PARSERS.set('Denik N.cz', denikNCzParser);
   PARSERS.set('Dennik N', dennikNSkParser);
+  PARSERS.set('SME.sk', smeSkParser);
   PARSERS.set('HN.cz', hnCzParser);
   PARSERS.set('Lidovky.cz', lidovkyCzParser);
   PARSERS.set('ČTK', ctkParser);
@@ -95,4 +97,20 @@ export function registerParsers(): void {
   // Aktualne.cz national feeds — bucket-5
   FEED_PARSERS.set('https://www.aktualne.cz/rss/domaci', makeFixedBucketParser('Aktualne.cz', ['bucket-5']));
   FEED_PARSERS.set('https://www.aktualne.cz/rss/ceska-ekonomika', makeFixedBucketParser('Aktualne.cz', ['bucket-5']));
+
+  // Pravda.sk regional feeds
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/bratislava/', makeFixedBucketParser('Pravda.sk', ['bucket-3']));
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/banska-bystrica/', makeFixedBucketParser('Pravda.sk', ['bucket-4']));
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/kosice/', makeFixedBucketParser('Pravda.sk', ['bucket-4']));
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/nitra/', makeFixedBucketParser('Pravda.sk', ['bucket-3']));
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/presov/', makeFixedBucketParser('Pravda.sk', ['bucket-4']));
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/trencin/', makeFixedBucketParser('Pravda.sk', ['bucket-3']));
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/trnava/', makeFixedBucketParser('Pravda.sk', ['bucket-3']));
+  FEED_PARSERS.set('https://spravy.pravda.sk/regiony/rss/xml/zilina/', makeFixedBucketParser('Pravda.sk', ['bucket-4']));
+
+  // Pravda.sk domestic feeds — bucket-5
+  FEED_PARSERS.set('https://spravy.pravda.sk/domace/rss/xml/', makeFixedBucketParser('Pravda.sk', ['bucket-5']));
+  FEED_PARSERS.set('https://sportweb.pravda.sk/rss/xml/', makeFixedBucketParser('Pravda.sk', ['bucket-5']));
+  FEED_PARSERS.set('https://kultura.pravda.sk/rss/xml/', makeFixedBucketParser('Pravda.sk', ['bucket-5']));
+  FEED_PARSERS.set('https://ekonomika.pravda.sk/rss/xml/', makeFixedBucketParser('Pravda.sk', ['bucket-5']));
 }

@@ -78,7 +78,22 @@ export const FEED_SOURCES: FeedSource[] = [
   { source: 'HN.cz', url: 'https://domaci.hn.cz/?m=rss' },
   { source: 'HN.cz', url: 'https://byznys.hn.cz/?p=02R000_rss' },
   { source: 'HN.cz', url: 'https://investice.hn.cz/?m=rss' },
-  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/rss/xml/' },
+  // Pravda.sk — regional feeds (fixed bucket per URL)
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/bratislava/' },
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/banska-bystrica/' },
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/kosice/' },
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/nitra/' },
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/presov/' },
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/trencin/' },
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/trnava/' },
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/zilina/' },
+  // Pravda.sk — domestic feeds (bucket-5)
+  { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/domace/rss/xml/' },
+  { source: 'Pravda.sk', url: 'https://sportweb.pravda.sk/rss/xml/' },
+  { source: 'Pravda.sk', url: 'https://kultura.pravda.sk/rss/xml/' },
+  { source: 'Pravda.sk', url: 'https://ekonomika.pravda.sk/rss/xml/' },
+  // SME.sk — single feed (prefix-based regional parser with domov fallback)
+  { source: 'SME.sk', url: 'https://www.sme.sk/rss-title' },
   // DennikN.sk — domestic feeds (prefix-based regional parser)
   { source: 'Dennik N', url: 'https://dennikn.sk/slovensko/feed/' },
   { source: 'Dennik N', url: 'https://dennikn.sk/ekonomika/feed' },
@@ -98,6 +113,7 @@ export const ALLOWED_HOST_PARTS = [
   'aktualne.cz',
   'ceskenoviny.cz',
   'pravda.sk',
+  'sme.sk',
   'dennikn.sk',
   'denikn.cz',
   'hn.cz',
