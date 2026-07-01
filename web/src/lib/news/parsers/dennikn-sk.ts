@@ -15,9 +15,9 @@ export const dennikNSkParser: SourceParser = {
     const matchedBuckets = resolveBucketsByPrefixRules(`${title} ${description}`, SLOVAK_REGIONAL_BUCKET_RULES);
 
     if (matchedBuckets.length === 0) {
-      return ['bucket-5'];
+      return ['cesko-slovensko'];
     }
 
-    return ['bucket-5', ...matchedBuckets];
+    return ['cesko-slovensko', ...matchedBuckets];
   },
 };

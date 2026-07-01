@@ -1,12 +1,12 @@
 /**
- * Parser for iDNES.cz - conditional bucket-5 assignment based on category domain
+ * Parser for iDNES.cz - conditional cesko-slovensko assignment based on category domain
  */
 
 import { SourceParser } from '../types';
 
 /**
  * Parser for iDNES.cz national feeds.
- * Only assigns bucket-5 when the item has a category whose domain attribute
+ * Only assigns cesko-slovensko when the item has a category whose domain attribute
  * contains the word "domaci" (e.g. domain="https://www.idnes.cz/ekonomika/domaci").
  */
 export const iDnesDomesticParser: SourceParser = {
@@ -14,7 +14,7 @@ export const iDnesDomesticParser: SourceParser = {
   extractBuckets(itemXml: string): string[] {
     const categoryMatches = Array.from(itemXml.matchAll(/<category[^>]+domain=["']([^"']+)["'][^>]*>/gi));
     const hasDomaci = categoryMatches.some((m) => m[1].toLowerCase().includes('domaci'));
-    return hasDomaci ? ['bucket-5'] : [];
+    return hasDomaci ? ['cesko-slovensko'] : [];
   },
 };
 

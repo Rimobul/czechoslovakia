@@ -15,12 +15,12 @@ function mapNovinkySectionToRegion(sectionValue: string): string | null {
   const normalized = sectionValue.trim().toLowerCase();
 
   if (normalized === 'domácí') {
-    return 'bucket-5';
+    return 'cesko-slovensko';
   }
 
   // Check each region bucket for matching terms
   for (const bucket of REGION_BUCKETS) {
-    if (bucket.id === 'bucket-5') continue; // Skip global bucket
+    if (bucket.id === 'cesko-slovensko') continue; // Skip global bucket
     for (const term of bucket.terms) {
       if (normalized.includes(normalizeText(term))) {
         return bucket.id;

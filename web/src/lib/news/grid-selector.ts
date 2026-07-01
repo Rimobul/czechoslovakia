@@ -28,7 +28,7 @@ function matchesTerms(item: ParsedFeedItem, terms: string[]): boolean {
 }
 
 function isRegionalCandidate(item: ParsedFeedItem): boolean {
-  return REGION_BUCKETS.filter((b) => b.id !== 'bucket-5').some((bucket) =>
+  return REGION_BUCKETS.filter((b) => b.id !== 'cesko-slovensko').some((bucket) =>
     matchesTerms(item, bucket.terms),
   );
 }
@@ -37,8 +37,8 @@ export function selectRandomGrid(allItems: ParsedFeedItem[]): NewsCardItem[] {
   const bucketResults = REGION_BUCKETS.map((bucket) => {
     let bucketItems: ParsedFeedItem[];
 
-    if (bucket.id === 'bucket-5') {
-      const explicitGlobal = allItems.filter((item) => item.buckets?.includes('bucket-5'));
+    if (bucket.id === 'cesko-slovensko') {
+      const explicitGlobal = allItems.filter((item) => item.buckets?.includes('cesko-slovensko'));
       const noRegionalMatch = allItems.filter((item) => !isRegionalCandidate(item));
       bucketItems = explicitGlobal.length > 0 ? explicitGlobal : noRegionalMatch;
     } else {

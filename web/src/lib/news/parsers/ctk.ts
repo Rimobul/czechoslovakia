@@ -13,7 +13,7 @@ interface CZDistrictBucketRule {
 
 const CZ_DISTRICT_BUCKET_RULES: CZDistrictBucketRule[] = [
   {
-    bucketId: 'bucket-1',
+    bucketId: 'zapadni-cechy',
     cities: [
       'Praha', 'Prague',
       'Benešov', 'Beroun', 'Kladno', 'Kolín', 'Kutná Hora', 'Mělník',
@@ -23,7 +23,7 @@ const CZ_DISTRICT_BUCKET_RULES: CZDistrictBucketRule[] = [
     ],
   },
   {
-    bucketId: 'bucket-2',
+    bucketId: 'jizni-morava',
     cities: [
       'Brno',
       'Blansko', 'Vyškov', 'Prostějov', 'Kroměříž', 'Uherské Hradiště',
@@ -32,7 +32,7 @@ const CZ_DISTRICT_BUCKET_RULES: CZDistrictBucketRule[] = [
     ],
   },
   {
-    bucketId: 'bucket-6',
+    bucketId: 'jizni-cechy',
     cities: [
       'České Budějovice', 'Český Krumlov', 'Prachatice', 'Strakonice',
       'Tábor', 'Pelhřimov', 'Jindřichův Hradec', 'Písek',
@@ -41,7 +41,7 @@ const CZ_DISTRICT_BUCKET_RULES: CZDistrictBucketRule[] = [
     ],
   },
   {
-    bucketId: 'bucket-7',
+    bucketId: 'severni-morava',
     cities: [
       'Olomouc', 'Šumperk', 'Přerov',
       'Ostrava', 'Opava', 'Bruntál', 'Frýdek-Místek', 'Nový Jičín',
@@ -49,7 +49,7 @@ const CZ_DISTRICT_BUCKET_RULES: CZDistrictBucketRule[] = [
     ],
   },
   {
-    bucketId: 'bucket-9',
+    bucketId: 'vychodni-cechy',
     cities: [
       'Liberec', 'Česká Lípa', 'Jablonec nad Nisou', 'Semily',
       'Hradec Králové', 'Jičín', 'Chrudim', 'Ústí nad Orlicí',
@@ -67,13 +67,13 @@ export const ctkParser: SourceParser = {
   extractBuckets(itemXml: string): string[] {
     const description = getTagValue(itemXml, 'description');
     if (!description) {
-      return ['bucket-5'];
+      return ['cesko-slovensko'];
     }
 
     // Extract location (text before dash or parenthesis)
     const location = description.split(/\s*[-\(]/)[0].trim();
     if (!location) {
-      return ['bucket-5'];
+      return ['cesko-slovensko'];
     }
 
     const normalizedLocation = normalizeText(location);
@@ -81,11 +81,11 @@ export const ctkParser: SourceParser = {
     // Find matching city in Czech district mappings
     for (const rule of CZ_DISTRICT_BUCKET_RULES) {
       if (rule.cities.some((city) => normalizeText(city) === normalizedLocation)) {
-        return ['bucket-5', rule.bucketId];
+        return ['cesko-slovensko', rule.bucketId];
       }
     }
 
-    // No district match, only bucket-5
-    return ['bucket-5'];
+    // No district match, only cesko-slovensko
+    return ['cesko-slovensko'];
   },
 };

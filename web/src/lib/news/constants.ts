@@ -22,7 +22,7 @@ export const FEED_SOURCES: FeedSource[] = [
   { source: 'iDNES.cz', url: 'https://servis.idnes.cz/rss.aspx?c=olomouc' },
   { source: 'iDNES.cz', url: 'https://servis.idnes.cz/rss.aspx?c=ostrava' },
   { source: 'iDNES.cz', url: 'https://servis.idnes.cz/rss.aspx?c=zlin' },
-  // iDNES.cz — national feeds (bucket-5 only when category domain contains "domaci")
+  // iDNES.cz — national feeds (cesko-slovensko only when category domain contains "domaci")
   { source: 'iDNES.cz', url: 'https://servis.idnes.cz/rss.aspx?c=zpravodaj' },
   { source: 'iDNES.cz', url: 'https://servis.idnes.cz/rss.aspx?c=sport' },
   { source: 'iDNES.cz', url: 'https://servis.idnes.cz/rss.aspx?c=ekonomikah' },
@@ -41,7 +41,7 @@ export const FEED_SOURCES: FeedSource[] = [
   { source: 'iRozhlas.cz', url: 'https://www.irozhlas.cz/rss/irozhlas/tag/59685' },
   { source: 'iRozhlas.cz', url: 'https://www.irozhlas.cz/rss/irozhlas/tag/86021' },
   { source: 'iRozhlas.cz', url: 'https://www.irozhlas.cz/rss/irozhlas/tag/86697' },
-  // iRozhlas.cz — national feed (bucket-5)
+  // iRozhlas.cz — national feed (cesko-slovensko)
   { source: 'iRozhlas.cz', url: 'https://www.irozhlas.cz/rss/irozhlas/section/zpravy-domov' },
   // Denik.cz — national/regional feeds (prefix-based regional parser)
   { source: 'Denik.cz', url: 'https://www.denik.cz/rss/podnikani.html' },
@@ -87,7 +87,7 @@ export const FEED_SOURCES: FeedSource[] = [
   { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/trencin/' },
   { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/trnava/' },
   { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/regiony/rss/xml/zilina/' },
-  // Pravda.sk — domestic feeds (bucket-5)
+  // Pravda.sk — domestic feeds (cesko-slovensko)
   { source: 'Pravda.sk', url: 'https://spravy.pravda.sk/domace/rss/xml/' },
   { source: 'Pravda.sk', url: 'https://sportweb.pravda.sk/rss/xml/' },
   { source: 'Pravda.sk', url: 'https://kultura.pravda.sk/rss/xml/' },
@@ -125,39 +125,39 @@ export const ALLOWED_HOST_PARTS = [
 
 export const REGION_BUCKETS: RegionBucket[] = [
   {
-    id: 'bucket-1',
+    id: 'zapadni-cechy',
     terms: ['Ústecký', 'Středočeský', 'Praha', 'Hlavní město Praha'],
   },
   {
-    id: 'bucket-2',
+    id: 'jizni-morava',
     terms: ['Vysočina', 'Jihomoravský'],
   },
   {
-    id: 'bucket-3',
+    id: 'zapadne-slovensko',
     terms: ['Bratislavský', 'Nitriansky', 'Trnavský'],
   },
   {
-    id: 'bucket-4',
+    id: 'vychodne-slovensko',
     terms: ['Košický', 'Prešovský'],
   },
   {
-    id: 'bucket-5',
+    id: 'cesko-slovensko',
     terms: ['Česko', 'Slovensko', 'Czechia', 'Slovakia', 'Domácí'],
   },
   {
-    id: 'bucket-6',
+    id: 'jizni-cechy',
     terms: ['Jihočeský', 'Plzeňský', 'Karlovarský'],
   },
   {
-    id: 'bucket-7',
+    id: 'severni-morava',
     terms: ['Moravskoslezský', 'Olomoucký', 'Zlínský'],
   },
   {
-    id: 'bucket-8',
+    id: 'stredne-slovensko',
     terms: ['Žilinský', 'Banskobystrický', 'Trenčiansky'],
   },
   {
-    id: 'bucket-9',
+    id: 'vychodni-cechy',
     terms: ['Liberecký', 'Královéhradecký', 'Pardubický'],
   },
 ];

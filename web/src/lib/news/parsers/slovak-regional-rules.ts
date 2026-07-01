@@ -2,7 +2,7 @@ import { BucketPrefixRules } from './prefix-engine';
 
 export const SLOVAK_REGIONAL_BUCKET_RULES: BucketPrefixRules[] = [
   {
-    bucketId: 'bucket-3',
+    bucketId: 'zapadne-slovensko',
     rules: [
       'bratislav', 'dunaj', 'záhor', 'malac', 'komárn',
       ['nov', 'zám'],
@@ -15,7 +15,7 @@ export const SLOVAK_REGIONAL_BUCKET_RULES: BucketPrefixRules[] = [
     ],
   },
   {
-    bucketId: 'bucket-4',
+    bucketId: 'vychodne-slovensko',
     rules: [
       'košic', 'prešov', 'poprad', 'tatr', 'zemplín', 'šariš', 'spiš', 'gemer',
       'kežmar',
@@ -26,7 +26,7 @@ export const SLOVAK_REGIONAL_BUCKET_RULES: BucketPrefixRules[] = [
     ],
   },
   {
-    bucketId: 'bucket-8',
+    bucketId: 'stredne-slovensko',
     rules: [
       'žilin',
       ['bansk', 'bystric'],

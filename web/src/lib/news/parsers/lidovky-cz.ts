@@ -22,9 +22,9 @@ export const lidovkyCzParser: SourceParser = {
     const matchedBuckets = resolveBucketsByPrefixRules(`${title} ${description}`, CZECH_REGIONAL_BUCKET_RULES);
 
     if (matchedBuckets.length === 0) {
-      return ['bucket-5'];
+      return ['cesko-slovensko'];
     }
 
-    return ['bucket-5', ...matchedBuckets];
+    return ['cesko-slovensko', ...matchedBuckets];
   },
 };

@@ -19,15 +19,15 @@ export const smeSkParser: SourceParser = {
     const matchedBuckets = resolveBucketsByPrefixRules(fullText, SLOVAK_REGIONAL_BUCKET_RULES);
 
     if (matchedBuckets.length > 0) {
-      return ['bucket-5', ...matchedBuckets];
+      return ['cesko-slovensko', ...matchedBuckets];
     }
 
     // If no regional match, check for "domov" keyword
     if (normalizeText(fullText).includes('domov')) {
-      return ['bucket-5'];
+      return ['cesko-slovensko'];
     }
 
-    // Default to bucket-5
-    return ['bucket-5'];
+    // Default to cesko-slovensko
+    return ['cesko-slovensko'];
   },
 };

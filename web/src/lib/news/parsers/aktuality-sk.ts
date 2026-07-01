@@ -8,7 +8,7 @@ import { resolveBucketsByPrefixRules } from './prefix-engine';
 import { SLOVAK_REGIONAL_BUCKET_RULES } from './slovak-regional-rules';
 
 /**
- * Parser for Aktuality.sk — all subfeeds are Slovak domestic news (bucket-5).
+ * Parser for Aktuality.sk — all subfeeds are Slovak domestic news (cesko-slovensko).
  * Regional buckets (3, 4, 8) are determined via prefix matching on the article text.
  */
 export const aktualitySkParser: SourceParser = {
@@ -17,6 +17,6 @@ export const aktualitySkParser: SourceParser = {
     const title = getTagValue(itemXml, 'title');
     const description = getTagValue(itemXml, 'description');
     const matchedBuckets = resolveBucketsByPrefixRules(`${title} ${description}`, SLOVAK_REGIONAL_BUCKET_RULES);
-    return ['bucket-5', ...matchedBuckets];
+    return ['cesko-slovensko', ...matchedBuckets];
   },
 };

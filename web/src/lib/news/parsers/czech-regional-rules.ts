@@ -2,7 +2,7 @@ import { BucketPrefixRules } from './prefix-engine';
 
 export const CZECH_REGIONAL_BUCKET_RULES: BucketPrefixRules[] = [
   {
-    bucketId: 'bucket-1',
+    bucketId: 'zapadni-cechy',
     rules: [
       'prah', 'praz', 'nymbur', 'kolin', ['kutn', 'hor'], 'benesov', 'pribram', 'beroun',
       'rakovni', 'klad', 'melni', ['mlad', 'boleslav'], 'loun', 'litomer', 'decin',
@@ -10,14 +10,14 @@ export const CZECH_REGIONAL_BUCKET_RULES: BucketPrefixRules[] = [
     ],
   },
   {
-    bucketId: 'bucket-2',
+    bucketId: 'jizni-morava',
     rules: [
       'brn', 'znoj', 'breclav', 'hodonin', 'vyskov', 'blan', 'trebic', ['zdar', 'sazav'],
       'jihlav', 'pelhrimov', ['halvic', 'brod'], 'vysocina', ['ji', 'morav'],
     ],
   },
   {
-    bucketId: 'bucket-6',
+    bucketId: 'jizni-cechy',
     rules: [
       'plzen', 'rokycan', 'klatov', 'domazlic', 'tachov', 'pise', 'strakonic', 'prachatic',
       ['cesk', 'krumlov'], ['cesk', 'budejov'], 'tabor', ['jindrich', 'hradec'], 'cheb',
@@ -25,7 +25,7 @@ export const CZECH_REGIONAL_BUCKET_RULES: BucketPrefixRules[] = [
     ],
   },
   {
-    bucketId: 'bucket-7',
+    bucketId: 'severni-morava',
     rules: [
       'ostrav', 'karvin', 'trinec', ['nov', 'jicin'], 'opav', 'bruntal', 'krnov', 'jeseni',
       'sumper', 'olomouc', 'prostejov', 'prerov', 'kromeriz', 'zlin', 'vsetin', 'uhersk',
@@ -33,7 +33,7 @@ export const CZECH_REGIONAL_BUCKET_RULES: BucketPrefixRules[] = [
     ],
   },
   {
-    bucketId: 'bucket-9',
+    bucketId: 'vychodni-cechy',
     rules: [
       ['cesk', 'lip'], 'liberec', ['jablon', 'nis'], 'semil', 'jicin', 'trutnov', 'nachod',
       ['hradec', 'kralov'], 'kralovehradec', ['rychnov', 'knez'], 'pardubic', 'chrudim',
