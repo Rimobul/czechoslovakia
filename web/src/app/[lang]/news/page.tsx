@@ -1,5 +1,6 @@
 import { Language, languages, t } from '@/lib/i18n';
 import NewsGrid from '@/components/news/NewsGrid';
+import AllNewsList from '@/components/news/AllNewsList';
 
 interface PageProps {
   params: Promise<{ lang: string }>;
@@ -20,6 +21,8 @@ export default async function NewsPage({ params }: PageProps) {
         <p className="text-text-secondary text-lg text-center max-w-3xl mx-auto mb-10">{t(lang, 'news.intro')}</p>
 
         <NewsGrid lang={lang} />
+
+        <AllNewsList lang={lang} />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ interface NewsCacheEntry {
   timestamp: number;
 }
 
-function getItemsFromCache(): ParsedFeedItem[] | null {
+export function getItemsFromCache(): ParsedFeedItem[] | null {
   if (typeof window === 'undefined') return null;
   try {
     const raw = localStorage.getItem(CACHE_KEY);

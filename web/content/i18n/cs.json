@@ -34,7 +34,8 @@
     "intro": "Krátké aktuality a oznámení o novém obsahu na CS Data.",
     "empty": "Aktuálně nejsou k dispozici žádné zprávy.",
     "loading": "Načítám zprávy…",
-    "error": "Zprávy se nepodařilo načíst. Zkuste to prosím znovu."
+    "error": "Zprávy se nepodařilo načíst. Zkuste to prosím znovu.",
+    "allNews": "Všechny novinky"
   },
   "maps": {
     "title": "Mapy",
